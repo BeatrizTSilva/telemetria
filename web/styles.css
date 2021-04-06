@@ -1,0 +1,46 @@
+/* "#" for id and "." for class */
+body{
+	border:2px; font-family:Klavika Basic; margin:0px;
+	background-color:white; color:#46555f;
+}
+#header{ /* blue header and clock */
+	padding:5.75px; text-align:center; background:#009de0; width:100%; font-size:15px;
+	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3;	
+}
+.sticky { /* make top clock bar static */
+	position:fixed; top:0; width:100%; left:0; z-index: 999;
+}
+.sticky + .content { /* make top clock bar static */
+	padding-top:102px;
+}
+#table{ /* dummy table */
+	margin-left:5px; margin-top:7px; text-align:left; float:right; 
+	padding-left:3px; padding-right:3px; position:relative;
+}
+#table th, #table td{ /* elements fo the table */
+	padding:3px; border:1px solid #ddd;
+}
+#form_container{ /* div for form */
+	border: 0.5px solid green; height:53px; width:197px; position:relative;
+	margin-top:7px; margin-left:5px; margin-right:4px; float:right; margin-bottom:5px;
+}
+.inputs{ /* inputs for data in form_container */
+	height:100%; width:100%; position:relative; left:0;
+	padding-left:3px; padding-top:3px;
+}
+#submission{ /* submit data in form_container */
+	height:100%; width:30%; /*border:0.5px solid blue;*/ 
+	position:relative; bottom:0; float:right; padding-right:0px; padding-top:3px;
+}
+#month, #day, #year, #hour, #minute, #second, p{ /* display of the date in the body */
+	margin-left:5px; float:left; 
+}
+.graph{ /* inividual graphs */
+	float:left; position:relative; border:0.5px solid blue; margin-left:5px; margin-bottom:7px;
+}
+#graph_container{ /* div for all graphs */
+	margin-left:5%; float:left; position:relative; margin-top:2.5%;
+}
+#database{ /* div for database (in progress) */
+	margin-left: 5%; float:left; position:relative;
+}

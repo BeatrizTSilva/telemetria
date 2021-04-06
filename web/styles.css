@@ -7,6 +7,9 @@ body{
 	padding:5.75px; text-align:center; background:#009de0; width:100%; font-size:15px;
 	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3;	
 }
+#container {
+	padding: 1rem;
+}
 .sticky { /* make top clock bar static */
 	position:fixed; top:0; width:100%; left:0; z-index: 999;
 }
@@ -44,3 +47,9 @@ body{
 #database{ /* div for database (in progress) */
 	margin-left: 5%; float:left; position:relative;
 }
+/* for the letters */
+#github_code {
+	float: right; font-size: 0.8rem; margin-right: 0.5rem; margin-top: 0.1rem; color: white;
+}
+/* for the link */
+#github_code a { color: white; }

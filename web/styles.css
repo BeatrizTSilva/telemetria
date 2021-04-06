@@ -11,7 +11,7 @@ body{
 	padding: 1rem;
 }
 .sticky { /* make top clock bar static */
-	position:fixed; top:0; width:100%; left:0; z-index: 999;
+	position:fixed; top:0; left:0; z-index: 999;
 }
 .sticky + .content { /* make top clock bar static */
 	padding-top:102px;
@@ -49,7 +49,7 @@ body{
 }
 /* for the letters */
 #github_code {
-	float: right; font-size: 0.8rem; margin-right: 0.5rem; margin-top: 0.1rem; color: white;
+	float: right; font-size: 0.8rem; margin-right: 0.7rem; margin-top: 0.1rem; color: white;
 }
 /* for the link */
 #github_code a { color: white; }

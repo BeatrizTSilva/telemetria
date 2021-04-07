@@ -4,7 +4,7 @@ body{
 	background-color:white; color:#46555f;
 }
 #head{ /* blue header and clock */
-	padding:5.75px; text-align:center; background:#009de0; width:100%; font-size:1rem;
+	padding:0.4rem; text-align:center; background:#009de0; width:100%; font-size:1rem;
 	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;	
 }
 #container {
@@ -36,10 +36,10 @@ body{
 	position:relative; bottom:0; float:right; padding-right:0px; padding-top:3px;
 }
 #month, #day, #year, #hour, #minute, #second, p{ /* display of the date in the body */
-	margin-left:5px; float:left; 
+	margin-left:0.1rem; float:left; 
 }
 .graph{ /* inividual graphs */
-	float:left; position:relative; border:0.5px solid blue; margin-left:5px; margin-bottom:7px;
+	float:left; position:relative; border:0.05rem solid blue; margin-left:0.4rem; margin-bottom:1rem;
 }
 #graph_container{ /* div for all graphs */
 	margin-left:5%; float:left; position:relative; margin-top:2.5%;

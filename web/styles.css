@@ -3,9 +3,9 @@ body{
 	border:2px; font-family:Klavika Basic; margin:0px;
 	background-color:white; color:#46555f;
 }
-#header{ /* blue header and clock */
-	padding:5.75px; text-align:center; background:#009de0; width:100%; font-size:15px;
-	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3;	
+#head{ /* blue header and clock */
+	padding:5.75px; text-align:center; background:#009de0; width:100%; font-size:1rem;
+	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;	
 }
 #container {
 	padding: 1rem;

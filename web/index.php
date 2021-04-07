@@ -15,7 +15,7 @@
 </head>
 
 <body>
-	<div id="header">
+	<div id="head">
 		<p id="github_code">
         	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
       	</p>

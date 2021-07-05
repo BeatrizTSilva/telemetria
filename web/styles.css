@@ -5,7 +5,7 @@ body{
 }
 #head{ /* blue header and clock */
 	padding:0.4rem; text-align:center; background:#009de0; width:100%; font-size:1rem;
-	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;	
+	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;
 }
 #container {
 	padding: 1rem;
@@ -17,7 +17,7 @@ body{
 	padding-top:102px;
 }
 #table{ /* dummy table */
-	margin-left:5px; margin-top:7px; text-align:left; float:right; 
+	margin-left:5px; margin-top:7px; text-align:left; float:right;
 	padding-left:3px; padding-right:3px; position:relative;
 }
 #table th, #table td{ /* elements fo the table */
@@ -32,11 +32,11 @@ body{
 	padding-left:3px; padding-top:3px;
 }
 #submission{ /* submit data in form_container */
-	height:100%; width:30%; /*border:0.5px solid blue;*/ 
+	height:100%; width:30%; /*border:0.5px solid blue;*/
 	position:relative; bottom:0; float:right; padding-right:0px; padding-top:3px;
 }
 #month, #day, #year, #hour, #minute, #second, p{ /* display of the date in the body */
-	margin-left:0.1rem; float:left; 
+	margin-left:0.1rem; float:left;
 }
 .graph{ /* inividual graphs */
 	float:left; position:relative; border:0.05rem solid blue; margin-left:0.4rem; margin-bottom:1rem;

@@ -30,7 +30,7 @@
 		include("database_connection.php");
 		include("functions.php");
 		//include("ajax.php");
-		
+
 		?>
 
 		<!-- -------------------------------------------------------------- table ---------------------------------------------------------------- -->
@@ -60,7 +60,7 @@
 		);
 
 		/* inserts a row -> in database_connection.php */
-		//insertRow($database, $values1); 
+		//insertRow($database, $values1);
 		/* in functions.php */
 		writeMessage();
 		/* shows the whole database -> in database_connection.php */
@@ -68,7 +68,7 @@
 		/* write SQL for parameter $variable and time $time */
 		getOneValue($database, "current", 2);
 		/* choose variable to print */
-		getColumn($database, "speed");
+		getColumn($database, "voltage");
 		/* get one value at a time for all t's*/
 		//getSequenceOfValues($database, "current");
 		/* delete row at time t */
@@ -87,7 +87,7 @@
 			console.log("Hello from the script");
 			const data = {whateveriwanttosend};
 			const options = {
-				method:'POST', 
+				method:'POST',
 				headers: {
 					'Content-Type': 'application/json'
 				},

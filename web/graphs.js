@@ -1,5 +1,5 @@
 /*******************************************************************************
-* Code for the graphs that show the data from the sensors 
+* Code for the graphs that show the data from the sensors
 ******************************************************************************/
 /* <javascript ....... > */ /* ---> tornar ficheiro php */
 /* ------------------------------------ Graph 1 --------------------------------------- */
@@ -287,8 +287,8 @@ function (chart) {
       var point = chart.series[0].points[0];
       var newVal; /* new value that comes from the database */
       var inc;
-      /* 
-      inc = -(newVal - database_speed); // for when we have the database values here 
+      /*
+      inc = -(newVal - database_speed); // for when we have the database values here
       */
       inc = 1; /* increment */
       newVal = point.y + inc;

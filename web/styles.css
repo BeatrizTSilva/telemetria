@@ -6,10 +6,21 @@ body{
   	-moz-osx-font-smoothing: grayscale;
 
 }
-#head{ /* blue header and clock */
-	padding:0.4rem; text-align:center; background:#94c43c; width:100%; font-size:1rem;
-	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;
+#head{ /* header for logo and clock */
+	/*padding:0.4rem; text-align:center; background:#94c43c; width:100%; font-size:1rem;
+	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;*/
+	background-color: #94c43c;
+	box-shadow:0px 5px 5px #D3D3D3;
+	font-size: 0.8rem;
+	display: flex;
+	position: sticky;
+	left:0;
+	top:0;
+	width:100%; /* take up the full browser width */
+	z-index:999; /* high z index so other content scrolls underneath */
 }
+
+
 #container {
 	padding: 1rem;
 }
@@ -56,3 +67,14 @@ body{
 }
 /* for the link */
 #github_code a { color: white; }
+
+#psem-logo { /* for the logo */
+  display: block;
+  width: 5rem;
+  height: 2.1rem;
+  float: left;
+  margin-left:0.4rem;
+  margin-top:0.4rem;
+  margin-bottom: 0.3rem;
+  margin-right: 0.3rem;
+}

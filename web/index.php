@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>TTTTTT</title>
-	<link rel="icon" href="rover.ico"> <!-- icon for the webpage -->
+	<link rel="icon" href="imgs/rover.ico"> <!-- icon for the webpage -->
 	<link rel="stylesheet" type="text/css" href="styles.css"> <!-- css file with all the definitions of classes, etc -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<!---------------------------- for graphs --------------------------------->
@@ -16,7 +16,7 @@
 
 <body>
 	<div id="head">
-		<img id="psem-logo" src="psem-car-white.png" />
+		<img id="psem-logo" src="imgs/psem-car-white.png" />
 		<div id="clockbox">
 			<script src="clock.js"></script>
 		</div>

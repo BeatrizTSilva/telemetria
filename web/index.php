@@ -16,6 +16,7 @@
 
 <body>
 	<div id="head">
+		<img id="psem-logo" src="../public/psem-car-white.png" />
 		<p id="github_code">
         	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
       	</p>

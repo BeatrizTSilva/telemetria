@@ -1,10 +1,13 @@
 /* "#" for id and "." for class */
 body{
-	border:2px; font-family:Klavika Basic; margin:0px;
-	background-color:white; color:#46555f;
+	border:2px; margin:0px; background-color:white; color:#46555f;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+
 }
 #head{ /* blue header and clock */
-	padding:0.4rem; text-align:center; background:#009de0; width:100%; font-size:1rem;
+	padding:0.4rem; text-align:center; background:#94c43c; width:100%; font-size:1rem;
 	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;
 }
 #container {

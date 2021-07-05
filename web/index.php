@@ -17,12 +17,12 @@
 <body>
 	<div id="head">
 		<img id="psem-logo" src="psem-car-white.png" />
-		<p id="github_code">
-        	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
-      	</p>
 		<div id="clockbox">
 			<script src="clock.js"></script>
 		</div>
+		<p id="github-code">
+        	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
+      	</p>
 	</div>
 
 	<div id="container">

@@ -1,3 +1,11 @@
+/******************************************************************************
+ * File: inputs.js
+ *
+ * Description: Not sure what this is yet
+ *
+ *****************************************************************************/
+
+
 /*function othername() {
 	var input1 = document.getElementById("input_place").value;
 	window.alert(input1);

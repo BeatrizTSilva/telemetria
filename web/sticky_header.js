@@ -1,6 +1,10 @@
-/********************************************************************************************
-* Makes top bar stay on top
-*********************************************************************************************/
+/******************************************************************************
+ * File: sticky_header.js
+ *
+ * Description: Makes top bar stay on top
+ *
+ *****************************************************************************/
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
@@ -17,4 +21,4 @@ function myFunction() {
   } else {
     header.classList.remove("sticky");
   }
-} 
+}

@@ -1,4 +1,12 @@
 <?php
+/******************************************************************************
+ * File: database_connection.php
+ *
+ * Description: All functions related to the database - connection,
+ *	retrieving values, deleting rows, etc
+ *
+ *****************************************************************************/
+
 include ("file.php"); // for hostaname, username, etc
 /* ------------------------------------------ connects to the database and returns the connection ---------------------------------------------------- */
 function connectDB(){
@@ -84,10 +92,10 @@ function getSequenceOfValues($database, $variable){
 function closeConnection($database){
 	if(pg_close($database)){
 		echo "Closed the connection to database <br>";
-	} 
+	}
 	else{
 		echo "ERROR: Could not close the connection to database <br>";
-	}	
+	}
 }
 
 /* -------------------------------------------- displays the whole database -> ordered by time (t) ------------------------------------------------- */

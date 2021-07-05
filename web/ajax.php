@@ -1,4 +1,12 @@
 <?php
+/******************************************************************************
+ * File: ajax.js
+ *
+ * Description: tests with ajax and real time updates
+ *
+ *****************************************************************************/
+
+
 //include("database_connection.php");
 
 echo "Inside ajax after a change <br>";

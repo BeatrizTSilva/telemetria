@@ -1,6 +1,9 @@
-/********************************************************************************************
-* Top bar clock 
- ********************************************************************************************/
+/******************************************************************************
+ * File: clock.js
+ *
+ * Description: top bar clock (will get day, month, year and time)
+ *
+ *****************************************************************************/
 
 //tday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
 tmonth=new Array("January","February","March","April","May","June","July","August","September","October","November","December");

@@ -109,21 +109,27 @@
 
 
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
-		<div id="graph-container">
-			<div id="temperature_graph" class="graph"></div>
-			<div id="voltage_graph" class="graph"></div>
+		<!--div id="graph-container">
+			<div id="temperature_graph" class="graph"></div-->
+			<!--div id="voltage_graph" class="graph"></div>
 			<div id="current_graph" class="graph"></div>
 			<div id="speed_graph" class="graph"></div>
-			<!--div id="graph_voltmeter" class="graph"></div-->
+			<div id="graph_voltmeter" class="graph"></div>
 			<script src="graphs.js"></script>
-		</div>
+		</div-->
 
+		<figure class="highcharts-figure">
+			<div id="container"></div>
+				<p class="highcharts-description">
+					Chart showing data updating every second, with old data being removed.
+				</p>
+		</figure>
+
+		<!--div id="test-chart"></div-->
 		<!--div id="temperature_graph" id="one-graph"></div>
 		<script src="graphs.js"></script-->
 
 
 	</div>
-	<?php ?>
-
 </body>
 </html>

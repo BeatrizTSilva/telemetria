@@ -15,7 +15,6 @@ Highcharts.chart('container', {
       marginRight: 10,
       events: {
           load: function () {
-
               // set up the updating of the chart each second
               var series = this.series[0];
               setInterval(function () {
@@ -29,7 +28,6 @@ Highcharts.chart('container', {
   time: {
       useUTC: false
   },
-
   title: {
       text: 'Live random data'
   },
@@ -59,21 +57,18 @@ Highcharts.chart('container', {
           color: '#808080'
       }]
   },
-
   tooltip: {
       headerFormat: '<b>{series.name}</b><br/>',
       pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
   },
-
   legend: {
       enabled: false
   },
-
   exporting: {
       enabled: false
   },
   series: [{
-      name: 'Random data',
+      name: 'Database',
       data: (function () {
           // generate an array of random data
           var data = [],

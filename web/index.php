@@ -1,7 +1,7 @@
 <!----------------------------------------------------------------------------
  * File: index.php
  *
- * Description: html file basically
+ * Description: html file, basically
  *
 ------------------------------------------------------------------------------>
 <!DOCTYPE HTML>
@@ -11,14 +11,16 @@
 	<title>TTTTTT</title>
 	<link rel="icon" href="imgs/rover.ico"> <!-- icon for the webpage -->
 	<link rel="stylesheet" type="text/css" href="styles.css"> <!-- css file with all the definitions of classes, etc -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<!--meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<!---------------------------- for graphs --------------------------------->
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/highcharts-more.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
-	<!-- ------------------------------------------------ includes ---------------------------------------------------------- -->
+	<!----------------------------- includes ----------------------------------->
 	<?php require("database_connection.php"); require("functions.php"); //require("ajax.php");?>
 </head>
 
@@ -32,8 +34,6 @@
         	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
       	</p>
 	</div>
-
-
 
 	<div id="main-container">
 
@@ -78,16 +78,15 @@
 		/* delete row at time t */
 		//deleteRow($database, 6);
 		//showTable($database);
-
 		closeConnection($database);
 		?>
 
 
-		<script type="text/javascript">
+		<!--script type="text/javascript">
 			fetch('/alldata');
-		</script>
+		</script-->
 
-
+		<!-- something for ajax -->
 		<!--script type="text/javascript">
 			console.log("Hello from the script");
 			const data = {whateveriwanttosend};
@@ -104,7 +103,6 @@
 			app.post('/api', (request, response) => {
 				console.log(request);
 			});
-
 		</script-->
 
 
@@ -114,16 +112,18 @@
 			<!--div id="voltage_graph" class="graph"></div>
 			<div id="current_graph" class="graph"></div>
 			<div id="speed_graph" class="graph"></div>
-			<div id="graph_voltmeter" class="graph"></div>
-			<script src="graphs.js"></script>
+			<div id="graph_voltmeter" class="graph"></div-->
+			<!--script src="graphs.js"></script>
 		</div-->
 
-		<figure class="highcharts-figure">
+		<div class="highcharts-figure">
 			<div id="container"></div>
-				<p class="highcharts-description">
-					Chart showing data updating every second, with old data being removed.
-				</p>
-		</figure>
+			<p class="highcharts-description">
+				Chart showing data updating every second, with old data being removed.
+			</p>
+		</div>
+
+		<script src="graphs.js"></script>
 
 		<!--div id="test-chart"></div-->
 		<!--div id="temperature_graph" id="one-graph"></div>

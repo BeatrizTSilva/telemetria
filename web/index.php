@@ -21,7 +21,7 @@
 </head>
 
 <body>
-	<div id="head">
+	<div id="header">
 		<img id="psem-logo" src="imgs/psem-car-white.png" />
 		<div id="clockbox">
 			<script src="clock.js"></script>
@@ -122,12 +122,6 @@
 
 
 	</div>
-	<!--script src="input.js"></script-->
-	<!-- script for the inputs place and date -->
-
-	<!-- THINK ABOUT WHY THIS ISN'T NECESSARY (styles.css sticky and content) -->
-	<!--script src="sticky_header.js"></script--> <!-- script for the static header clock -->
-
 	<?php closeConnection($database);?>
 
 </body>

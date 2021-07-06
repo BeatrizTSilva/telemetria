@@ -19,7 +19,7 @@ var chartT = new Highcharts.Chart({
     line: {animation: false,
       dataLabels: {enabled: true}
     },
-    series: {color: '#059e8a'}
+    series: {color: '#0595d4f'}
   },
   xAxis: {
     type: 'datetime',
@@ -36,7 +36,7 @@ setInterval(function () {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var x = (new Date()).getTime();
-      var y = 4;
+      var y = 1;
 
       /*function iterationFunction(){
         for (i = 1; ;i++){

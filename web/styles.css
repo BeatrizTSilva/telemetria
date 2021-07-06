@@ -5,18 +5,17 @@ body{ /* for everything */
 	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 
 }
-#head{ /* header for logo and clock */
-	/*padding:0.4rem; text-align:center; width:100%; font-size:1rem;
-	font-family:verdana; color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem;*/
-	/*background-color: #94c43c;*/
+#head{ /* header */
+	/*padding:0.4rem; text-align:center; width:100%; font-size:1rem; font-family:verdana;
+	color:white; box-shadow:0px 5px 5px #D3D3D3; position: fixed; height: 1.2rem; background-color: #94c43c;*/
 	background:#89c45f; box-shadow:0px 5px 5px #D3D3D3; display: flex;
 	position: sticky; left:0; top:0; width:100%; /* take up the full browser width */
 	z-index:999; /* high z index so other content scrolls underneath */
 }
 
 #clockbox{ /* clock div */
-	display: flex; height: auto; width: auto; margin: auto;
-	color: white; font-size: 1.1rem; /*font-weight: bold;*/
+	display: flex; height: auto; width: auto; margin: auto; color: white; font-size: 1.1rem;
+	/*font-weight: bold;*/
 }
 /* for the letters */
 #github-code { /* github link */
@@ -35,12 +34,11 @@ body{ /* for everything */
 #container { /* big container for all things in the body */
 	padding: 2rem;
 }
-
 #table{ /* dummy table */
 	margin-left:5px; margin-top:7px; text-align:left; float:right;
 	padding-left:3px; padding-right:3px; position:relative;
 }
-#table th, #table td{ /* elements fo the table */
+#table th, #table td{ /* elements for the table */
 	padding:3px; border:1px solid #ddd;
 }
 
@@ -48,9 +46,9 @@ body{ /* for everything */
 	margin-left:0.1rem; float:left;
 }
 .graph{ /* individual graphs */
-	float:left; position:relative; border:0.05rem solid blue; margin-left:0.4rem; margin-bottom:1rem;
+	float:left; position:relative; border:0.05rem solid black; margin-left:0.4rem; margin-bottom:1rem;
 }
-#graph_container{ /* div for all graphs */
+#graph-container{ /* div for all graphs */
 	margin-left:5%; float:left; position:relative; margin-top:2.5%;
 }
 #database{ /* div for database (in progress) */

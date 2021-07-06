@@ -111,7 +111,7 @@
 
 
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
-		<div id="graph_container">
+		<div id="graph-container">
 			<div id="temperature_graph" class="graph"></div>
 			<!--div id="voltage_graph" class="graph"></div>
 			<div id="current_graph" class="graph"></div>

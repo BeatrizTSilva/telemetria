@@ -5,6 +5,8 @@
  * Description: All functions related to the database - connection,
  *	retrieving values, deleting rows, etc
  *
+ * Comment: delete "echos" in the end
+ *
  *****************************************************************************/
 
 include ("file.php"); // for hostaname, username, etc
@@ -19,8 +21,7 @@ function connectDB(){
 	$connection = pg_connect('host='.$hostname.' port='.$port.' dbname='.$database_name.' user='.$username.' password='.$password);
 	if ($connection) {
 		echo "Connection successful <br>";
-	}
-	else{
+	} else {
 		echo "Connection failed <br>";
 	}
 	return $connection;
@@ -32,7 +33,7 @@ function insertRow($database, $values){
 	$string = "INSERT INTO telemetria (t, voltage, current, speed, temperature, coordinates1, coordinates2) VALUES (".$values["time"].",". $values["volt"].",".$values["ampere"].",".$values["vel"].",". $values["temp"].",".$values["coord1"].",".$values["coord2"].")";
 	if(pg_query($database, $string)){
 		echo "Records added successfully in insertRow <br>";
-	} else{
+	} else {
 		echo "ERROR: Did not execute query ".$string." in insertRow <br>";
 	}
 }
@@ -43,7 +44,7 @@ function insertRow2($database, $time, $voltage, $current, $speed, $temperature, 
 	$string = "INSERT INTO telemetria (t, voltage, current, speed, temperature, coordinates1, coordinates2) VALUES (".$time.", ".$voltage.", ".$current.", ".$speed.", ".$temperature.", ".$coordinates1.", ".$coordinates2.")";
 	if(pg_query($database, $string)){
 		echo "Records added successfully in insertRow2 <br>";
-	} else{
+	} else {
 		echo "ERROR: Did not execute query ".$string." in insertRow2 <br>";
 	}
 }
@@ -91,10 +92,10 @@ function getSequenceOfValues($database, $variable){
 /* ----------------------------------------------------------- close the connection ---------------------------------------------------------------- */
 function closeConnection($database){
 	if(pg_close($database)){
-		echo "Closed the connection to database <br>";
+		echo "Connection to database closed <br>";
 	}
 	else{
-		echo "ERROR: Could not close the connection to database <br>";
+		echo "ERROR: Connection to database not closed <br>";
 	}
 }
 

@@ -18,6 +18,8 @@
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<!-- ------------------------------------------------ includes ---------------------------------------------------------- -->
+	<?php require("database_connection.php"); require("functions.php"); //require("ajax.php");?>
 </head>
 
 <body>
@@ -31,14 +33,9 @@
       	</p>
 	</div>
 
-	<div id="container">
-		<!-- ------------------------------------------------ includes ---------------------------------------------------------- -->
-		<?php
-		include("database_connection.php");
-		include("functions.php");
-		//include("ajax.php");
 
-		?>
+
+	<div id="main-container">
 
 		<!-- -------------------------------------------------------------- table ---------------------------------------------------------------- -->
 		<!--div id="table"><table><tr>
@@ -56,7 +53,6 @@
 		<?php
 		/* connection to the database -> in database_connection.php */
 		$database = connectDB();
-		echo "UPdate <br>";
 
 		/* values that can be inserted into the database */
 		$values1 = array('time' => '6', 'volt' => '52.1', 'ampere' => '0.95', 'vel' => '8.52',
@@ -69,13 +65,13 @@
 		/* inserts a row -> in database_connection.php */
 		//insertRow($database, $values1);
 		/* in functions.php */
-		writeMessage();
+		//writeMessage();
 		/* shows the whole database -> in database_connection.php */
 		showTable($database);
 		/* write SQL for parameter $variable and time $time */
-		getOneValue($database, "current", 2);
+		//getOneValue($database, "current", 2);
 		/* choose variable to print */
-		getColumn($database, "voltage");
+		//getColumn($database, "voltage");
 		/* get one value at a time for all t's*/
 		//getSequenceOfValues($database, "current");
 		/* delete row at time t */

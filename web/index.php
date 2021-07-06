@@ -69,7 +69,8 @@
 		/* shows the whole database -> in database_connection.php */
 		showTable($database);
 		/* write SQL for parameter $variable and time $time */
-		//getOneValue($database, "current", 2);
+		$something = getOneValue($database, "current", 2);
+		echo "The value from getOneValue is " .$something . "<br>";
 		/* choose variable to print */
 		//getColumn($database, "voltage");
 		/* get one value at a time for all t's*/
@@ -78,6 +79,7 @@
 		//deleteRow($database, 6);
 		//showTable($database);
 
+		closeConnection($database);
 		?>
 
 
@@ -109,16 +111,19 @@
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
 		<div id="graph-container">
 			<div id="temperature_graph" class="graph"></div>
-			<!--div id="voltage_graph" class="graph"></div>
+			<div id="voltage_graph" class="graph"></div>
 			<div id="current_graph" class="graph"></div>
-			<div id="speed_graph" class="graph"></div-->
+			<div id="speed_graph" class="graph"></div>
 			<!--div id="graph_voltmeter" class="graph"></div-->
 			<script src="graphs.js"></script>
 		</div>
 
+		<!--div id="temperature_graph" id="one-graph"></div>
+		<script src="graphs.js"></script-->
+
 
 	</div>
-	<?php closeConnection($database);?>
+	<?php ?>
 
 </body>
 </html>

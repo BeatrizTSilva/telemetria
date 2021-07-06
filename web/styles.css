@@ -28,16 +28,21 @@ body{ /* for everything */
 	padding-top:0.6rem; padding-left:1rem; padding-bottom:0.8rem; padding-right:0.8rem;
 }
 #graph-container{ /* div that has all graphs */
-	margin-left:5%; float:left; position:relative; margin-top:2.5%;
+	margin-left:0.2rem; float:left; position:relative; margin-top:1rem;
 }
 .graph{ /* individual graph */
 	float:left; position:relative; border:0.05rem solid black; margin-left:0.4rem; margin-bottom:1rem;
 }
+#one-graph{
+	padding-left:0.2rem; padding-right:0.2rem; padding-top:0.2rem; padding-bottom:0.2rem; position:relative;
+	float:left;
+}
 #database{ /* div for database (in progress) */
-	margin-left:5%; float:left; position:relative;
+	margin-left:0.2rem; float:left; position:relative;
 }
 
-/* NOT IN USE AT THE MOMENT */
+
+/* - - - - - - NOT IN USE AT THE MOMENT - - - - - - */
 #table{ /* dummy table */
 	margin-left:5px; margin-top:7px; text-align:left; float:right;
 	padding-left:3px; padding-right:3px; position:relative;

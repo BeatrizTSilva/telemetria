@@ -40,12 +40,13 @@ window.onload=function(){
   GetClock();
   setInterval(GetClock,1000);
 
-  document.getElementById("day").innerHTML=saved_day;
-  document.getElementById("month").innerHTML=saved_month;
-  document.getElementById("year").innerHTML=saved_year;
-  document.getElementById("hour").innerHTML=saved_hour;
-  document.getElementById("minute").innerHTML=saved_min;
-  document.getElementById("second").innerHTML=saved_sec;
+  /* to get individual values - not relevant as of yet */
+  //document.getElementById("day").innerHTML=saved_day;
+  //document.getElementById("month").innerHTML=saved_month;
+  //document.getElementById("year").innerHTML=saved_year;
+  //document.getElementById("hour").innerHTML=saved_hour;
+  //document.getElementById("minute").innerHTML=saved_min;
+  //document.getElementById("second").innerHTML=saved_sec;
 }
 
 

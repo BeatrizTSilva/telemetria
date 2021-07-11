@@ -5,8 +5,6 @@
  *
  *****************************************************************************/
 
-/* <javascript ....... > */ /* ---> tornar ficheiro php */
-
 /* FROM HIGHCHARTS - FOR TEST */
 Highcharts.chart('container', {
   chart: {
@@ -20,53 +18,38 @@ Highcharts.chart('container', {
               setInterval(function () {
                   // current time - will create the actual update of time
                   var x = (new Date()).getTime(),
-                  // keep as random for now (if you give a value in line 65 it will eventually create random numbers anyway)
-                      //y = Math.random();
-                      y=6;
+                      y = 6; // value for y from database (was "y = Math.random();")
                   series.addPoint([x, y], true, true);
               }, 1000);
           }
       }
   },
-  time: {
-    useUTC: false
-  },
+  time: { useUTC: false },
   title: { text: 'From database' },
   accessibility: {
       announceNewData: {
           enabled: true, minAnnounceInterval: 15000,
           announcementFormatter: function (allSeries, newSeries, newPoint) {
-              if (newPoint) {
-                  return 'New point added. Value: ' + newPoint.y;
-              }
+              if (newPoint) { return 'New point added. Value: ' + newPoint.y; }
               return false;
           }
       }
   },
-  xAxis: {
-      type: 'datetime', tickPixelInterval: 150
-  },
+  xAxis: { type: 'datetime', tickPixelInterval: 150 },
   yAxis: {
-      title: {
-          text: 'Value'
-      },
-      plotLines: [{ value: 0, width: 1, color: '#808080'}]
-  },
+      title: { text: 'Value' },
+      plotLines: [{ value: 0, width: 1, color: '#808080'}] },
   tooltip: {
       headerFormat: '<b>{series.name}</b><br/>',
-      pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
-  },
+      pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}' },
   legend: { enabled: false }, exporting: { enabled: false },
   series: [{
       name: 'Database',
-      data: (function () {
-          // generate an array of random data
-          var data = [], time = (new Date()).getTime(), i;
+      data: (function () { var data = [], time = (new Date()).getTime(), i;
           for (i = -30; i <= 0; i += 1) {
               data.push({
                   x: time + i * 1000, // shows time in a comprehensible way
-                  //y: Math.random()
-                  y:4 // will on ly be 4 when the page is loaded and then y becomes random
+                  y:0 // initial value (was "y: Math.random()")
               });
           }
           return data;

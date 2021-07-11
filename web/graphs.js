@@ -18,8 +18,11 @@ Highcharts.chart('container', {
               // set up the updating of the chart each second
               var series = this.series[0];
               setInterval(function () {
-                  var x = (new Date()).getTime(), // current time
-                      y = Math.random();
+                  // current time - will create the actual update of time
+                  var x = (new Date()).getTime(),
+                  // keep as random for now (if you give a value in line 65 it will eventually create random numbers anyway)
+                      //y = Math.random();
+                      y=6;
                   series.addPoint([x, y], true, true);
               }, 1000);
           }
@@ -61,8 +64,9 @@ Highcharts.chart('container', {
           var data = [], time = (new Date()).getTime(), i;
           for (i = -30; i <= 0; i += 1) {
               data.push({
-                  x: time + i * 1000,
-                  y: Math.random()
+                  x: time + i * 1000, // shows time in a comprehensible way
+                  //y: Math.random()
+                  y:4 // will on ly be 4 when the page is loaded and then y becomes random
               });
           }
           return data;

@@ -70,7 +70,7 @@
 		showTable($database);
 		/* write SQL for parameter $variable and time $time */
 		$something = getOneValue($database, "current", 2);
-		echo "The value from getOneValue is " .$something . "<br>";
+		echo "The value from getOneValue is " .$something. "<br>";
 		/* choose variable to print */
 		//getColumn($database, "voltage");
 		/* get one value at a time for all t's*/
@@ -79,6 +79,41 @@
 		//deleteRow($database, 6);
 		//showTable($database);
 		closeConnection($database);
+		?>
+
+		<?php /* ajax test */
+		//lastID -> bulk of data using this as input
+		// get user input
+		$lastID = intval($_GET['lastid']);
+
+		// --------------------------------
+		// FETCH RECORDS FROM DATABASE HERE
+		// --------------------------------
+		// $sql = "SELECT * FROM `graph` WHERE `id` > " . $lastID;
+
+		// CREATE DUMMY CONTENT
+		$data = array();
+
+		for($i = $lastID; $i < $lastID + 50; $i++) {
+			array_push($data, array(
+				'id'        => $i,
+				'position'  => array(
+					'x' => $i,
+					'y' => mt_rand(0, 10) // random value between 0 and 10
+				)
+			));
+		}
+		// END CREATING DUMMY CONTENT
+
+		// create response
+		$json = array(
+			'lastID'    => $data[count($data) - 1]['id'],
+			'data'      => $data
+		);
+
+		// display response
+		echo json_encode($json);
+
 		?>
 
 

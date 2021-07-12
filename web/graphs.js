@@ -5,6 +5,33 @@
  *
  *****************************************************************************/
 
+
+/* AJAX test */
+var interval = setInterval(doRequest, 4000);
+var lastID = 0; // set 0 as default to ensure we get the data from the start
+
+function doRequest(e) {
+  var url = 'index.php'; // the PHP file
+  var data = {'lastid': lastID}; // input for the PHP file
+  $.getJSON(url, data, requestCallback); // send request
+}
+
+// this function is run when $.getJSON() is completed
+function requestCallback(data, textStatus, xhr) {
+  lastID = data.lastID; // save lastID
+
+  // loop through data
+  $.each(data, function(index, value) {
+      // you can do stuff with "value" here
+      console.log(value.id); // display ID
+      console.log(value.position.x); // display X
+      console.log(value.position.y); // display Y
+  });
+}
+
+
+
+
 /* FROM HIGHCHARTS - FOR TEST */
 Highcharts.chart('container', {
   chart: {
@@ -27,8 +54,7 @@ Highcharts.chart('container', {
   time: { useUTC: false },
   title: { text: 'From database' },
   accessibility: {
-      announceNewData: {
-          enabled: true, minAnnounceInterval: 15000,
+      announceNewData: { enabled: true, minAnnounceInterval: 15000,
           announcementFormatter: function (allSeries, newSeries, newPoint) {
               if (newPoint) { return 'New point added. Value: ' + newPoint.y; }
               return false;
@@ -37,11 +63,13 @@ Highcharts.chart('container', {
   },
   xAxis: { type: 'datetime', tickPixelInterval: 150 },
   yAxis: {
-      title: { text: 'Value' },
-      plotLines: [{ value: 0, width: 1, color: '#808080'}] },
+    title: { text: 'Value' },
+    plotLines: [{ value: 0, width: 1, color: '#808080'}]
+  },
   tooltip: {
       headerFormat: '<b>{series.name}</b><br/>',
-      pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}' },
+      pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
+  },
   legend: { enabled: false }, exporting: { enabled: false },
   series: [{
       name: 'Database',

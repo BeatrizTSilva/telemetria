@@ -89,6 +89,16 @@ function getSequenceOfValues($database, $variable){
 	}
 }
 
+/* ------------------------------------------------------ put values in an array --------------------------------------------------------*/
+// CHECK THIS FUNCTION
+function dataArray($database, $time){
+	$result = pg_query($database, "SELECT * FROM telemetria");
+	$data = array();
+	while ($row = pg_fetch_assoc($result)){
+		array_push($data, $row);
+	}
+	return $data;
+}
 /* ----------------------------------------------------------- close the connection ---------------------------------------------------------------- */
 function closeConnection($database){
 	if(pg_close($database)){

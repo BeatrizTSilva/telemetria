@@ -81,7 +81,9 @@
 		closeConnection($database);
 		?>
 
-		<?php /* ajax test */
+
+
+		<!--?php /* -------------------------------- 1st ajax test ------------------------------------------- */
 		//lastID -> bulk of data using this as input
 		// get user input
 		$lastID = intval($_GET['lastid']);
@@ -113,9 +115,16 @@
 
 		// display response
 		echo json_encode($json);
+		?-->
 
+
+		<?php /* ---------------------------------- 2nd AJAX test -------------------------------------------- */
+		echo "<br> Connection to DB in 2nd test <br>"; $db = connectDB();
+		$data = dataArray($db, 1);
+		echo json_encode($data);
+		echo "<br> Closed in 2nd test "; closeConnection($db);
+		exit();
 		?>
-
 
 		<!--script type="text/javascript">
 			fetch('/alldata');

@@ -82,8 +82,8 @@
 		?>
 
 
-
-		<!--?php /* -------------------------------- 1st ajax test ------------------------------------------- */
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<?php /* -------------------------------- 1st ajax test ------------------------------------------- */
 		//lastID -> bulk of data using this as input
 		// get user input
 		$lastID = intval($_GET['lastid']);
@@ -95,7 +95,6 @@
 
 		// CREATE DUMMY CONTENT
 		$data = array();
-
 		for($i = $lastID; $i < $lastID + 50; $i++) {
 			array_push($data, array(
 				'id'        => $i,
@@ -115,16 +114,17 @@
 
 		// display response
 		echo json_encode($json);
-		?-->
-
-
-		<?php /* ---------------------------------- 2nd AJAX test -------------------------------------------- */
-		echo "<br> Connection to DB in 2nd test <br>"; $db = connectDB();
-		$data = dataArray($db, 1);
-		echo json_encode($data);
-		echo "<br> Closed in 2nd test "; closeConnection($db);
-		exit();
 		?>
+
+		<!--?php /* ---------------------------------- 2nd AJAX test -------------------------------------------- */
+		echo "<br> Connection to DB in 2nd test <br>";
+		$db = connectDB();
+		$data = dataArray($db, 1);
+		echo "Echo in php file " .json_encode($data);
+		echo "<br> Closed in 2nd test ";
+		closeConnection($db);
+		//exit();
+		?-->
 
 		<!--script type="text/javascript">
 			fetch('/alldata');

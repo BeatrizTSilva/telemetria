@@ -3,6 +3,9 @@
  *
  * Description: html file, basically
  *
+ * Comments: CLOSE CONNECTION TO DATABASE SOONER (CURRENTLY AT THE
+ * 			END OF THE FILE)
+ *
 ------------------------------------------------------------------------------>
 <!DOCTYPE HTML>
 <html>
@@ -78,19 +81,17 @@
 		/* delete row at time t */
 		//deleteRow($database, 6);
 		//showTable($database);
-		closeConnection($database);
+
 		?>
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<?php /* -------------------------------- 1st ajax test ------------------------------------------- */
+		<!--?php /* -------------------------------- 1st ajax test ------------------------------------------- */
 		//lastID -> bulk of data using this as input
 		// get user input
 		$lastID = intval($_GET['lastid']);
 
-		// --------------------------------
 		// FETCH RECORDS FROM DATABASE HERE
-		// --------------------------------
 		// $sql = "SELECT * FROM `graph` WHERE `id` > " . $lastID;
 
 		// CREATE DUMMY CONTENT
@@ -114,7 +115,7 @@
 
 		// display response
 		echo json_encode($json);
-		?>
+		?-->
 
 		<!--?php /* ---------------------------------- 2nd AJAX test -------------------------------------------- */
 		echo "<br> Connection to DB in 2nd test <br>";
@@ -150,6 +151,18 @@
 		</script-->
 
 
+		<?php /* ---------------------------------- 3rd AJAX test -------------------------------------------- */
+		if(isset($_POST['action']) && !empty($_POST['action'])) {
+			$action = $_POST['action'];
+			switch($action) {
+				case 'test' : getOneValue($database, "current", 2);
+				break;
+				//case 'blah' : blah();break;
+				// ...etc...
+			}
+		}
+		?>
+
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
 		<!--div id="graph-container">
 			<div id="temperature_graph" class="graph"></div-->
@@ -172,6 +185,8 @@
 		<!--div id="test-chart"></div-->
 		<!--div id="temperature_graph" id="one-graph"></div>
 		<script src="graphs.js"></script-->
+
+		<?php closeConnection($database); ?>
 
 
 	</div>

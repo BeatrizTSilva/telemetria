@@ -4,6 +4,17 @@
  * Description: graphs that show the data from the sensors
  *
  *****************************************************************************/
+
+/* ---------------------------------- 3rd AJAX test ---------------------------------------------- */
+$.ajax({ url: 'index.php',
+  data: {action: 'test'},
+  type: 'post',
+  success: function(output) {
+    console.log("in function");
+    console.log(output);
+    console.log(action);
+  }
+});
 /* ---------------------------------- 2nd AJAX test ---------------------------------------------- */
 /*var ajax = new XMLHttpRequest();
 ajax.open("GET", "my-info.php", true);
@@ -21,7 +32,7 @@ ajax.onreadystatechange = function() {
 //document.write(data);
 
 /* ------------------------------------- 1st AJAX test ------------------------------------------- */
-var interval = setInterval(doRequest, 4000);
+/*var interval = setInterval(doRequest, 4000);
 var lastID = 0; // set 0 as default to ensure we get the data from the start
 
 function doRequest(e) {
@@ -44,7 +55,7 @@ function requestCallback(data, textStatus, xhr) {
       console.log(value.position.x); // display X
       console.log(value.position.y); // display Y
   });
-}
+}*/
 
 
 

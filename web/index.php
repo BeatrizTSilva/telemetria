@@ -25,6 +25,8 @@
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<!----------------------------- includes ----------------------------------->
 	<?php require("database_connection.php"); require("functions.php"); //require("ajax.php");?>
+	<!------------------------------- jquery ----------------------------------->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1"></script>
 </head>
 
 <body>
@@ -47,12 +49,7 @@
 			<td>Eve</td><td>Jackson</td><td>94</td><td>Lisbon</td></tr>
 		</table></div-->
 
-		<!-- use values from clock.js for date in hmtl -->
-		<!--p id="day"></p><p id="month"></p><p id="year"></p><p id="hour"></p><p id="minute"></p><p id="second"></p-->
-
-
-
-		<!-- --------------------------------------------------------- PHP -------------------------------------------------------------------------- -->
+		<!-- --------------------------------------------------------- PHP ------------------------------------------------------------------------ -->
 		<?php
 		/* connection to the database -> in database_connection.php */
 		$database = connectDB();
@@ -84,8 +81,6 @@
 
 		?>
 
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!--?php /* -------------------------------- 1st ajax test ------------------------------------------- */
 		//lastID -> bulk of data using this as input
 		// get user input
@@ -151,13 +146,21 @@
 		</script-->
 
 
+		<!--?php /* ---------------------------------- 4th AJAX test -------------------------------------------- */
+		if(isset($_POST['action']) && !empty($_POST['action'])) {
+			echo json_encode(array("blablabla"=>$variable));
+		}
+		?-->
+
+
 		<?php /* ---------------------------------- 3rd AJAX test -------------------------------------------- */
 		if(isset($_POST['action']) && !empty($_POST['action'])) {
 			$action = $_POST['action'];
 			switch($action) {
 				case 'test' : getOneValue($database, "current", 2);
 				break;
-				//case 'blah' : blah();break;
+				case 'blah' : getOneValue($database, "current", 3);
+				break;
 				// ...etc...
 			}
 		}

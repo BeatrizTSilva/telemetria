@@ -5,13 +5,25 @@
  *
  *****************************************************************************/
 
+/* --------------------------------------- 4th AJAX test ---------------------------------------- */
+/*$.ajax({
+  type: "POST",
+  url: "index.php",
+  data: {action: 'test'},
+  dataType:'JSON',
+  success: function(action){
+      //console.log(response);
+      // put on console what server sent back...
+      console.log(action);
+  }
+});*/
+
 /* ---------------------------------- 3rd AJAX test ---------------------------------------------- */
 $.ajax({ url: 'index.php',
   data: {action: 'test'},
   type: 'post',
-  success: function(output) {
+  success: function(action) {
     console.log("in function");
-    console.log(output);
     console.log(action);
   }
 });

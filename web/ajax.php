@@ -1,23 +1,29 @@
-<?php
 /******************************************************************************
  * File: ajax.js
  *
  * Description: tests with ajax and real time updates
  *
- *****************************************************************************/
+ ******************************************************************************/
 
+<?php
+require("database_connection.php");
 
-//include("database_connection.php");
+if (isset($_POST['query'])) {
+    $query = "SELECT * FROM Songs WHERE song_name LIKE '{$_POST['query']}%' LIMIT 100";
+    $result = mysqli_query($connection, $query);
 
-echo "Inside ajax after a change <br>";
+  if (mysqli_num_rows($result) > 0) {
+      while ($res = mysqli_fetch_array($result)) {
+      echo $res['song_name']. "<br/>";
+    }
+  } else {
+    echo "
+    <div class='alert alert-danger mt-3 text-center' role='alert'>
+        Song not found
+    </div>
+    ";
+  }
+}
 
-$variable = getOneValue($database, "speed", 3);
-echo "From ajax.php ".$variable. "<br>";
-echo json_encode($first);
-
-/*$first = 4;
-$second = 5;
-echo json_encode($first);
-echo json_encode($second);*/
 
 ?>

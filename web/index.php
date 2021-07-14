@@ -1,4 +1,4 @@
-<!----------------------------------------------------------------------------
+/*****************************************************************************
  * File: index.php
  *
  * Description: html file, basically
@@ -6,14 +6,14 @@
  * Comments: CLOSE CONNECTION TO DATABASE SOONER (CURRENTLY AT THE
  * 			END OF THE FILE)
  *
------------------------------------------------------------------------------->
+******************************************************************************/
 <!DOCTYPE HTML>
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>TTTTTT</title>
-	<link rel="icon" href="imgs/rover.ico"> <!-- icon for the webpage -->
-	<link rel="stylesheet" type="text/css" href="styles.css"> <!-- css file with all the definitions of classes, etc -->
+	<link rel="icon" href="imgs/rover.ico"> <!-- icon for the browser tab -->
+	<link rel="stylesheet" type="text/css" href="styles.css"> <!--css file-->
 	<!--meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -24,9 +24,13 @@
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<!----------------------------- includes ----------------------------------->
-	<?php require("database_connection.php"); require("functions.php"); //require("ajax.php");?>
+	<?php
+	require("database_connection.php");
+	require("functions.php");
+	//require("ajax.php");
+	?>
 	<!------------------------------- jquery ----------------------------------->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -49,7 +53,7 @@
 			<td>Eve</td><td>Jackson</td><td>94</td><td>Lisbon</td></tr>
 		</table></div-->
 
-		<!-- --------------------------------------------------------- PHP ------------------------------------------------------------------------ -->
+		<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
 		<?php
 		/* connection to the database -> in database_connection.php */
 		$database = connectDB();
@@ -78,7 +82,6 @@
 		/* delete row at time t */
 		//deleteRow($database, 6);
 		//showTable($database);
-
 		?>
 
 		<!--?php /* -------------------------------- 1st ajax test ------------------------------------------- */
@@ -157,7 +160,7 @@
 		if(isset($_POST['action']) && !empty($_POST['action'])) {
 			$action = $_POST['action'];
 			switch($action) {
-				case 'test' : getOneValue($database, "current", 2);
+				case 'test' : getOneValue($database, "current", 4);
 				break;
 				case 'blah' : getOneValue($database, "current", 3);
 				break;
@@ -165,6 +168,10 @@
 			}
 		}
 		?>
+
+
+
+
 
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
 		<!--div id="graph-container">
@@ -176,6 +183,7 @@
 			<!--script src="graphs.js"></script>
 		</div-->
 
+		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
 		<div class="highcharts-figure">
 			<div id="container"></div>
 			<p class="highcharts-description">

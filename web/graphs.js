@@ -22,9 +22,9 @@
 $.ajax({ url: 'index.php',
   data: {action: 'test'},
   type: 'post',
-  success: function(action) {
+  success: function(output) {
     console.log("in function");
-    console.log(action);
+    console.log(output);
   }
 });
 /* ---------------------------------- 2nd AJAX test ---------------------------------------------- */

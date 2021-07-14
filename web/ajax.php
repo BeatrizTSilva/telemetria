@@ -17,6 +17,5 @@ $var = "hello";
 echo json_encode($var);
 
 closeConnection($database);
-exit();
 
 ?>

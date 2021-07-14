@@ -1,4 +1,4 @@
-/*****************************************************************************
+<!-----------------------------------------------------------------------------
  * File: index.php
  *
  * Description: html file, basically
@@ -6,7 +6,7 @@
  * Comments: CLOSE CONNECTION TO DATABASE SOONER (CURRENTLY AT THE
  * 			END OF THE FILE)
  *
-******************************************************************************/
+------------------------------------------------------------------------------>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -160,7 +160,7 @@
 		if(isset($_POST['action']) && !empty($_POST['action'])) {
 			$action = $_POST['action'];
 			switch($action) {
-				case 'test' : getOneValue($database, "current", 4);
+				case 'test' : $two_one = getOneValue($database, "current", 4);
 				break;
 				case 'blah' : getOneValue($database, "current", 3);
 				break;

@@ -6,24 +6,17 @@
  ******************************************************************************/
 
 <?php
+
 require("database_connection.php");
+$database = connectDB();
 
-if (isset($_POST['query'])) {
-    $query = "SELECT * FROM Songs WHERE song_name LIKE '{$_POST['query']}%' LIMIT 100";
-    $result = mysqli_query($connection, $query);
+/* ----------------------------------- 5th AJAX test --------------------------------- */
 
-  if (mysqli_num_rows($result) > 0) {
-      while ($res = mysqli_fetch_array($result)) {
-      echo $res['song_name']. "<br/>";
-    }
-  } else {
-    echo "
-    <div class='alert alert-danger mt-3 text-center' role='alert'>
-        Song not found
-    </div>
-    ";
-  }
-}
+//$var = getOneValue($database, "current", 5);
+$var = "hello";
+echo json_encode($var);
 
+closeConnection($database);
+exit();
 
 ?>

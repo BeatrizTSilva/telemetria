@@ -5,6 +5,18 @@
  *
  *****************************************************************************/
 
+/* --------------------------------------- 5th AJAX test ---------------------------------------- */
+var ajax = new XMLHttpRequest();
+    ajax.open("GET", "ajax.php", true);
+    ajax.send();
+
+ajax.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+      var data = JSON.parse(this.responseText);
+      console.log(data);
+  }
+}
+
 /* --------------------------------------- 4th AJAX test ---------------------------------------- */
 /*$.ajax({
   type: "POST",
@@ -19,14 +31,14 @@
 });*/
 
 /* ---------------------------------- 3rd AJAX test ---------------------------------------------- */
-$.ajax({ url: 'index.php',
+/*$.ajax({ url: 'index.php',
   data: {action: 'test'},
   type: 'post',
-  success: function(output) {
+  success: function(two_one) {
     console.log("in function");
-    console.log(output);
+    console.log(two_one);
   }
-});
+});*/
 /* ---------------------------------- 2nd AJAX test ---------------------------------------------- */
 /*var ajax = new XMLHttpRequest();
 ajax.open("GET", "my-info.php", true);

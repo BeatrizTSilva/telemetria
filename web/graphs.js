@@ -6,16 +6,17 @@
  *****************************************************************************/
 
 /* --------------------------------------- 5th AJAX test ---------------------------------------- */
-var ajax = new XMLHttpRequest();
+/*var ajax = new XMLHttpRequest();
     ajax.open("GET", "ajax.php", true);
     ajax.send();
 
 ajax.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
       var data = JSON.parse(this.responseText);
+      console.log(this.responseText);
       console.log(data);
   }
-}
+}*/
 
 /* --------------------------------------- 4th AJAX test ---------------------------------------- */
 /*$.ajax({

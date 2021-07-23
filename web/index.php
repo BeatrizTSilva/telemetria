@@ -148,14 +148,6 @@
 			});
 		</script-->
 
-
-		<!--?php /* ---------------------------------- 4th AJAX test -------------------------------------------- */
-		if(isset($_POST['action']) && !empty($_POST['action'])) {
-			echo json_encode(array("blablabla"=>$variable));
-		}
-		?-->
-
-
 		<!--?php /* ---------------------------------- 3rd AJAX test -------------------------------------------- */
 		if(isset($_POST['action']) && !empty($_POST['action'])) {
 			$action = $_POST['action'];
@@ -169,9 +161,67 @@
 		}
 		?-->
 
+		<!--?php /* ---------------------------------- 4th AJAX test -------------------------------------------- */
+		if(isset($_POST['action']) && !empty($_POST['action'])) {
+			echo json_encode(array("blablabla"=>$variable));
+		}
+		?-->
+
+		<!-- ---------------------------------- 5th AJAX test ---------------------------------------------->
+		<!--table>
+			<tr>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>Job title</th>
+			</tr>
+
+			<tbody id="data"></tbody>
+		</table-->
+
+		<!--script>
+			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "ajax.php", true);
+			ajax.send();
+
+			ajax.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					var data = JSON.parse(this.responseText);
+					console.log(data);
+
+					var html = "";
+					for(var a = 0; a < data.length; a++) {
+						var firstName = data[a].time;
+						var lastName = data[a].voltage;
+						var jobTitle = data[a].current;
+
+						html += "<tr>";
+							html += "<td>" + firstName + "</td>";
+							html += "<td>" + lastName + "</td>";
+							html += "<td>" + jobTitle + "</td>";
+						html += "</tr>";
+					}
+					document.getElementById("data").innerHTML += html;
+				}
+			};
+		</script-->
+
+
+		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
+		<table>
+			<tr>
+			<th>Time</th>
+			<th>Voltage</th>
+			<th>Current</th>
+			</tr>
+			<tbody id="data"></tbody>
+			</table>
+		<?php
 
 
 
+
+
+		?>
 
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
 		<!--div id="graph-container">

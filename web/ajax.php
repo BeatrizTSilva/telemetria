@@ -16,6 +16,6 @@ require("database_connection.php");
 //echo json_encode($data);
 
 $data = '{"result":true,"count":1}';
-echo json_encode($data);
+json_encode($data);
 
 ?>

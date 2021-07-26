@@ -179,11 +179,22 @@
 
 			var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
-			ajax.send();
-			ajax.onreadystatechange = function() {
+			ajax.onreadystatechange = handleRequestStateChange;
+			ajax.send(null);
+
+			function handleRequestStateChange(){ //this will work instead of var funcName=function(){}
+    			if(ajax.readyState == 4 && ajax.status == 200){
+      				console.log("Loaded");
+					console.log(ajax);
+					console.log("Result is: " + ajax.result);
+    			}
+  			}
+
+
+			/*ajax.onreadystatechange = function() {
         		if (this.readyState == 4 && this.status == 200) {
             		var data = JSON.stringify(this.responseText);
-            		console.log("Data in index.php is: " + data);
+            		console.log("Data in index.php is: " + data);*/
 
 					/*var html = "";
 					var newValue = data.current;
@@ -194,8 +205,8 @@
 
 					document.getElementById("data").innerHTML += html;*/
 
-    			}
-			};
+    			//}
+			//};
 
 			/* ---------- JSON.parse ----------- */
 			/*var response = '{"result":true,"count":1}';

@@ -167,54 +167,50 @@
 		}
 		?-->
 
-		<!-- ---------------------------------- 5th AJAX test ---------------------------------------------->
-		<!--table>
+		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
+		<table>
 			<tr>
-			<th>First name</th>
-			<th>Last name</th>
-			<th>Job title</th>
+			<th>Current</th>
 			</tr>
-
 			<tbody id="data"></tbody>
-		</table-->
+		</table>
 
-		<!--script>
-			var ajax = new XMLHttpRequest();
+		<script>
+
+			/*var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
 			ajax.send();
 
 			ajax.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-					var data = JSON.parse(this.responseText);
-					console.log(data);
+        		if (this.readyState == 4 && this.status == 200) {
+            		var data = JSON.parse(this.responseText);
+            		console.log(data);
 
 					var html = "";
-					for(var a = 0; a < data.length; a++) {
-						var firstName = data[a].time;
-						var lastName = data[a].voltage;
-						var jobTitle = data[a].current;
+					var newValue = data.current;
 
-						html += "<tr>";
-							html += "<td>" + firstName + "</td>";
-							html += "<td>" + lastName + "</td>";
-							html += "<td>" + jobTitle + "</td>";
-						html += "</tr>";
-					}
+					html += "<tr>";
+                    html += "<td>" + current + "</td>";
+                	html += "</tr>";
+
 					document.getElementById("data").innerHTML += html;
-				}
-			};
-		</script-->
 
+    			}
+			};*/
 
-		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
-		<table>
-			<tr>
-			<th>Time</th>
-			<th>Voltage</th>
-			<th>Current</th>
-			</tr>
-			<tbody id="data"></tbody>
-			</table>
+			console.log("in index.php");
+
+			var response = '{"result":true,"count":1}';
+			const parsed_var = JSON.parse(response);
+			const stringed_var = JSON.stringify(response);
+			console.log(response);
+			console.log("Parsed variable is: " + parsed_var);
+			console.log("Result (from parsed variable) is: " + parsed_var.result);
+			console.log("Stringed variable is: " + stringed_var);
+			const myarray = JSON.parse(one);
+			console.log(myarray);
+
+		</script>
 		<?php
 
 

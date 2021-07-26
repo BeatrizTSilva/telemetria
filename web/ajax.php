@@ -7,14 +7,15 @@
 
 <?php
 require("database_connection.php");
-//$database = connectDB();
-//$var = getOneValue($database, "current", 5);
+$database = connectDB();
 
 /* ----------------------------------- 6th AJAX test --------------------------------- */
+//$data = getOneValue($database, "current", 5);
 
+//echo json_encode($data);
 
 
 
 closeConnection($database);
-exit();
+//exit();
 ?>

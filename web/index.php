@@ -177,45 +177,37 @@
 
 		<script>
 
-			/*var ajax = new XMLHttpRequest();
+			var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
 			ajax.send();
-
 			ajax.onreadystatechange = function() {
         		if (this.readyState == 4 && this.status == 200) {
-            		var data = JSON.parse(this.responseText);
-            		console.log(data);
+            		var data = JSON.stringify(this.responseText);
+            		console.log("Data in index.php is: " + data);
 
-					var html = "";
+					/*var html = "";
 					var newValue = data.current;
 
 					html += "<tr>";
                     html += "<td>" + current + "</td>";
                 	html += "</tr>";
 
-					document.getElementById("data").innerHTML += html;
+					document.getElementById("data").innerHTML += html;*/
 
     			}
-			};*/
+			};
 
-			console.log("in index.php");
-
-			var response = '{"result":true,"count":1}';
+			/* ---------- JSON.parse ----------- */
+			/*var response = '{"result":true,"count":1}';
 			const parsed_var = JSON.parse(response);
 			const stringed_var = JSON.stringify(response);
 			console.log(response);
 			console.log("Parsed variable is: " + parsed_var);
 			console.log("Result (from parsed variable) is: " + parsed_var.result);
-			console.log("Stringed variable is: " + stringed_var);
+			console.log("Stringed variable is: " + stringed_var);*/
 
 		</script>
-		<?php
 
-
-
-
-
-		?>
 
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
 		<!--div id="graph-container">

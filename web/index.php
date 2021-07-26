@@ -207,8 +207,6 @@
 			console.log("Parsed variable is: " + parsed_var);
 			console.log("Result (from parsed variable) is: " + parsed_var.result);
 			console.log("Stringed variable is: " + stringed_var);
-			const myarray = JSON.parse(one);
-			console.log(myarray);
 
 		</script>
 		<?php

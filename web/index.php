@@ -27,9 +27,9 @@
 	<?php
 	require("database_connection.php");
 	require("functions.php");
-	//require("ajax.php");
+	require("ajax.php");
 	?>
-	<!------------------------------- jquery ----------------------------------->
+	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -170,25 +170,51 @@
 		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
 		<table>
 			<tr>
+			<th>Time</th>
+			<th>Voltage</th>
 			<th>Current</th>
+			<th>Speed</th>
+			<th>Temperature</th>
+			<th>Coordinates1</th>
+			<th>Coordinates2</th>
 			</tr>
 			<tbody id="data"></tbody>
 		</table>
 
 		<script>
-
+			console.log("inside javascript script");
 			var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
-			ajax.onreadystatechange = handleRequestStateChange;
-			ajax.send(null);
+			ajax.send();
 
-			function handleRequestStateChange(){ //this will work instead of var funcName=function(){}
-    			if(ajax.readyState == 4 && ajax.status == 200){
-      				console.log("Loaded");
-					console.log(ajax);
-					console.log("Result is: " + ajax.result);
+			ajax.onreadystatechange = function() {
+        		if (this.readyState == 4 && this.status == 200) {
+            		var data = JSON.parse(this.responseText);
+            		console.log(data);
+
+					var html = "";
+					for(var a = 0; a < data.length; a++) {
+						var time = data[a].time;
+						var voltage = data[a].voltage;
+						var current = data[a].current;
+						var speed = data[a].speed;
+						var temperature = data[a].temperature;
+						var coordinates1 = data[a].coordinates1;
+						var coordinates2 = data[a].coordinates2;
+
+						html += "<tr>";
+							html += "<td>" + time + "</td>";
+							html += "<td>" + voltage + "</td>";
+							html += "<td>" + current + "</td>";
+							html += "<td>" + speed + "</td>";
+							html += "<td>" + temperature + "</td>";
+							html += "<td>" + coordinates1 + "</td>";
+							html += "<td>" + coordinates2 + "</td>";
+						html += "</tr>";
+					}
+					document.getElementById("data").innerHTML += html;
     			}
-  			}
+  			};
 
 
 			/*ajax.onreadystatechange = function() {
@@ -215,7 +241,10 @@
 			console.log(response);
 			console.log("Parsed variable is: " + parsed_var);
 			console.log("Result (from parsed variable) is: " + parsed_var.result);
-			console.log("Stringed variable is: " + stringed_var);*/
+			console.log("Stringed variable is: " + stringed_var);
+			var data = JSON.parse(new_var);
+			console.log(new_var);
+			console.log("Result is: " + new_var.result);*/
 
 		</script>
 
@@ -244,7 +273,7 @@
 		<!--div id="temperature_graph" id="one-graph"></div>
 		<script src="graphs.js"></script-->
 
-		<?php closeConnection($database); ?>
+		<!--?php closeConnection($database); ?-->
 
 
 	</div>

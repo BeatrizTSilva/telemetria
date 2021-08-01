@@ -114,7 +114,7 @@ function showTable($database){
 	$result = pg_query($database,"SELECT * FROM telemetria ORDER BY t");
 	$i = 1;
 	echo "<table>";
-	while($row=pg_fetch_assoc($result)){
+	while($row = pg_fetch_assoc($result)){
 		echo "<tr>";
 		echo "<td align='center' width='100'> t =" . $row['t'] . "</td>";
 		echo "<td align='center' width='100'>" . $row['voltage'] . "</td>";

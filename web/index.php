@@ -39,14 +39,13 @@
 		<div id="clockbox">
 			<script src="clock.js"></script>
 		</div>
-		<a id="web-design" href="123web-index.php" target="_blank">Web Design</a>
 		<p id="github-code">
         	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
       	</p>
 	</div>
 
 	<div id="main-container">
-	<a class="navbar_link" id="projects" href="projects.php#sectionProjects" target="_blank">Projects</a>
+	<a id="web-design" class="button-web" href="123web-index.php" target="_blank">Web Design PSEM</a>
 
 		<!-- -------------------------------------------------------------- table ---------------------------------------------------------------- -->
 		<!--div id="table"><table><tr>

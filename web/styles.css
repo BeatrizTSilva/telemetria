@@ -20,8 +20,11 @@ body{ /* for everything */
 #github-code a { /* color of the link */
 	color:white;
 }
-#web-design {
-	color:white; float:right; margin-right:0.65rem; margin-bottom: 0.1rem; margin-top: 0.4rem;
+.button-web { /* button for redirecting to the web desing page */
+	font: bold; text-decoration: none; background-color: #89c45f; padding: 17px 10px 17px 10px;
+	/*border-top: 1px solid #D3D3D3; border-right: 1px solid #D3D3D3;*/ float:right;
+  	/*border-bottom: 1px solid #D3D3D3; border-left: 1px solid #D3D3D3;*/ box-shadow:0px 2px 2px #D3D3D3;
+	color:white; margin-right:1rem; margin-top: 1rem; border-radius: 8px; font-size: 1.7rem;
 }
 #psem-logo { /* logo */
 	display: block; width: 5rem; height: 2.1rem; float: left;

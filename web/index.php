@@ -27,7 +27,7 @@
 	<?php
 	require("database_connection.php");
 	require("functions.php");
-	require("ajax.php");
+	//require("ajax.php");
 	?>
 	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,12 +39,14 @@
 		<div id="clockbox">
 			<script src="clock.js"></script>
 		</div>
+		<a id="web-design" href="123web-index.php" target="_blank">Web Design</a>
 		<p id="github-code">
         	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
       	</p>
 	</div>
 
 	<div id="main-container">
+	<a class="navbar_link" id="projects" href="projects.php#sectionProjects" target="_blank">Projects</a>
 
 		<!-- -------------------------------------------------------------- table ---------------------------------------------------------------- -->
 		<!--div id="table"><table><tr>
@@ -185,10 +187,13 @@
 			console.log("inside javascript script");
 			var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
+			console.log("it got got");
 			ajax.send();
+			console.log("and sent");
 
 			ajax.onreadystatechange = function() {
         		if (this.readyState == 4 && this.status == 200) {
+					console.log("inside readyState");
             		var data = JSON.parse(this.responseText);
             		console.log(data);
 

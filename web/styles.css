@@ -20,7 +20,7 @@ body{ /* for everything */
 #github-code a { /* color of the link */
 	color:white;
 }
-.button-web { /* button for redirecting to the web desing page */
+.button-web-design { /* button for redirecting to the web desing page */
 	font: bold; text-decoration: none; background-color: #89c45f; padding: 17px 10px 17px 10px;
 	/*border-top: 1px solid #D3D3D3; border-right: 1px solid #D3D3D3;*/ float:right;
   	/*border-bottom: 1px solid #D3D3D3; border-left: 1px solid #D3D3D3;*/ box-shadow:0px 2px 2px #D3D3D3;

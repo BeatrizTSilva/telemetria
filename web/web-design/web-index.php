@@ -14,16 +14,17 @@
 
 		<!-- main -->
 		<main>
+			<h1 id="first-title" style="color: purple">O Pico sobe até aos 2351m</h1>
+			<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
+			<img src="imgs/pico.jpg" style="width:30rem; height:25rem;" alt="Pico">
+			</a>
 
-		<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
-		<img src="imgs/pico.jpg"
-			style="width:30rem; height:25rem;" alt="Pico">
-		</a>
+			<p>A vaca da montanha nada teme</p>
 
 			<br>
 			<hr>
 
-			<div style="color: black;">
+			<div style="color: green;">
 				<h2>Estes são os meus amigos da vida airada</h2>
 
 				<a href="https://web.tecnico.ulisboa.pt/ist190209/" target="_blank">Alexandre Freira</a>

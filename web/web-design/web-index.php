@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="This Website is mearly a test to understand the basic structure of the php file">
 
-		<title>Novo Título</title>
+		<title>Title</title>
 	</head>
 
 
@@ -15,15 +15,10 @@
 		<!-- main -->
 		<main>
 
-
-			<div>
-				<h4>Isto é um iFrame btw</h4>
-				<!-- o conteudo dum iFrame (que está dentro das tags) é a mensagem de erro que nós queremos mostrar caso não abra -->
-				<iframe src="http://www.rubiksplace.com/speedcubing/F2L-algorithms/" frameborder="0" height="300" width="400">
-					Can't display - error message
-				</iframe>
-				<!-- iFrames foram descontinuados no chrome! -->
-			</div>
+		<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
+		<img src="imgs/pico.jpg"
+			style="width:30rem; height:25rem;" alt="Pico">
+		</a>
 
 			<br>
 			<hr>

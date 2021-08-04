@@ -45,7 +45,7 @@
 	</div>
 
 	<div id="main-container">
-	<a id="web-design" class="button-web" href="/web-design/web-index.php" target="_blank">Web Design PSEM</a>
+	<a id="web-design" class="button-web" href="web-design/web-index.php" target="_blank">Web Design PSEM</a>
 
 		<!-- -------------------------------------------------------------- table ---------------------------------------------------------------- -->
 		<!--div id="table"><table><tr>

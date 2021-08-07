@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="This Website is mearly a test to understand the basic structure of the php file">
 
-		<title>Title</title>
+		<title>We're really in it now</title>
 	</head>
 
 
@@ -14,6 +14,84 @@
 
 		<!-- main -->
 		<main>
+
+
+		<div id="table">
+				<table style="background-color:green;">
+				<caption>Forms Table</caption>
+				<thead>
+				<tr>
+					<th>
+						<form>
+							<label for="fname">Nome:</label><br>
+							<input type="text" id="name" name="name" value="o teu nome"><br>
+							<!--input type="submit" value="Submit"-->
+						</form>
+					</th>
+					<th>
+						<form>
+							<label for="lname">Animal:</label><br>
+							<input type="text" id="animal" name="animal" value="cavalo"><br>
+							<!--input type="submit" value="Submit"-->
+						</form>
+					</th>
+					<th>
+						<form>
+							<label for="lname">Podes dar uma festinha?</label><br>
+							<input type="checkbox" id="" name="lname"><br>
+						</form>
+					</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				<th>
+					<form>
+						<input type="radio" id="This" name="choose" value="This">
+						<label for="html">This one?</label><br>
+					</form>
+				</th>
+				<th>
+					<form>
+						<input type="radio" id="that" name="choose" value="That">
+						<label for="css">This one?</label><br>
+					</form>
+				</th>
+				<th>
+					<form>
+						<input type="radio" id="Nope" name="choose" value="Nope">
+						<label for="javascript">Nope</label>
+					</form>
+				</th>
+				</tr>
+				<tr>
+				<th>
+					<div class="slidecontainer">
+						<label>Left</label><br>
+						<input type="range" min="1" max="100" value="25" class="slider" id="myRange">
+					</div>
+				</th>
+				<th>
+					<form>
+						<label for="email">Enter your email:</label><br>
+						<input type="email" id="email" name="email" value="your email">
+					</form>
+				</th>
+				<th>
+					<div class="slidecontainer">
+						<label>Right</label><br>
+						<input type="range" min="1" max="100" value="75" class="slider" id="myRange">
+					</div>
+				</th>
+				</tr>
+				</tbody>
+				</table>
+
+			</div>
+
+			<br>
+			<hr>
+
 			<h1 id="first-title" style="color: purple">O Pico sobe até aos 2351m</h1>
 			<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
 			<img src="imgs/pico.jpg" style="width:30rem; height:25rem;" alt="Pico">
@@ -43,6 +121,11 @@
 
 				<img src="https://wallpaperaccess.com/full/240618.jpg" width="30%">
 			</div>
+
+
+
+
+
 
 		</main>
 

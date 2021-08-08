@@ -15,9 +15,9 @@ $data = array();
 while ($row = pg_fetch_assoc($result))
 {
     echo array_push($data, $row);
-
 }
 
+echo "before json encode";
 echo json_encode($data);
 //exit();
 closeConnection($database);

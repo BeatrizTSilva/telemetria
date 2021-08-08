@@ -84,10 +84,10 @@
 			<th>Time</th>
 			<th>Voltage</th>
 			<th>Current</th>
-			<th>Speed</th>
 			<th>Temperature</th>
 			<th>Coordinates1</th>
 			<th>Coordinates2</th>
+			<th>Speed</th>
 			</tr>
 			<tbody id="data"></tbody>
 		</table>
@@ -102,6 +102,13 @@
 			ajax.onreadystatechange = function() {
 				console.log("we are readystatechange");
         		if (this.readyState == 4 && this.status == 200) {
+					/* readyState
+						0 UNSENT - open()has not been called yet
+						1 OPENED - send()has not been called yet
+						2 HEADERS_RECEIVED - send() has been called, and headers and status are available
+						3 LOADING Downloading; - responseText holds partial data
+						4 - The operation is complete
+					*/
 					console.log("inside readyState");
             		var data = JSON.parse(this.responseText);
             		console.log(data);
@@ -112,19 +119,19 @@
 						var time = data[a].time;
 						var voltage = data[a].voltage;
 						var current = data[a].current;
-						var speed = data[a].speed;
 						var temperature = data[a].temperature;
 						var coordinates1 = data[a].coordinates1;
 						var coordinates2 = data[a].coordinates2;
+						var speed = data[a].speed;
 
 						html += "<tr>";
 							html += "<td>" + time + "</td>";
 							html += "<td>" + voltage + "</td>";
 							html += "<td>" + current + "</td>";
-							html += "<td>" + speed + "</td>";
 							html += "<td>" + temperature + "</td>";
 							html += "<td>" + coordinates1 + "</td>";
 							html += "<td>" + coordinates2 + "</td>";
+							html += "<td>" + speed + "</td>";
 						html += "</tr>";
 					}
 					document.getElementById("data").innerHTML += html;

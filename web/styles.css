@@ -51,6 +51,7 @@ body{ /* for everything */
 	float:left;
 }
 
+/* graphs (still in progress) */
 
 .highcharts-figure, .highcharts-data-table table {
 	min-width: 320px;
@@ -87,6 +88,8 @@ body{ /* for everything */
   .highcharts-data-table tr:hover {
 	background: #f1f7ff;
   }
+
+
 
 
 /* - - - - - - NOT IN USE AT THE MOMENT - - - - - - */

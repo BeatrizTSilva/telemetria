@@ -27,7 +27,7 @@
 	<?php
 	require("database_connection.php");
 	require("functions.php");
-	//require("ajax.php");
+	require("ajax.php");
 	?>
 	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -47,15 +47,8 @@
 	<div id="main-container">
 	<a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a>
 
-		<!-- -------------------------------------------------------------- table ---------------------------------------------------------------- -->
-		<!--div id="table"><table><tr>
-			<th>First name</th><th>Last name</th><th>Age</th><th>City</th></tr><tr>
-			<td>Jill</td><td>Smith</td><td>50</td><td>Lisbon</td></tr><tr>
-			<td>Eve</td><td>Jackson</td><td>94</td><td>Lisbon</td></tr>
-		</table></div-->
-
 		<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
-		<?php
+		<!--?php
 		/* connection to the database -> in database_connection.php */
 		$database = connectDB();
 
@@ -83,89 +76,6 @@
 		/* delete row at time t */
 		//deleteRow($database, 6);
 		//showTable($database);
-		?>
-
-		<!--?php /* -------------------------------- 1st ajax test ------------------------------------------- */
-		//lastID -> bulk of data using this as input
-		// get user input
-		$lastID = intval($_GET['lastid']);
-
-		// FETCH RECORDS FROM DATABASE HERE
-		// $sql = "SELECT * FROM `graph` WHERE `id` > " . $lastID;
-
-		// CREATE DUMMY CONTENT
-		$data = array();
-		for($i = $lastID; $i < $lastID + 50; $i++) {
-			array_push($data, array(
-				'id'        => $i,
-				'position'  => array(
-					'x' => $i,
-					'y' => mt_rand(0, 10) // random value between 0 and 10
-				)
-			));
-		}
-		// END CREATING DUMMY CONTENT
-
-		// create response
-		$json = array(
-			'lastID'    => $data[count($data) - 1]['id'],
-			'data'      => $data
-		);
-
-		// display response
-		echo json_encode($json);
-		?-->
-
-		<!--?php /* ---------------------------------- 2nd AJAX test -------------------------------------------- */
-		echo "<br> Connection to DB in 2nd test <br>";
-		$db = connectDB();
-		$data = dataArray($db, 1);
-		echo "Echo in php file " .json_encode($data);
-		echo "<br> Closed in 2nd test ";
-		closeConnection($db);
-		//exit();
-		?-->
-
-		<!--script type="text/javascript">
-			fetch('/alldata');
-		</script-->
-
-		<!-- something for ajax -->
-		<!--script type="text/javascript">
-			console.log("Hello from the script");
-			const data = {whateveriwanttosend};
-			const options = {
-				method:'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify(data)
-			};
-			fetch('/api', options);
-
-			//on the js file i should have:
-			app.post('/api', (request, response) => {
-				console.log(request);
-			});
-		</script-->
-
-		<!--?php /* ---------------------------------- 3rd AJAX test -------------------------------------------- */
-		if(isset($_POST['action']) && !empty($_POST['action'])) {
-			$action = $_POST['action'];
-			switch($action) {
-				case 'test' : $two_one = getOneValue($database, "current", 4);
-				break;
-				case 'blah' : getOneValue($database, "current", 3);
-				break;
-				// ...etc...
-			}
-		}
-		?-->
-
-		<!--?php /* ---------------------------------- 4th AJAX test -------------------------------------------- */
-		if(isset($_POST['action']) && !empty($_POST['action'])) {
-			echo json_encode(array("blablabla"=>$variable));
-		}
 		?-->
 
 		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
@@ -183,7 +93,6 @@
 		</table>
 
 		<script>
-			console.log("inside javascript script");
 			var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
 			console.log("it got got");
@@ -191,6 +100,7 @@
 			console.log("and sent");
 
 			ajax.onreadystatechange = function() {
+				console.log("we are readystatechange");
         		if (this.readyState == 4 && this.status == 200) {
 					console.log("inside readyState");
             		var data = JSON.parse(this.responseText);
@@ -198,6 +108,7 @@
 
 					var html = "";
 					for(var a = 0; a < data.length; a++) {
+						console.log("a is" + a);
 						var time = data[a].time;
 						var voltage = data[a].voltage;
 						var current = data[a].current;
@@ -218,25 +129,8 @@
 					}
 					document.getElementById("data").innerHTML += html;
     			}
+				console.log("readyState is " + this.readyState + " and status is " + this.status);
   			};
-
-
-			/*ajax.onreadystatechange = function() {
-        		if (this.readyState == 4 && this.status == 200) {
-            		var data = JSON.stringify(this.responseText);
-            		console.log("Data in index.php is: " + data);*/
-
-					/*var html = "";
-					var newValue = data.current;
-
-					html += "<tr>";
-                    html += "<td>" + current + "</td>";
-                	html += "</tr>";
-
-					document.getElementById("data").innerHTML += html;*/
-
-    			//}
-			//};
 
 			/* ---------- JSON.parse ----------- */
 			/*var response = '{"result":true,"count":1}';

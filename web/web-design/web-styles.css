@@ -39,15 +39,36 @@
     width: 10%;
 }
 .yandex-search-container {
-    /*float: right;*/
-    display: block;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-    cursor: pointer;
-    width: 16rem;
+    display: block; padding: 2px; cursor: pointer;
 }
 #yandex-search-icon {
-    width: 2.5%;
+    width: 2.5%; border: none;
+
+    text-decoration: none;
+}
+#search-form-div {
+    border: 2px solid yellow; border-radius: 5.2px; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+}
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+input {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }

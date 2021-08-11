@@ -21,8 +21,8 @@
 				<h6 id="yandex-text">Yandex</h6>
 			</div>
 			<div class="yandex-search-container">
-				<form action="/action_page.php">
-					<input type="text" placeholder="Search..." name="search">
+				<form id="search-form-div" action="/action_page.php">
+					<input type="text" placeholder="Finds many things" name="search">
 					<button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
 					</button>
 				</form>

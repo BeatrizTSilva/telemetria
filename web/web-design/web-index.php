@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="description" content="This Website is mearly a test to understand the basic structure of the php file">
-
+		<link rel="stylesheet" type="text/css" href="web-styles.css">
 		<title>We're really in it now</title>
 	</head>
 
@@ -17,7 +17,7 @@
 
 
 		<div id="table">
-				<table style="background-color:green;">
+				<table>
 				<caption>Forms Table</caption>
 				<thead>
 				<tr>
@@ -92,7 +92,7 @@
 			<br>
 			<hr>
 
-			<h1 id="first-title" style="color: purple">O Pico sobe até aos 2351m</h1>
+			<h1 id="first-title">O Pico sobe até aos 2351m</h1>
 			<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
 			<img src="imgs/pico.jpg" style="width:30rem; height:25rem;" alt="Pico">
 			</a>
@@ -102,7 +102,7 @@
 			<br>
 			<hr>
 
-			<div style="color: green;">
+			<div id="amigos">
 				<h2>Estes são os meus amigos da vida airada</h2>
 
 				<a href="https://web.tecnico.ulisboa.pt/ist190209/" target="_blank">Alexandre Freira</a>
@@ -116,9 +116,8 @@
 			</div>
 
 
-			<div style="color: black">
+			<div id="foto-amigos">
 				<h3>Aqui está uma foto deles:</h3>
-
 				<img src="https://wallpaperaccess.com/full/240618.jpg" width="30%">
 			</div>
 

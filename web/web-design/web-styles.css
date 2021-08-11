@@ -1,0 +1,17 @@
+* {
+	box-sizing: border-box;
+    background-color: blue;
+}
+
+#table {
+    background-color:green;
+}
+#first-title {
+    color: purple;
+}
+#amigos {
+    color: green;
+}
+#foto-amigos {
+    color: black;
+}

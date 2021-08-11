@@ -15,18 +15,26 @@
 		<!-- main -->
 		<main>
 
-		<div id="search-bar">
+		<div id="yandex-search-bar">
 
-			<img src="imgs/yandex-rus.png" width="30%">
-			<h6 id="yandex">Yandex</h6>
+			<div id="yandexes">
+				<img id="yandex-img" src="imgs/yandex-rus.png">
+				<h6 id="yandex-text">Yandex</h6>
+			</div>
+			<div class="yandex-search-container">
+				<form action="/action_page.php">
+					<input type="text" placeholder="Search..." name="search">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+				</form>
+			</div>
 
 
 		</div>
 
-		<span>
-
-		</span>
-
+		<br>
+		<hr>
 
 		<div class="centered-div" id="table">
 				<table>

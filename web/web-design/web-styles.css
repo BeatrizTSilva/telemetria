@@ -26,9 +26,24 @@
 #foto-amigos {
     color: black;
 }
-#search-bar {
-    font-family: Arial, Helvetica, sans-serif;
+#yandex-search-bar {
+    font-family: Arial, Helvetica, sans-serif; display: block;
 }
-#yandex {
-
+#yandexes {
+    display: block;
+}
+#yandex-text {
+    margin: auto; padding-bottom: 2rem;
+}
+#yandex-img {
+    width: 10%;
+}
+.yandex-search-container {
+    /*float: right;*/
+    display: block;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    cursor: pointer;
 }

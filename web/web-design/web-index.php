@@ -15,8 +15,20 @@
 		<!-- main -->
 		<main>
 
+		<div id="search-bar">
 
-		<div id="table">
+			<img src="imgs/yandex-rus.png" width="30%">
+			<h6 id="yandex">Yandex</h6>
+
+
+		</div>
+
+		<span>
+
+		</span>
+
+
+		<div class="centered-div" id="table">
 				<table>
 				<caption>Forms Table</caption>
 				<thead>
@@ -86,21 +98,17 @@
 				</tr>
 				</tbody>
 				</table>
-
 			</div>
 
-			<br>
-			<hr>
+			<div class="centered-div" id="pico-div">
+				<h1 id="first-title">O Pico sobe até aos 2351m</h1>
+				<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
+					<img src="imgs/pico.jpg" id="imagem-pico" alt="Pico">
+				</a>
 
-			<h1 id="first-title">O Pico sobe até aos 2351m</h1>
-			<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
-			<img src="imgs/pico.jpg" style="width:30rem; height:25rem;" alt="Pico">
-			</a>
+				<p id="vaca">A vaca da montanha nada teme</p>
 
-			<p>A vaca da montanha nada teme</p>
-
-			<br>
-			<hr>
+			</div>
 
 			<div id="amigos">
 				<h2>Estes são os meus amigos da vida airada</h2>

@@ -1,17 +1,34 @@
 * {
 	box-sizing: border-box;
-    background-color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 #table {
-    background-color:green;
+    background-color:green; margin: 0 auto;
+}
+.centered-div {
+    text-align: center; display: block; margin-left: auto; margin-right: auto;
+}
+#pico-div {
+    background-color:rgb(225, 225, 225);
 }
 #first-title {
-    color: purple;
+    color: purple; margin-bottom: 1.5rem; padding-top: 1.5rem;
+}
+#imagem-pico {
+    width:30rem; height:25rem;
+}
+#vaca {
+    padding-bottom: 1.5rem;
 }
 #amigos {
     color: green;
 }
 #foto-amigos {
     color: black;
+}
+#search-bar {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#yandex {
+
 }

@@ -15,32 +15,13 @@
 		<!-- main -->
 		<main>
 
-		<!--div class="yandex-search-bar">
-		<table id="yandex-table">
-		<thead>
-		<tr>
-			<th id="yandexes">
-				<img id="yandex-img" src="imgs/yandex-rus.png">
-			</th>
-			<th>
-				<form id="search-form-div" action="/action_page.php">
-					<input id="yandex-search-input"type="text" placeholder="Finds many things" name="search">
-					<button id="yandex-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
-					</button>
-				</form>
-			</th>
-		</tr>
-		</thead>
-		</table>
-		</div-->
-
 		<div class="yandex-search-bar">
 			<div id="yandex-rus">
 				<img id="yandex-img" src="imgs/yandex-rus.png">
 			</div>
 			<div id="search-yandex">
 				<form id="search-form" action="/action_page.php">
-					<input id="yandex-search-input"type="text" placeholder="Finds many things" name="search">
+					<input id="yandex-search-input" type="text" placeholder="Finds many things" name="search">
 					<button id="yandex-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
 					</button>
 				</form>

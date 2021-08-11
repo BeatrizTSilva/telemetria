@@ -1,6 +1,5 @@
 * {
-	box-sizing: border-box; padding: 0; margin: 0.1rem;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	box-sizing: border-box; padding: 0; margin: 0.1rem; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #table {
     background-color:green; margin: 0 auto; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
@@ -30,32 +29,22 @@
     display: flex; justify-content: center; align-items: center; font-family: Arial, Helvetica, sans-serif;
 }
 #yandex-rus {
-    margin-right:0.2rem; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+    margin-right: 1.1rem; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
 }
 #yandex-img {
     width: 8rem; display: flex;
 }
 #search-form {
-    border: 2px solid #fc0; border-radius: 6px;
-    width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+    border: 2px solid #fc0; border-radius: 6px; margin-top: 0.7rem;
+    /* width: fit-content; width:-webkit-fit-content; width:-moz-fit-content; */
 }
 #search-yandex {
     margin-left: 0;
 }
 #yandex-button {
-    background-color: #fc0;
-    border: none;
-    color: black;
-    /* text-align: center; */
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    background-color: #fc0; border: none; color: black; text-decoration: none; display: inline-block; font-size: 16px;
+    height: 2.2rem; width: 5rem; margin: 0 0 0 0; padding: 0 0 0 0;
 }
 #yandex-search-input {
-    border: none;
-    text-align: left;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    width: 20rem;
+    border: none; text-align: left; display: inline-block; font-size: 20px; cursor: pointer; width: 30rem; height: 2.2rem;
 }

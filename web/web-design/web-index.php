@@ -15,26 +15,44 @@
 		<!-- main -->
 		<main>
 
-		<div id="yandex-search-bar">
-			<div id="yandexes">
+		<!--div class="yandex-search-bar">
+		<table id="yandex-table">
+		<thead>
+		<tr>
+			<th id="yandexes">
 				<img id="yandex-img" src="imgs/yandex-rus.png">
-				<h6 id="yandex-text">Yandex</h6>
-			</div>
-			<div class="yandex-search-container">
+			</th>
+			<th>
 				<form id="search-form-div" action="/action_page.php">
-					<input type="text" placeholder="Finds many things" name="search">
-					<button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+					<input id="yandex-search-input"type="text" placeholder="Finds many things" name="search">
+					<button id="yandex-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+					</button>
+				</form>
+			</th>
+		</tr>
+		</thead>
+		</table>
+		</div-->
+
+		<div class="yandex-search-bar">
+			<div id="yandex-rus">
+				<img id="yandex-img" src="imgs/yandex-rus.png">
+			</div>
+			<div id="search-yandex">
+				<form id="search-form" action="/action_page.php">
+					<input id="yandex-search-input"type="text" placeholder="Finds many things" name="search">
+					<button id="yandex-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
 					</button>
 				</form>
 			</div>
-
-
 		</div>
+
+
 
 		<br>
 		<hr>
 
-		<div class="centered-div" id="table">
+		<div id="table">
 				<table>
 				<caption>Forms Table</caption>
 				<thead>

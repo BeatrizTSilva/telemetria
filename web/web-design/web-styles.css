@@ -46,4 +46,8 @@
     margin-right: 16px;
     font-size: 17px;
     cursor: pointer;
+    width: 16rem;
+}
+#yandex-search-icon {
+    width: 2.5%;
 }

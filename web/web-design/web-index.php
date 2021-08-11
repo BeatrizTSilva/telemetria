@@ -5,10 +5,10 @@
 		<meta charset="UTF-8">
 		<meta name="description" content="This Website is mearly a test to understand the basic structure of the php file">
 		<link rel="stylesheet" type="text/css" href="web-styles.css">
+		<!-- for icon -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<title>We're really in it now</title>
 	</head>
-
-
 
 	<body>
 
@@ -16,7 +16,6 @@
 		<main>
 
 		<div id="yandex-search-bar">
-
 			<div id="yandexes">
 				<img id="yandex-img" src="imgs/yandex-rus.png">
 				<h6 id="yandex-text">Yandex</h6>
@@ -24,8 +23,7 @@
 			<div class="yandex-search-container">
 				<form action="/action_page.php">
 					<input type="text" placeholder="Search..." name="search">
-					<button type="submit">
-						<i class="fa fa-search"></i>
+					<button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
 					</button>
 				</form>
 			</div>

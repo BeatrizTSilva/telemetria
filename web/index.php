@@ -103,7 +103,7 @@
 			ajax.onreadystatechange = function() {
 				console.log("we are readystatechange");
         		if (this.readyState == 4 /*&& this.status == 200*/) {
-					console-log("we are this.readystate");
+					console.log("we are this.readystate");
 					alert(ajax.responseText);
 					/* readyState
 						0 UNSENT - open()has not been called yet

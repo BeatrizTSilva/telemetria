@@ -27,7 +27,7 @@
 	<?php
 	require("database_connection.php");
 	require("functions.php");
-	require("ajax.php");
+	//require("ajax.php");
 	?>
 	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -94,10 +94,7 @@
 
 		<script>
 			var ajax = new XMLHttpRequest();
-			ajax.open("GET", "ajax.php", true);
-			console.log("it got got");
-			ajax.send();
-			console.log("and sent");
+
 
 			ajax.onreadystatechange = function() {
 				console.log("we are readystatechange");
@@ -138,6 +135,12 @@
     			}
 				console.log("readyState is " + this.readyState + " and status is " + this.status);
   			};
+
+			ajax.open("GET", "ajax.php", true);
+			console.log("it got got");
+			ajax.send();
+			console.log("and sent");
+
 
 			/* ---------- JSON.parse ----------- */
 			/*var response = '{"result":true,"count":1}';

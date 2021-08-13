@@ -29,7 +29,6 @@
 		</div>
 
 
-
 		<br>
 		<hr>
 
@@ -117,7 +116,6 @@
 
 			<div id="amigos">
 				<h2>Estes são os meus amigos da vida airada</h2>
-
 				<a href="https://web.tecnico.ulisboa.pt/ist190209/" target="_blank">Alexandre Freira</a>
 				<a href="https://web.tecnico.ulisboa.pt/ist186954/" target="_blank">Beatriz Silva</a>
 				<a href="https://web.tecnico.ulisboa.pt/ist190234/" target="_blank">Daniel Vareta</a>
@@ -126,6 +124,7 @@
 				<a href="https://web.tecnico.ulisboa.pt/ist196788/" target="_blank">Eduarda David</a>
 				<a href="https://web.tecnico.ulisboa.pt/ist190307/" target="_blank">Enzo</a>
 				<a href="https://web.tecnico.ulisboa.pt/ist196791/" target="_blank">Xico</a>
+				<a href="https://web.tecnico.ulisboa.pt/ist425444/" target="_blank">Miguel</a>
 			</div>
 
 

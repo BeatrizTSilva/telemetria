@@ -1,4 +1,6 @@
-<!---------------------------------------------------------------------------
+<?php
+
+/* ---------------------------------------------------------------------------
  * File: database_connection.php
  *
  * Description: All functions related to the database - connection,
@@ -6,9 +8,7 @@
  *
  * Comment: delete "echos" in the end
  *
- --------------------------------------------------------------------------->
-
-<?php
+ --------------------------------------------------------------------------- */
 include ("file.php"); // for hostaname, username, etc
 /* ------------------------------------------ connects to the database and returns the connection ---------------------------------------------------- */
 function connectDB(){

@@ -94,12 +94,17 @@
 
 		<script>
 			var ajax = new XMLHttpRequest();
+			ajax.open("GET", "ajax.php", true);
+			console.log("it got got");
+			ajax.send();
+			console.log("and sent");
 
 
 			ajax.onreadystatechange = function() {
 				console.log("we are readystatechange");
-        		if (this.readyState == 4 && this.status == 200) {
-					alert(this.responseText);
+        		if (this.readyState == 4 /*&& this.status == 200*/) {
+					console-log("we are this.readystate");
+					alert(ajax.responseText);
 					/* readyState
 						0 UNSENT - open()has not been called yet
 						1 OPENED - send()has not been called yet
@@ -137,10 +142,7 @@
 				console.log("readyState is " + this.readyState + " and status is " + this.status);
   			};
 
-			ajax.open("GET", "ajax.php", true);
-			console.log("it got got");
-			ajax.send();
-			console.log("and sent");
+
 
 
 			/* ---------- JSON.parse ----------- */

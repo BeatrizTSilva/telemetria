@@ -6,6 +6,7 @@
 		<meta name="description" content="This Website is mearly a test to understand the basic structure of the php file">
 		<link rel="stylesheet" type="text/css" href="web-styles.css">
 		<!-- for icon -->
+		<link rel="icon" href="imgs/33.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<title>We're really in it now</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">

@@ -25,8 +25,12 @@
 #foto-amigos {
     color: black;
 }
+
+
+/* ------------------------------------------------- YANDEX --------------------------------------------- */
 .yandex-search-bar {
     display: flex; justify-content: center; align-items: center; font-family: Arial, Helvetica, sans-serif; margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 #yandex-rus {
     margin-right: 1.1rem;
@@ -39,16 +43,25 @@
     /* border: solid 2px #fc0; border-radius: 6px; */ background-color: #fc0; border-radius: 12px;
 }
 #yandex-button {
-    background-color: #fc0; border: solid 2px #fc0; color: black; text-decoration: none;
+    background-color: #fc0; /* border: solid 2px #fc0; */ border: none; color: black; text-decoration: none;
     font-size: 15px;  flex: 0.1; border-radius:0 9px 9px 0; height: 35px;
 }
 #yandex-button:hover {
     background-color: rgb(238, 194, 16);
 }
 #yandex-button:active {
-    background-color: rgb(238, 194, 16); transform: translateY(1px);
+    background-color: rgb(238, 194, 16); transform: translateY(2px);
   }
 #yandex-search-input {
     border: solid 2px #fc0; border-radius: 5px 5px 5px 5px; text-align: left; display: inline-block; font-size: 13px;
     cursor: text; flex: 0.9; padding-left: 0.5rem; z-index: 1; outline: 0;
+}
+
+
+/* ---------------------------------------- MEMBROS --------------------------------- */
+.img-membro {
+    width: 10rem;
+}
+.membros-div {
+    display: flex; flex-wrap: wrap;
 }

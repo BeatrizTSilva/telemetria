@@ -17,6 +17,37 @@
 		<!-- main -->
 		<main>
 
+		<div class="membros-div">
+		<?php
+		$membro = array(
+		   'Alexandre Freira' 	=> 'ist190209/',
+		   'Beatriz Silva' 		=> 'ist186954/',
+		   'Daniel Vareta' 		=> 'ist190234/',
+		   'João Coelho' 		=> 'ist196252/',
+		   'Paulo Silva' 		=> 'ist193672/',
+		   'Eduarda David' 		=> 'ist196788/',
+		   'Lourenço Vieira' 	=> 'ist190307/',
+		   'Francisco Pedro'	=> 'ist196791/'
+		);
+
+		foreach($membro as $nome => $ID_aluno)
+		echo '
+			<div>
+				<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
+					<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
+				</a>
+			</div>
+			<span>'. $nome . '</span>
+		'
+		?>
+
+		</div>
+
+
+		<br>
+		<hr>
+
+
 		<div class="yandex-search-bar">
 			<div id="yandex-rus">
 				<img id="yandex-img" src="imgs/yandex-rus.png">

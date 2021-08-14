@@ -20,11 +20,8 @@
 				<img id="yandex-img" src="imgs/yandex-rus.png">
 			</div>
 			<div id="search-yandex">
-				<form id="search-form" action="/action_page.php">
-					<input id="yandex-search-input" type="text" placeholder="Finds many things" name="search">
-					<button id="yandex-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i>
-					</button>
-				</form>
+				<input id="yandex-search-input" type="text" placeholder="Finds many things" name="search">
+				<button id="yandex-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
 			</div>
 		</div>
 

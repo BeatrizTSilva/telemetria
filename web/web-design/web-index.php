@@ -22,7 +22,7 @@
 			</div>
 			<div id="search-yandex">
 				<input id="yandex-search-input" type="text" placeholder="Finds many things" name="search">
-				<button id="yandex-button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				<button id="yandex-button" type="submit">Search<!--i class="fa fa-search" aria-hidden="true"></i--></button>
 			</div>
 		</div>
 

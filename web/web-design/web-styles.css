@@ -25,26 +25,38 @@
 #foto-amigos {
     color: black;
 }
+
+
+/* width: 20%; width:-webkit-fit-content; width:-moz-fit-content; */
 .yandex-search-bar {
-    display: flex; justify-content: center; align-items: center; font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    /* align-items: center;  */
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 #yandex-rus {
-    margin-right: 1.1rem; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+    margin-right: 1.1rem;
 }
 #yandex-img {
-    width: 8rem; display: flex;
-}
-#search-form {
-    border: 2px solid #fc0; border-radius: 6px; margin-top: 0.7rem;
+    width: 8rem;
 }
 #search-yandex {
-    margin-left: 0;
+    border: 2px solid #fc0; border-radius: 6px; margin-top: 0.7rem;
+    display: flex; flex-direction: row; width: 45rem;
 }
 #yandex-button {
-    background-color: #fc0; border: none; color: black; text-decoration: none;
-    font-size: 20px; margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;
+    background-color: #fc0; border: solid 2px #fc0; color: black; text-decoration: none;
+    font-size: 20px;
+    flex: 0.13;
+    /* position: relative; */
+    /* margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; */
 }
 #yandex-search-input {
-    border: none; text-align: left; display: inline-block; font-size: 16px; cursor: pointer; width: 35rem;
+    border: solid 2px #fc0; text-align: left;
+    display: inline-block;
+    font-size: 16px; cursor: pointer;
+    flex: 0.87;
+    /* position: relative; */
     padding-left: 0.5rem;
 }

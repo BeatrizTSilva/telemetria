@@ -59,9 +59,20 @@
 
 
 /* ---------------------------------------- MEMBROS --------------------------------- */
+.membros-div {
+    display: flex; flex-wrap: wrap; position: relative;
+    justify-content: center;
+}
 .img-membro {
     width: 10rem;
 }
-.membros-div {
-    display: flex; flex-wrap: wrap;
+.img-and-link {
+    margin-bottom: 2rem;
+}
+.nome-membro {
+    position: relative;
+    /* top: 10rem;  */
+    right: 8rem;
+    height: 10%;
+    font-family:'Courier New', Courier, monospace;
 }

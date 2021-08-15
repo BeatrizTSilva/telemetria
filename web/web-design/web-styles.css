@@ -1,5 +1,6 @@
 * {
-	box-sizing: border-box; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	box-sizing: border-box;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 #table {
     background-color:green; margin: 0 auto; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
@@ -59,18 +60,27 @@
 
 
 /* ---------------------------------------- MEMBROS --------------------------------- */
+.membros-container {
+    text-align: center; font-family:'Courier New', Courier, monospace;
+}
 .membros-div {
-    display: flex; flex-wrap: wrap; justify-content: center;
+    display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 10rem 0rem 10rem;
+}
+#dep-title {
+    font-size: 30px;
+}
+.coordenador-membros-title {
+    font-size: 25px;
 }
 .one-member {
     text-align: center; margin: 1.5rem;
 }
 .img-membro {
-    width: 10rem;
+    width: 15rem;
 }
 .img-and-link {
-    /* margin-bottom: 2rem; */
+
 }
 .nome-membro {
-    font-family:'Courier New', Courier, monospace;
+    font-size: 15px;
 }

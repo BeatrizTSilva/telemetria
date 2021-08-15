@@ -17,32 +17,45 @@
 		<!-- main -->
 		<main>
 
-		<div class="membros-div">
-		<?php
-		$membro = array(
-		   'Alexandre Freira' 	=> 'ist190209/',
-		   'Beatriz Silva' 		=> 'ist186954/',
-		   'Daniel Vareta' 		=> 'ist190234/',
-		   'João Coelho' 		=> 'ist196252/',
-		   'Paulo Silva' 		=> 'ist193672/',
-		   'Eduarda David' 		=> 'ist196788/',
-		   'Lourenço Vieira' 	=> 'ist190307/',
-		   'Francisco Pedro'	=> 'ist196791/'
-		);
-
-		foreach($membro as $nome => $ID_aluno)
-		echo '
+		<div class="membros-container">
+			<h1 id="dep-title">Departamento de Web Design</h1>
+			<h2 class="coordenador-membros-title">Coordenador</h2>
 			<div class="one-member">
 				<div class="img-and-link">
-					<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
-						<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
+					<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">
+						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
 					</a>
 				</div>
-				<div class="nome-membro">'. $nome . '</div>
+				<div class="nome-membro">Miguel D'Ajuda</div>
 			</div>
-		'
-		?>
+			<h2 class="coordenador-membros-title">Membros</h2>
+			<div class="membros-div">
+				<?php
+				$membro = array(
+				'Alexandre Freira' 	=> 'ist190209/',
+				'Beatriz Silva' 		=> 'ist186954/',
+				'Daniel Vareta' 		=> 'ist190234/',
+				'João Coelho' 		=> 'ist196252/',
+				'Paulo Silva' 		=> 'ist193672/',
+				'Eduarda David' 		=> 'ist196788/',
+				'Lourenço Vieira' 	=> 'ist190307/',
+				'Francisco Pedro'	=> 'ist196791/'
+				);
 
+				foreach($membro as $nome => $ID_aluno)
+				echo '
+					<div class="one-member">
+						<div class="img-and-link">
+							<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
+								<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
+							</a>
+						</div>
+						<div class="nome-membro">'. $nome . '</div>
+					</div>
+				'
+				?>
+
+			</div>
 		</div>
 
 

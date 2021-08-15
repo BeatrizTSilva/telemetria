@@ -19,6 +19,7 @@
 
 		<div class="membros-container">
 			<h1 id="dep-title">Departamento de Web Design</h1>
+			<br>
 			<h2 class="coordenador-membros-title">Coordenador</h2>
 			<div class="one-member">
 				<div class="img-and-link">
@@ -28,6 +29,7 @@
 				</div>
 				<div class="nome-membro">Miguel D'Ajuda</div>
 			</div>
+			<br>
 			<h2 class="coordenador-membros-title">Membros</h2>
 			<div class="membros-div">
 				<?php

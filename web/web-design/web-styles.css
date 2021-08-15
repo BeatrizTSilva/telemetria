@@ -60,12 +60,10 @@
 
 /* ---------------------------------------- MEMBROS --------------------------------- */
 .membros-div {
-    display: flex; flex-wrap: wrap;
-    /* position: relative; */
-    justify-content: center;
+    display: flex; flex-wrap: wrap; justify-content: center;
 }
 .one-member {
-    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin: 1.5rem;
+    text-align: center; margin: 1.5rem;
 }
 .img-membro {
     width: 10rem;
@@ -74,7 +72,5 @@
     /* margin-bottom: 2rem; */
 }
 .nome-membro {
-    position: absolute;
-    /* top: 10rem; */
     font-family:'Courier New', Courier, monospace;
 }

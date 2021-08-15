@@ -32,12 +32,14 @@
 
 		foreach($membro as $nome => $ID_aluno)
 		echo '
-			<div class="img-and-link">
-				<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
-					<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
-				</a>
+			<div class="one-member">
+				<div class="img-and-link">
+					<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
+						<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
+					</a>
+				</div>
+				<div class="nome-membro">'. $nome . '</div>
 			</div>
-			<div class="nome-membro">'. $nome . '</div>
 		'
 		?>
 

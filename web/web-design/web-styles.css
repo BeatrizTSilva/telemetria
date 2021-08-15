@@ -60,19 +60,21 @@
 
 /* ---------------------------------------- MEMBROS --------------------------------- */
 .membros-div {
-    display: flex; flex-wrap: wrap; position: relative;
+    display: flex; flex-wrap: wrap;
+    /* position: relative; */
     justify-content: center;
+}
+.one-member {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; margin: 1.5rem;
 }
 .img-membro {
     width: 10rem;
 }
 .img-and-link {
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 .nome-membro {
-    position: relative;
-    /* top: 10rem;  */
-    right: 8rem;
-    height: 10%;
+    position: absolute;
+    /* top: 10rem; */
     font-family:'Courier New', Courier, monospace;
 }

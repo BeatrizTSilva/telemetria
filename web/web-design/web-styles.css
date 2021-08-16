@@ -1,9 +1,10 @@
 * {
-	box-sizing: border-box;
+	box-sizing: border-box; margin: 0px;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 #table {
-    background-color:green; margin: 0 auto; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+    background-color:green; margin: auto; width: fit-content; width:-webkit-fit-content; width:-moz-fit-content;
+    margin-top: 2rem; margin-bottom: 2rem;
 }
 .centered-div {
     text-align: center; display: block; margin-left: auto; margin-right: auto;

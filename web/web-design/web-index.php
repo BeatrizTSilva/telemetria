@@ -60,10 +60,7 @@
 			</div>
 		</div>
 
-
-		<br>
 		<hr>
-
 
 		<div class="yandex-search-bar">
 			<div id="yandex-rus">
@@ -75,8 +72,6 @@
 			</div>
 		</div>
 
-
-		<br>
 		<hr>
 
 		<div id="table">
@@ -151,15 +146,17 @@
 				</table>
 			</div>
 
+			<hr>
+
 			<div class="centered-div" id="pico-div">
 				<h1 id="first-title">O Pico sobe até aos 2351m</h1>
 				<a href="https://www.youtube.com/watch?v=WcYG-5b7448" target="blank">
 					<img src="imgs/pico.jpg" id="imagem-pico" alt="Pico">
 				</a>
-
 				<p id="vaca">A vaca da montanha nada teme</p>
-
 			</div>
+
+			<hr>
 
 			<div id="amigos">
 				<h2>Estes são os meus amigos da vida airada</h2>
@@ -173,7 +170,6 @@
 				<a href="https://web.tecnico.ulisboa.pt/ist196791/" target="_blank">Xico</a>
 				<a href="https://web.tecnico.ulisboa.pt/ist425444/" target="_blank">Miguel</a>
 			</div>
-
 
 			<div id="foto-amigos">
 				<h3>Aqui está uma foto deles:</h3>

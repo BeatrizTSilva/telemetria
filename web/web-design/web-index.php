@@ -8,7 +8,7 @@
 		<!-- for icon -->
 		<link rel="icon" href="imgs/33.png">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<title>We're really in it now</title>
+		<title>Um site</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
 	</head>
 

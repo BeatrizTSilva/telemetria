@@ -27,7 +27,7 @@
 	<?php
 	require("database_connection.php");
 	require("functions.php");
-	//require("ajax.php");
+	require("ajax.php");
 	?>
 	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -81,13 +81,13 @@
 		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
 		<table>
 			<tr>
-			<th>Time</th>
-			<th>Voltage</th>
-			<th>Current</th>
-			<th>Temperature</th>
-			<th>Coordinates1</th>
-			<th>Coordinates2</th>
-			<th>Speed</th>
+				<th>Time</th>
+				<th>Voltage</th>
+				<th>Current</th>
+				<th>Temperature</th>
+				<th>Coordinates1</th>
+				<th>Coordinates2</th>
+				<th>Speed</th>
 			</tr>
 			<tbody id="data"></tbody>
 		</table>
@@ -95,16 +95,15 @@
 		<script>
 			var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
-			console.log("it got got");
+			// console.log("it got got");
 			ajax.send();
-			console.log("and sent");
+			// console.log("and sent");
 
 
 			ajax.onreadystatechange = function() {
 				console.log("we are readystatechange");
         		if (this.readyState == 4 /*&& this.status == 200*/) {
-					console.log("we are this.readystate");
-					alert(ajax.responseText);
+					//alert(ajax.responseText);
 					/* readyState
 						0 UNSENT - open()has not been called yet
 						1 OPENED - send()has not been called yet

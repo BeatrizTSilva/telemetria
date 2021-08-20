@@ -64,6 +64,7 @@
 .membros-container {
     text-align: center; font-family: 'Source Sans Pro', sans-serif; background-color: #080a09; /* #32a852*/
     padding-bottom: 4rem; margin-bottom: 2rem; color: rgb(246, 248, 242);
+    letter-spacing: 3px;
 }
 #dep-title {
     font-size: 50px; padding-top: 3rem; margin-bottom: 2rem;
@@ -78,7 +79,21 @@
     text-align: center; margin: 1.5rem;
 }
 .img-membro {
-    width: 15rem; border-radius: 35px;
+    width: 15rem; border-radius: 35px; padding: 5px; border: solid 2px rgb(84, 219, 57);
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.img-membro:nth-of-type(even):hover {
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+}
+.img-membro:nth-of-type(odd):hover {
+    transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
 }
 .img-and-link {
 

@@ -35,11 +35,11 @@
 				<?php
 				$membro = array(
 				'Alexandre Freira' 	=> 'ist190209/',
-				'Beatriz Silva' 		=> 'ist186954/',
-				'Daniel Vareta' 		=> 'ist190234/',
+				'Beatriz Silva' 	=> 'ist186954/',
+				'Daniel Vareta' 	=> 'ist190234/',
 				'João Coelho' 		=> 'ist196252/',
 				'Paulo Silva' 		=> 'ist193672/',
-				'Eduarda David' 		=> 'ist196788/',
+				'Eduarda David' 	=> 'ist196788/',
 				'Lourenço Vieira' 	=> 'ist190307/',
 				'Francisco Pedro'	=> 'ist196791/'
 				);

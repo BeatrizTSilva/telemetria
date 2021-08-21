@@ -1,11 +1,10 @@
 /* "#" for id and "." for class */
 * {
-	box-sizing: border-box;
+	box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
 body{ /* for everything */
-	border:2px; margin:0px; background-color:white; color:#46555f;
+	border: 2px; margin: 0px; background-color:white; color:#46555f;
 }
 #header{ /* header (background-color: #94c43c;) */
 	background:#89c45f; box-shadow:0px 5px 5px #D3D3D3; display:flex;
@@ -16,21 +15,19 @@ body{ /* for everything */
 	display:flex; height:auto; width:auto; margin:auto; color:white; font-size:1.1rem;
 }
 #github-code { /* github link */
-	font-size:0.9rem; margin-right:0.45rem; margin-bottom:0.1rem; margin-top:0.7rem;
-	float:right; color:white;
+	font-size:0.9rem; margin-right:0.45rem; margin-bottom:0.1rem; margin-top:0.7rem; float:right; color:white;
 }
 #github-code a { /* color of the link */
 	color:white;
 }
 .button-web-design { /* button for redirecting to the web desing page */
-	font: bold; text-decoration: none; background-color: #89c45f; padding: 17px 10px 17px 10px;
-	/*border-top: 1px solid #D3D3D3; border-right: 1px solid #D3D3D3;*/ float:right;
-  	/*border-bottom: 1px solid #D3D3D3; border-left: 1px solid #D3D3D3;*/ box-shadow:0px 2px 2px #D3D3D3;
-	color:white; margin-right:1rem; margin-top: 1rem; border-radius: 8px; font-size: 1.7rem;
+	font: bold; text-decoration: none; background-color: #89c45f; padding: 17px 10px 17px 10px; float:right;
+	box-shadow:0px 2px 2px #D3D3D3; color:white; margin-right:1rem; margin-top: 1rem;
+	border-radius: 8px; font-size: 1.7rem;
 }
 #psem-logo { /* logo */
-	display: block; width: 5rem; height: 2.1rem; float: left;
-	margin-left:0.4rem;	margin-top:0.4rem; margin-bottom:0.3rem; margin-right:0.3rem;
+	display: block; width: 5rem; height: 2.1rem; float: left; margin-left:0.4rem; margin-top:0.4rem;
+	margin-bottom:0.3rem; margin-right:0.3rem;
   }
 #main-container { /* big container for all things in the body */
 	padding-top:0.6rem; padding-left:1rem; padding-bottom:0.8rem; padding-right:0.8rem;
@@ -96,8 +93,7 @@ body{ /* for everything */
 
 /* - - - - - - NOT IN USE AT THE MOMENT - - - - - - */
 #table{ /* dummy table */
-	margin-left:5px; margin-top:7px; text-align:left; float:right;
-	padding-left:3px; padding-right:3px; position:relative;
+	margin-left:5px; margin-top:7px; text-align:left; float:right; padding-left:3px; padding-right:3px; position:relative;
 }
 #month, #day, #year, #hour, #minute, #second, p{ /* display of the date in the body */
 	margin-left:0.1rem; float:left;

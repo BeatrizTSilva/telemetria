@@ -17,6 +17,7 @@
 		<!-- main -->
 		<main>
 
+		<div class="vertical-line">
 		<div class="membros-container">
 			<h1 id="dep-title">Departamento de Web Design</h1>
 			<br>
@@ -30,7 +31,7 @@
 				<div class="nome-membro">Miguel D'Ajuda</div>
 			</div>
 			<br>
-			<h2 class="coordenador-membros-title">Membros</h2>
+			<h2 class="coordenador-membros-title" id="membros-title">Membros</h2>
 			<div class="membros-div">
 				<?php
 				$membro = array(
@@ -58,6 +59,7 @@
 				?>
 
 			</div>
+		</div>
 		</div>
 
 		<hr>

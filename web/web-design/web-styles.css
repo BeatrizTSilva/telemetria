@@ -61,30 +61,42 @@
 
 
 /* --------------------------------------------------------- MEMBROS --------------------------------------------------------- */
-.membros-container {
+.vertical-line {
+    border-left: 12px solid green;
+    height: auto;
+    /* position: absolute; */
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}.membros-container {
     text-align: center; font-family: 'Source Sans Pro', sans-serif; background-color: #080a09; /* #32a852*/
     padding-bottom: 4rem; margin-bottom: 2rem; color: rgb(246, 248, 242);
     letter-spacing: 3px;
 }
 #dep-title {
-    font-size: 50px; padding-top: 3rem; margin-bottom: 2rem;
+    font-size: 55px; padding-top: 3rem; margin-bottom: 2rem;
 }
 .coordenador-membros-title {
-    font-size: 35px; margin-bottom: 2rem;
+    font-size: 40px; margin-bottom: 2rem;
+}
+#membros-title {
+    margin-top: 3.5rem; letter-spacing: 5.5px;
 }
 .membros-div {
-    display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 10rem 0rem 10rem;
+    display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 7rem 0rem 7rem;
 }
 .one-member {
     text-align: center; margin: 1.5rem;
 }
 .img-membro {
-    width: 15rem; border-radius: 35px; padding: 5px; border: solid 2px rgb(84, 219, 57);
+    width: 17rem;
+    /* border-radius: 35px;  */
+    border-radius: 50%;
+    padding: 5px; border: solid 2px rgb(84, 219, 57);
     -webkit-transition: -webkit-transform .8s ease-in-out;
     -ms-transition: -ms-transform .8s ease-in-out;
     transition: transform .8s ease-in-out;
 }
-
 .img-membro:nth-of-type(even):hover {
     transform:rotate(45deg);
     -ms-transform:rotate(45deg);
@@ -99,5 +111,5 @@
 
 }
 .nome-membro {
-    font-size: 15px; margin-top: 0.5rem;
+    font-size: 17px; margin-top: 0.5rem;
 }

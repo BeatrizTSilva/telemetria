@@ -61,17 +61,47 @@
 
 
 /* --------------------------------------------------------- MEMBROS --------------------------------------------------------- */
-.vertical-line {
-    border-left: 12px solid green;
-    height: auto;
-    /* position: absolute; */
-    left: 50%;
-    margin-left: -3px;
-    top: 0;
-}.membros-container {
+.membros-container {
     text-align: center; font-family: 'Source Sans Pro', sans-serif; background-color: #080a09; /* #32a852*/
-    padding-bottom: 4rem; margin-bottom: 2rem; color: rgb(246, 248, 242);
+    padding-bottom: 4rem;
+    position: relative;
+    margin-bottom: 2rem;
+    color: rgb(246, 248, 242);
     letter-spacing: 3px;
+    overflow: hidden;
+}
+/* for the vertical lines */
+.membros-container::after {
+    content: '';
+	position: absolute;
+	width: 2rem;
+	background-color: green;
+	top: 0;
+	bottom: 0;
+	left: 94%;
+	transform: translateX(-50%);
+    z-index: 1;
+}
+.membros-container-2nd-line {
+    overflow: hidden;
+    position: relative;
+}
+/* for the vertical lines */
+.membros-container-2nd-line::after {
+    content: '';
+	position: absolute;
+	width: 2rem;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	left: 98%;
+	transform: translateX(-50%);
+    z-index: 1;
+}
+/* to redefine z-index */
+.membros-container-2{
+    z-index: 10;
+    position: relative;
 }
 #dep-title {
     font-size: 55px; padding-top: 3rem; margin-bottom: 2rem;
@@ -82,6 +112,7 @@
 #membros-title {
     margin-top: 3.5rem; letter-spacing: 5.5px;
 }
+/* members grid */
 .membros-div {
     display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 7rem 0rem 7rem;
 }
@@ -90,7 +121,7 @@
 }
 .img-membro {
     width: 17rem;
-    /* border-radius: 35px;  */
+    background-color: #080a09;
     border-radius: 50%;
     padding: 5px; border: solid 2px rgb(84, 219, 57);
     -webkit-transition: -webkit-transform .8s ease-in-out;

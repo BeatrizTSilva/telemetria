@@ -19,7 +19,6 @@
 
 
 		<div class="membros-container">
-		<div class="membros-container-2nd-line"></div>
 		<div class="membros-container-2">
 			<h1 id="dep-title">Departamento de Web Design</h1>
 			<br>
@@ -61,7 +60,7 @@
 				?>
 
 			</div>
-		</div>
+			</div>
 		</div>
 		</div>
 

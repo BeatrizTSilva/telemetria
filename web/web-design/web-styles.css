@@ -40,11 +40,10 @@
     width: 6rem;
 }
 #search-yandex {
-    margin-top: 0.25rem; display: flex; flex-direction: row; width: 40rem;
-    background-color: #fc0; border-radius: 12px;
+    margin-top: 0.25rem; display: flex; flex-direction: row; width: 40rem; background-color: #fc0; border-radius: 12px;
 }
 #yandex-button {
-    background-color: #fc0; /* border: solid 2px #fc0; */ border: none; color: black; text-decoration: none;
+    background-color: #fc0; border: none; color: black; text-decoration: none;
     font-size: 15px;  flex: 0.1; border-radius:0 9px 9px 0; height: 35px;
 }
 #yandex-button:hover {
@@ -97,7 +96,7 @@
     font-size: 55px; margin-top: 3rem; margin-bottom: 2rem;
 }
 .coordenador-membros-title {
-    font-size: 40px; margin-bottom: 2rem;
+    font-size: 40px; margin-bottom: 3rem;
 }
 #membros-title {
     margin-top: 3.5rem; letter-spacing: 5.5px;
@@ -109,19 +108,18 @@
 /* image, name and link of each member */
 .one-member {
     text-align: center; margin: 1.5rem;
-    transition: transform .8s ease-in-out;
+    /* transition: transform .8s ease-in-out; */
 }
-.one-member:hover {
-    transform: scale(1.25);
-}
+.outside-img-membro
 /* just the image of a member */
 .img-membro {
     width: 17rem; background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
-    /* transition: transform .8s ease-in-out; */
+    transition: transform .8s ease-in-out;
 }
 .img-membro:hover {
     /* transform:rotate(45deg); -ms-transform:rotate(45deg); -webkit-transform:rotate(45deg); */
-    /* transform: scale(1.3); */
+    transform: scale(2);
+    transform: rotateY(90deg);
 }
 /* image and link of each member */
 .img-and-link {

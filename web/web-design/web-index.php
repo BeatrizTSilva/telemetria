@@ -23,10 +23,12 @@
 			<h1 id="dep-title">Departamento de Web Design</h1>
 			<br>
 			<h2 class="coordenador-membros-title">Coordenador</h2>
-			<div class="one-member">
+			<div class="one-member" id="miguel">
 				<div class="img-and-link">
 					<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">
-						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
+						<div class="outside-img-membro"></div>
+							<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
+						</div>
 					</a>
 				</div>
 				<div class="nome-membro">Miguel D'Ajuda</div>

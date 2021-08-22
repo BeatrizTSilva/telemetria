@@ -17,6 +17,18 @@
 		<!-- main -->
 		<main>
 
+		<div id="bite">
+			<div id="thekey">
+				<img src="{image:thekey}">
+			</div>
+			<div class="death">
+				<div id="actualnews">
+					<a href="www" font-color:#9d3e78>MY STUFF</a>
+					<p><a href="www" font-color:#9d3e78>PRETTY THINGS</a>
+				</div>
+			</div>
+		</div>
+
 
 		<div class="membros-container">
 		<div class="membros-container-2">

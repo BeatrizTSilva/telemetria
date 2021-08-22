@@ -119,7 +119,7 @@
     width: 17rem;
     border-radius: 50%;
     /* background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57); */
-    transition: transform .8s ease-in-out;
+    transition: transform .8s /*ease-in-out*/;
     /* transition: 1s; */
 }
 .img-membro:hover {
@@ -130,12 +130,12 @@
 .membro-description {
     opacity: 0;
     position: absolute;
-    bottom: 0;
+    top: 6rem;
     text-align: center;
 }
 .img-membro:hover + .membro-description {
     opacity: 1;
-  }
+}
 /* each name */
 .nome-membro {
     font-size: 17px; margin-top: 0.5rem;

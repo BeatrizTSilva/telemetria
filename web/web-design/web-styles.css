@@ -60,9 +60,10 @@
 
 
 /* --------------------------------------------------------- MEMBROS --------------------------------------------------------- */
+/* container for all members and titles */
 .membros-container {
-    text-align: center; font-family: 'Source Sans Pro', sans-serif; background-color: #080a09; /* #32a852*/
-    padding-bottom: 4rem; margin-bottom: 2rem; color: rgb(246, 248, 242); letter-spacing: 3px;
+    text-align: center; font-family: 'Source Sans Pro', sans-serif; background-color: #080a09;
+    padding-bottom: 5rem; margin-bottom: 2rem; color: rgb(246, 248, 242); letter-spacing: 3px;
     position: relative; overflow: hidden;
 
     background-image: url("imgs/Novo.png");
@@ -71,23 +72,27 @@
     background-position-x: 18rem;
     background-position-y: 3rem;
 }
-/* for the vertical lines */
+/* white vertical line */
 .membros-container::before {
-    content: ''; position: absolute; width: 3rem;
-    background-color: white;
-    top: 0; bottom: 0; left: 96.5%;
+    content: ''; position: absolute;
+    /* width: 2vw; */ width: 1.7rem;
+    background-color: rgb(246, 248, 242); top: 0; bottom: 0;
+    /* left: 76px; */ left: 2.2rem;
 	transform: translateX(-50%); z-index: 1;
 }
+/* green vertical line */
 .membros-container::after {
-    content: ''; position: absolute; width: 3rem;
-    background-color: rgb(84, 219, 57);
-    top: 0; bottom: 0; left: 92%;
+    content: ''; position: absolute;
+    /* width: 2vw; */ width: 1.7rem;
+    background-color: rgb(84, 219, 57); top: 0; bottom: 0;
+    /* left: 27px; */ left: 4.4rem;
 	transform: translateX(-50%); z-index: 1;
 }
-/* to redefine z-index */
+/* smaller container that does not include vertival lines to redefine z-index */
 .membros-container-2{
     z-index: 10; position: relative;
 }
+/* Departamento de Web Design */
 #dep-title {
     font-size: 55px; margin-top: 3rem; margin-bottom: 2rem;
 }
@@ -101,23 +106,28 @@
 .membros-div {
     display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 7rem 0rem 7rem;
 }
+/* image, name and link of each member */
 .one-member {
     text-align: center; margin: 1.5rem;
-}
-.img-membro {
-    width: 17rem; background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
-    -webkit-transition: -webkit-transform .8s ease-in-out; -ms-transition: -ms-transform .8s ease-in-out;
     transition: transform .8s ease-in-out;
 }
-.img-membro:nth-of-type(even):hover {
-    transform:rotate(45deg); -ms-transform:rotate(45deg); -webkit-transform:rotate(45deg);
+.one-member:hover {
+    transform: scale(1.25);
 }
-.img-membro:nth-of-type(odd):hover {
-    transform:rotate(-45deg); -ms-transform:rotate(-45deg); -webkit-transform:rotate(-45deg);
+/* just the image of a member */
+.img-membro {
+    width: 17rem; background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
+    /* transition: transform .8s ease-in-out; */
 }
+.img-membro:hover {
+    /* transform:rotate(45deg); -ms-transform:rotate(45deg); -webkit-transform:rotate(45deg); */
+    /* transform: scale(1.3); */
+}
+/* image and link of each member */
 .img-and-link {
     font-size: 16px; /* remove */
 }
+/* each name */
 .nome-membro {
     font-size: 17px; margin-top: 0.5rem;
 }

@@ -111,7 +111,8 @@
 /* image and link of each member */
 .img-and-link {
     background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
-    position: relative;
+    /* position: relative; */
+    position: relative; display: inline-block;
 }
 /* just the image of a member */
 .img-membro {
@@ -128,9 +129,9 @@
 }
 .membro-description {
     opacity: 0;
-    /* position: absolute; */
+    position: absolute;
     bottom: 0;
-    text-align:center;
+    text-align: center;
 }
 .img-membro:hover + .membro-description {
     opacity: 1;

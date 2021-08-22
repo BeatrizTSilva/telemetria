@@ -99,11 +99,19 @@
 }
 /* members grid */
 .membros-div {
-    display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 7rem 0rem 7rem;
+    display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 5rem 0rem 5rem;
 }
 /* image, name and link of each member */
 .one-member {
     text-align: center; margin: 1.5rem;
+}
+#miguel {
+    margin: 0rem 15rem 0rem 15rem;
+}
+/* image and link of each member */
+.img-and-link {
+    background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
+    position: relative;
 }
 /* just the image of a member */
 .img-membro {
@@ -111,24 +119,22 @@
     border-radius: 50%;
     /* background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57); */
     transition: transform .8s ease-in-out;
+    /* transition: 1s; */
 }
 .img-membro:hover {
+    /* opacity: 0; */
     /* transform: scale(2); */
-    transform: rotateY(90deg) ;
-}
-.img-membro:hover .membro-description {
-    opacity: 1;
+    transform: rotateY(90deg);
 }
 .membro-description {
     opacity: 0;
+    /* position: absolute; */
+    bottom: 0;
+    text-align:center;
 }
-.membro-description > p {
-    color: white;
-}
-/* image and link of each member */
-.img-and-link {
-    background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
-}
+.img-membro:hover + .membro-description {
+    opacity: 1;
+  }
 /* each name */
 .nome-membro {
     font-size: 17px; margin-top: 0.5rem;

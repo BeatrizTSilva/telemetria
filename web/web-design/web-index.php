@@ -66,6 +66,10 @@
 						<div class="img-and-link">
 							<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
 								<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
+								<div class="membro-description">
+									<p id="dept-desription">Dept. Electrónica</p>
+									<p id="funtion-description">Coordenador</p>
+							</div>
 							</a>
 						</div>
 						<div class="nome-membro">'. $nome . '</div>

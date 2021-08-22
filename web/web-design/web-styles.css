@@ -73,19 +73,15 @@
 }
 /* white vertical line */
 .membros-container::before {
-    content: ''; position: absolute;
+    content: ''; position: absolute; background-color: rgb(246, 248, 242); top: 0; bottom: 0; transform: translateX(-50%); z-index: 1;
     /* width: 2vw; */ width: 1.7rem;
-    background-color: rgb(246, 248, 242); top: 0; bottom: 0;
     /* left: 76px; */ left: 2.2rem;
-	transform: translateX(-50%); z-index: 1;
 }
 /* green vertical line */
 .membros-container::after {
-    content: ''; position: absolute;
+    content: ''; position: absolute; background-color: rgb(84, 219, 57); top: 0; bottom: 0; transform: translateX(-50%); z-index: 1;
     /* width: 2vw; */ width: 1.7rem;
-    background-color: rgb(84, 219, 57); top: 0; bottom: 0;
     /* left: 27px; */ left: 4.4rem;
-	transform: translateX(-50%); z-index: 1;
 }
 /* smaller container that does not include vertival lines to redefine z-index */
 .membros-container-2{
@@ -108,22 +104,30 @@
 /* image, name and link of each member */
 .one-member {
     text-align: center; margin: 1.5rem;
-    /* transition: transform .8s ease-in-out; */
 }
-.outside-img-membro
 /* just the image of a member */
 .img-membro {
-    width: 17rem; background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
+    width: 17rem;
+    border-radius: 50%;
+    /* background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57); */
     transition: transform .8s ease-in-out;
 }
 .img-membro:hover {
-    /* transform:rotate(45deg); -ms-transform:rotate(45deg); -webkit-transform:rotate(45deg); */
-    transform: scale(2);
-    transform: rotateY(90deg);
+    /* transform: scale(2); */
+    transform: rotateY(90deg) ;
+}
+.img-membro:hover .membro-description {
+    opacity: 1;
+}
+.membro-description {
+    opacity: 0;
+}
+.membro-description > p {
+    color: white;
 }
 /* image and link of each member */
 .img-and-link {
-    font-size: 16px; /* remove */
+    background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
 }
 /* each name */
 .nome-membro {

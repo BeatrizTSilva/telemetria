@@ -26,8 +26,10 @@
 			<div class="one-member" id="miguel">
 				<div class="img-and-link">
 					<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">
-						<div class="outside-img-membro"></div>
-							<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
+						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
+						<div class="membro-description">
+							<p id="dept-desription">Dept. Electrónica</p>
+							<p id="funtion-description">Coordenador</p>
 						</div>
 					</a>
 				</div>
@@ -37,6 +39,16 @@
 			<h2 class="coordenador-membros-title" id="membros-title">Membros</h2>
 			<div class="membros-div">
 				<?php
+				$membro2 = array(
+					array('Alexandre Freira', 'ist190209/', 'Dept.Electrónica'),
+					array('Beatriz Silva',    'ist186954/', 'Dept.Electrónica'),
+					array('Daniel Vareta',    'ist190234/', 'Dept.Electrónica'),
+					array('João Coelho',      'ist196252/', 'Dept.Electrónica'),
+					array('Paulo Silva',      'ist193672/', 'Dept. Comm e Marketing'),
+					array('Eduarda David',    'ist196788/', 'Dept. Comm e Marketing'),
+					array('Lourenço Vieira',  'ist190307/', 'Dept.Electrónica'),
+					array('Francisco Pedro',  'ist196791/', 'Dept. Comm e Marketing'),
+				);
 				$membro = array(
 				'Alexandre Freira' 	=> 'ist190209/',
 				'Beatriz Silva' 	=> 'ist186954/',

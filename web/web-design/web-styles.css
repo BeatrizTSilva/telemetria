@@ -68,14 +68,20 @@
     background-image: url("imgs/Novo.png");
     background-size: 15rem;
     background-repeat: no-repeat;
-    background-position-x: left;
+    background-position-x: 18rem;
     background-position-y: 3rem;
 }
 /* for the vertical lines */
+.membros-container::before {
+    content: ''; position: absolute; width: 3rem;
+    background-color: white;
+    top: 0; bottom: 0; left: 96.5%;
+	transform: translateX(-50%); z-index: 1;
+}
 .membros-container::after {
-    content: ''; position: absolute; width: 2rem;
+    content: ''; position: absolute; width: 3rem;
     background-color: rgb(84, 219, 57);
-    top: 0; bottom: 0; left: 94%;
+    top: 0; bottom: 0; left: 92%;
 	transform: translateX(-50%); z-index: 1;
 }
 /* to redefine z-index */

@@ -40,14 +40,14 @@
 			<div class="membros-div">
 				<?php
 				$membro2 = array(
-					array('Alexandre Freira', 'ist190209/', 'Dept.Electrónica',       'Web Design'),
-					array('Beatriz Silva',    'ist186954/', 'Dept.Electrónica',       'Web Design'),
-					array('Daniel Vareta',    'ist190234/', 'Dept.Electrónica',       'Web Design'),
-					array('João Coelho',      'ist196252/', 'Dept.Electrónica',       'Web Design'),
-					array('Paulo Silva',      'ist193672/', 'Dept. Comm e Marketing', 'Web Design'),
-					array('Eduarda David',    'ist196788/', 'Dept. Comm e Marketing', 'Web Design'),
-					array('Lourenço Vieira',  'ist190307/', 'Dept.Electrónica',       'Web Design'),
-					array('Francisco Pedro',  'ist196791/', 'Dept. Comm e Marketing', 'Web Design'),
+					array('Alexandre Freira', 'ist190209/', 'Dept. Electrónica',       'Web Design'),
+					array('Beatriz Silva',    'ist186954/', 'Dept. Electrónica',       'Web Design'),
+					array('Daniel Vareta',    'ist190234/', 'Dept. Electrónica',       'Web Design'),
+					array('João Coelho',      'ist196252/', 'Dept. Electrónica',       'Web Design'),
+					array('Paulo Silva',      'ist193672/', 'Dept. Comm e Marketing',  'Web Design'),
+					array('Eduarda David',    'ist196788/', 'Dept. Comm e Marketing',  'Web Design'),
+					array('Lourenço Vieira',  'ist190307/', 'Dept. Electrónica',       'Web Design'),
+					array('Francisco Pedro',  'ist196791/', 'Dept. Comm e Marketing',  'Web Design'),
 				);
 				$membro = array(
 				'Alexandre Freira' 	=> 'ist190209/',
@@ -61,7 +61,6 @@
 				);
 
 				for ($row = 0; $row < count($membro2[0]); $row++) {
-					/*foreach($membro as $nome => $ID_aluno)*/
 					echo '
 						<div class="one-member">
 							<div class="outside-img-border">

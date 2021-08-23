@@ -35,15 +35,17 @@
 			<h1 id="dep-title">Departamento de Web Design</h1>
 			<br>
 			<h2 class="coordenador-membros-title">Coordenador</h2>
-			<div class="one-member" id="miguel">
-				<div class="img-and-link">
-					<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">
-						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
-						<div class="membro-description">
-							<p id="dept-desription">Dept. Electrónica</p>
-							<p id="funtion-description">Coordenador</p>
-						</div>
-					</a>
+			<div class="one-member" id="one-member-miguel">
+				<div class="img-and-link-border">
+					<div class="img-and-link">
+						<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">
+							<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
+							<div class="membro-description">
+								<p id="dept-desription">Dept. Electrónica</p>
+								<p id="funtion-description">Coordenador</p>
+							</div>
+						</a>
+					</div>
 				</div>
 				<div class="nome-membro">Miguel D'Ajuda</div>
 			</div>
@@ -75,14 +77,16 @@
 				foreach($membro as $nome => $ID_aluno)
 				echo '
 					<div class="one-member">
-						<div class="img-and-link">
-							<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
-								<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
-								<div class="membro-description">
-									<p id="dept-desription">Dept. Electrónica</p>
-									<p id="funtion-description">Coordenador</p>
-								</div>
-							</a>
+						<div class="img-and-link-border">
+							<div class="img-and-link">
+								<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
+									<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
+									<div class="membro-description">
+										<p id="dept-desription">Dept. Electrónica</p>
+										<p id="funtion-description">Coordenador</p>
+									</div>
+								</a>
+							</div>
 						</div>
 						<div class="nome-membro">'. $nome . '</div>
 					</div>

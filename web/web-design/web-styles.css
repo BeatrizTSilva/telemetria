@@ -75,13 +75,13 @@
 .membros-container::before {
     content: ''; position: absolute; background-color: rgb(246, 248, 242); top: 0; bottom: 0; transform: translateX(-50%); z-index: 1;
     /* width: 2vw; */ width: 1.7rem;
-    /* left: 76px; */ left: 2.2rem;
+    /* left: 76px; */ left: 2.8rem;
 }
 /* green vertical line */
 .membros-container::after {
     content: ''; position: absolute; background-color: rgb(84, 219, 57); top: 0; bottom: 0; transform: translateX(-50%); z-index: 1;
     /* width: 2vw; */ width: 1.7rem;
-    /* left: 27px; */ left: 4.4rem;
+    /* left: 27px; */ left: 5.1rem;
 }
 /* smaller container that does not include vertival lines to redefine z-index */
 .membros-container-2{
@@ -91,6 +91,7 @@
 #dep-title {
     font-size: 55px; margin-top: 3rem; margin-bottom: 2rem;
 }
+/* Coordenador e Membros texto */
 .coordenador-membros-title {
     font-size: 40px; margin-bottom: 3rem;
 }
@@ -99,42 +100,47 @@
 }
 /* members grid */
 .membros-div {
-    display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 5rem 0rem 5rem;
+    display: flex; flex-wrap: wrap; justify-content: center; margin: 0rem 7rem 0rem 7rem;
 }
 /* image, name and link of each member */
 .one-member {
     text-align: center; margin: 1.5rem;
 }
-#miguel {
+/* posicionar o miguel */
+#one-member-miguel {
     margin: 0rem 15rem 0rem 15rem;
+}
+/* border for the img-and-link div so it doesn't destroy the green border when :hover */
+.img-and-link-border {
+    background-color: #080a09; border-radius: 50%;
+    padding: 5px 5px 5px 5px;
+    border: solid 2px rgb(84, 219, 57);
+    position: relative; display: inline-block;
 }
 /* image and link of each member */
 .img-and-link {
-    background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57);
-    /* position: relative; */
-    position: relative; display: inline-block;
+    position: relative;
+    /* position: relative; display: inline-block; */
+}
+.img-and-link:hover {
+    /* opacity: 0; */
+    /* transform: rotateY(90deg); */
+    transition: transform .8s ease-in-out;
+    transform: rotateY(90deg) scale3d(1.2, 1.2, 0.3);
 }
 /* just the image of a member */
 .img-membro {
     width: 17rem;
     border-radius: 50%;
-    /* background-color: #080a09; border-radius: 50%; padding: 5px; border: solid 2px rgb(84, 219, 57); */
-    transition: transform .8s /*ease-in-out*/;
-    /* transition: 1s; */
-}
-.img-membro:hover {
-    /* opacity: 0; */
-    /* transform: scale(2); */
-    /* transform: rotateY(90deg); */
-    transform: rotateY(90deg) scale3d(1.2, 1.2, 0.3);
 }
 .membro-description {
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     top: 6rem;
+    left: 3rem;
     text-align: center;
 }
-.img-membro:hover + .membro-description {
+.img-and-link:hover + .membro-description {
     opacity: 1;
 }
 /* each name */

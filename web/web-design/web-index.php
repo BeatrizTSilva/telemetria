@@ -28,7 +28,7 @@
 						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
 						<div class="membro-description">
 							<p id="dept-desription">Dept. Electrónica</p>
-							<p id="funtion-description">Coordenador</p>
+							<p id="function-description">Coordenador</p>
 							<a class="link" href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">Website</a>
 						</div>
 					</div>
@@ -68,7 +68,7 @@
 								<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
 								<div class="membro-description">
 									<p id="dept-desription">Dept. Electrónica</p>
-									<p id="funtion-description">Coordenador</p>
+									<p id="function-description">Coordenador</p>
 									<a class="link" href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">Website</a>
 								</div>
 							</div>

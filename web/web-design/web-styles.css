@@ -61,15 +61,13 @@
 /* --------------------------------------------------------- MEMBROS --------------------------------------------------------- */
 /* container for all members and titles */
 .membros-container {
-    text-align: center; font-family: 'Source Sans Pro', sans-serif; background-color: #080a09;
-    padding-bottom: 5rem; margin-bottom: 2rem; color: rgb(246, 248, 242); letter-spacing: 3px;
-    position: relative; overflow: hidden;
-
-    background-image: url("imgs/Novo.png");
+    text-align: center; font-family: 'Source Sans Pro', sans-serif; background-color: #080a09; padding-bottom: 5rem;
+    margin-bottom: 2rem; color: rgb(246, 248, 242); letter-spacing: 3px; position: relative; overflow: hidden;
+    /* background-image: url("imgs/Novo.png");
     background-size: 15rem;
     background-repeat: no-repeat;
-    background-position-x: 18rem;
-    background-position-y: 3rem;
+    background-position-x: 78rem;
+    background-position-y: 3rem; */
 }
 /* white vertical line */
 .membros-container::before {
@@ -142,7 +140,11 @@
 }
 /* description of each member that shows up after the transition */
 .membro-description {
-    position: absolute; top: 6.5rem; left: 0rem; font-size: 18px; width: 17rem; text-align: center;
+    position: absolute; top: 6.5rem; left: 0rem; font-size: 18px; width: 17rem; text-align: center; height: 10rem;
+}
+/* description of task in dept. */
+#function-description {
+    margin-top: 0.5rem;
 }
 /* each member name */
 .nome-membro {
@@ -150,5 +152,5 @@
 }
 /* link for the website */
 .link {
-    color: blue;
+    margin-top: 0.5rem; color: blue;
 }

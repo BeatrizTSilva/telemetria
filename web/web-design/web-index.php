@@ -66,15 +66,15 @@
 						<div class="one-member">
 							<div class="outside-img-border">
 								<div class="outside-img">
-									<img class="img-membro" src="imgs/membros/'. $membro2[$row][0] . '.jpg" />
+									<img class="img-membro" src="imgs/membros/'.$membro2[$row][0]. '.jpg" />
 									<div class="membro-description">
-										<p id="dept-desription">Dept. Electrónica</p>
-										<p id="function-description">Coordenador</p>
-										<div class="link-div"><a class="link" href="https://web.tecnico.ulisboa.pt/' . $membro2[$row][1] . '" target="_blank">Website</a></div>
+										<p id="dept-desription">' .$membro2[$row][2]. '</p>
+										<p id="function-description">' .$membro2[$row][3]. '</p>
+										<div class="link-div"><a class="link" href="https://web.tecnico.ulisboa.pt/' .$membro2[$row][1]. '" target="_blank">Website</a></div>
 									</div>
 								</div>
 							</div>
-							<div class="nome-membro">'. $membro2[$row][0] . '</div>
+							<div class="nome-membro">'.$membro2[$row][0]. '</div>
 						</div>
 					';}
 				?>

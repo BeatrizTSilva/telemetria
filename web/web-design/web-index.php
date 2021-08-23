@@ -60,7 +60,7 @@
 				'Francisco Pedro'	=> 'ist196791/'
 				);
 
-				for ($row = 0; $row < count($membro2[0]); $row++) {
+				for ($row = 0; $row < count($membro2); $row++) {
 					echo '
 						<div class="one-member">
 							<div class="outside-img-border">

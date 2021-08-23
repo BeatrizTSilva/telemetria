@@ -27,9 +27,9 @@
 					<div class="outside-img">
 						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
 						<div class="membro-description">
-							<p id="dept-desription">Dept. Electrónica</p>
+							<p id="dept-desription">uigfrbfeoipçbfri</p>
 							<p id="function-description">Coordenador</p>
-							<a class="link" href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">Website</a>
+							<div class="link-div"><a class="link" href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">Website</a></div>
 						</div>
 					</div>
 				</div>
@@ -40,14 +40,14 @@
 			<div class="membros-div">
 				<?php
 				$membro2 = array(
-					array('Alexandre Freira', 'ist190209/', 'Dept.Electrónica'),
-					array('Beatriz Silva',    'ist186954/', 'Dept.Electrónica'),
-					array('Daniel Vareta',    'ist190234/', 'Dept.Electrónica'),
-					array('João Coelho',      'ist196252/', 'Dept.Electrónica'),
-					array('Paulo Silva',      'ist193672/', 'Dept. Comm e Marketing'),
-					array('Eduarda David',    'ist196788/', 'Dept. Comm e Marketing'),
-					array('Lourenço Vieira',  'ist190307/', 'Dept.Electrónica'),
-					array('Francisco Pedro',  'ist196791/', 'Dept. Comm e Marketing'),
+					array('Alexandre Freira', 'ist190209/', 'Dept.Electrónica',       'Web Design'),
+					array('Beatriz Silva',    'ist186954/', 'Dept.Electrónica',       'Web Design'),
+					array('Daniel Vareta',    'ist190234/', 'Dept.Electrónica',       'Web Design'),
+					array('João Coelho',      'ist196252/', 'Dept.Electrónica',       'Web Design'),
+					array('Paulo Silva',      'ist193672/', 'Dept. Comm e Marketing', 'Web Design'),
+					array('Eduarda David',    'ist196788/', 'Dept. Comm e Marketing', 'Web Design'),
+					array('Lourenço Vieira',  'ist190307/', 'Dept.Electrónica',       'Web Design'),
+					array('Francisco Pedro',  'ist196791/', 'Dept. Comm e Marketing', 'Web Design'),
 				);
 				$membro = array(
 				'Alexandre Freira' 	=> 'ist190209/',
@@ -60,24 +60,24 @@
 				'Francisco Pedro'	=> 'ist196791/'
 				);
 
-				foreach($membro as $nome => $ID_aluno)
-				echo '
-					<div class="one-member">
-						<div class="outside-img-border">
-							<div class="outside-img">
-								<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
-								<div class="membro-description">
-									<p id="dept-desription">Dept. Electrónica</p>
-									<p id="function-description">Coordenador</p>
-									<a class="link" href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">Website</a>
+				for ($row = 0; $row < count($membro2[0]); $row++) {
+					/*foreach($membro as $nome => $ID_aluno)*/
+					echo '
+						<div class="one-member">
+							<div class="outside-img-border">
+								<div class="outside-img">
+									<img class="img-membro" src="imgs/membros/'. $membro2[$row][0] . '.jpg" />
+									<div class="membro-description">
+										<p id="dept-desription">Dept. Electrónica</p>
+										<p id="function-description">Coordenador</p>
+										<div class="link-div"><a class="link" href="https://web.tecnico.ulisboa.pt/' . $membro2[$row][1] . '" target="_blank">Website</a></div>
+									</div>
 								</div>
 							</div>
+							<div class="nome-membro">'. $membro2[$row][0] . '</div>
 						</div>
-						<div class="nome-membro">'. $nome . '</div>
-					</div>
-				'
+					';}
 				?>
-
 			</div>
 			</div>
 		</div>

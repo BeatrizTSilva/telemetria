@@ -112,9 +112,7 @@
 }
 /* border for the img-and-link div so it doesn't destroy the green border when :hover */
 .img-and-link-border {
-    background-color: #080a09; border-radius: 50%;
-    padding: 5px 5px 5px 5px;
-    border: solid 2px rgb(84, 219, 57);
+    background-color: #080a09; border-radius: 50%; padding: 5px 5px 5px 5px; border: solid 2px rgb(84, 219, 57);
     position: relative; display: inline-block;
 }
 /* image and link of each member */
@@ -122,26 +120,50 @@
     position: relative;
     /* position: relative; display: inline-block; */
 }
-.img-and-link:hover {
-    /* opacity: 0; */
-    /* transform: rotateY(90deg); */
-    transition: transform .8s ease-in-out;
-    transform: rotateY(90deg) scale3d(1.2, 1.2, 0.3);
+.img-and-link .membro-description {
+    filter: alpha(opacity = 0);
+    opacity:0;-webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;transition: all 0.5s ease-out;
+}
+.img-and-link:hover .membro-description{
+    /* transition: transform .8s ease-in-out; */
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    filter: alpha(opacity = 100);
+    filter: alpha(opacity = 100);
+    opacity:100;
+}
+.img-and-link:hover .img-membro {
+    margin-top:0px;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    filter: alpha(opacity = 0);
+    filter: alpha(opacity = 0);
+    opacity:0;
 }
 /* just the image of a member */
 .img-membro {
     width: 17rem;
     border-radius: 50%;
+    filter: alpha(opacity = 100);
+    opacity:100;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
 }
 .membro-description {
-    opacity: 1;
     position: absolute;
     top: 6rem;
     left: 3rem;
-    text-align: center;
-}
-.img-and-link:hover + .membro-description {
-    opacity: 1;
+    font-size:15px;
+    width:8rem;
+    height:auto;
+    padding-top:3px;
+    border:1px solid#b8b8b8;
+    text-align:center;
+    /* position:fixed; */
 }
 /* each name */
 .nome-membro {
@@ -152,22 +174,22 @@
 /* --------------------- CSS EXEMPLO -------------------- */
 #bite
 #bite a{
-display:block
+    display:block
 }
 #bite .death {
-margin-top:0px;filter: alpha(opacity = 0);
-opacity:0;-webkit-transition: all 0.5s ease-out;
--moz-transition: all 0.5s ease-out;transition: all 0.5s ease-out;
+    margin-top:0px;filter: alpha(opacity = 0);
+    opacity:0;-webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;transition: all 0.5s ease-out;
 }
 
 #bite:hover .death {
-margin-top:0px;
--webkit-transition: all 0.8s ease-out;
--moz-transition: all 0.8s ease-out;
-transition: all 0.8s ease-out;
-filter: alpha(opacity = 100);
-filter: alpha(opacity = 100);
-opacity:100;
+    margin-top:0px;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    filter: alpha(opacity = 100);
+    filter: alpha(opacity = 100);
+    opacity:100;
 }
 
 #actualnews {

@@ -38,13 +38,12 @@
 			<div class="one-member" id="one-member-miguel">
 				<div class="img-and-link-border">
 					<div class="img-and-link">
-						<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">
-							<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
-							<div class="membro-description">
-								<p id="dept-desription">Dept. Electrónica</p>
-								<p id="funtion-description">Coordenador</p>
-							</div>
-						</a>
+						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
+						<div class="membro-description">
+							<p id="dept-desription">Dept. Electrónica</p>
+							<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank"></a>
+							<p id="funtion-description">Coordenador</p>
+						</div>
 					</div>
 				</div>
 				<div class="nome-membro">Miguel D'Ajuda</div>
@@ -79,13 +78,12 @@
 					<div class="one-member">
 						<div class="img-and-link-border">
 							<div class="img-and-link">
-								<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">
-									<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
-									<div class="membro-description">
-										<p id="dept-desription">Dept. Electrónica</p>
-										<p id="funtion-description">Coordenador</p>
-									</div>
-								</a>
+								<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
+								<div class="membro-description">
+									<p id="dept-desription">Dept. Electrónica</p>
+									<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank"></a>
+									<p id="funtion-description">Coordenador</p>
+								</div>
 							</div>
 						</div>
 						<div class="nome-membro">'. $nome . '</div>

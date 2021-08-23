@@ -125,7 +125,8 @@
 .img-membro:hover {
     /* opacity: 0; */
     /* transform: scale(2); */
-    transform: rotateY(90deg);
+    /* transform: rotateY(90deg); */
+    transform: rotateY(90deg) scale3d(1.2, 1.2, 0.3);
 }
 .membro-description {
     opacity: 0;
@@ -139,4 +140,66 @@
 /* each name */
 .nome-membro {
     font-size: 17px; margin-top: 0.5rem;
+}
+
+
+/* --------------------- CSS EXEMPLO -------------------- */
+#bite
+#bite a{
+display:block
+}
+#bite .death {
+margin-top:0px;filter: alpha(opacity = 0);
+opacity:0;-webkit-transition: all 0.5s ease-out;
+-moz-transition: all 0.5s ease-out;transition: all 0.5s ease-out;
+}
+
+#bite:hover .death {
+margin-top:0px;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+filter: alpha(opacity = 100);
+filter: alpha(opacity = 100);
+opacity:100;
+}
+
+#actualnews {
+    font-family: 'Rock Salt';
+    font-size:5px;
+    color: #b8b8b8;
+    width:150px;
+    height:auto;
+    padding-top:3px;
+    border:1px solid#b8b8b8;
+    margin-left: 30px;
+    margin-top:10px;
+    text-align:center;
+    position:fixed;
+    right: 145px;
+    bottom: 70px;
+}
+
+#thekey img{
+    width:150px;
+    margin-top: -40px;
+    margin-left: 45px;
+    position:fixed;
+    right:150px;
+    bottom:20px;
+    filter: alpha(opacity = 100);
+    opacity:100;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+}
+
+#bite:hover #thekey img  {
+    margin-top:0px;
+    -webkit-transition: all 0.8s ease-out;
+    -moz-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+    filter: alpha(opacity = 0);
+    filter: alpha(opacity = 0);
+    opacity:0;
 }

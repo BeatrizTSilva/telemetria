@@ -81,7 +81,7 @@
 								<div class="membro-description">
 									<p id="dept-desription">Dept. Electrónica</p>
 									<p id="funtion-description">Coordenador</p>
-							</div>
+								</div>
 							</a>
 						</div>
 						<div class="nome-membro">'. $nome . '</div>

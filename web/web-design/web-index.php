@@ -17,32 +17,19 @@
 		<!-- main -->
 		<main>
 
-		<div id="bite">
-			<div id="thekey">
-				<img src="{image:thekey}">
-			</div>
-			<div class="death">
-				<div id="actualnews">
-					<a href="www" font-color:#9d3e78>MY STUFF</a>
-					<p><a href="www" font-color:#9d3e78>PRETTY THINGS</a>
-				</div>
-			</div>
-		</div>
-
-
 		<div class="membros-container">
 		<div class="membros-container-2">
 			<h1 id="dep-title">Departamento de Web Design</h1>
 			<br>
 			<h2 class="coordenador-membros-title">Coordenador</h2>
 			<div class="one-member" id="one-member-miguel">
-				<div class="img-and-link-border">
-					<div class="img-and-link">
+				<div class="outside-img-border">
+					<div class="outside-img">
 						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
 						<div class="membro-description">
 							<p id="dept-desription">Dept. Electrónica</p>
-							<a href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank"></a>
 							<p id="funtion-description">Coordenador</p>
+							<a class="link" href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">Website</a>
 						</div>
 					</div>
 				</div>
@@ -76,13 +63,13 @@
 				foreach($membro as $nome => $ID_aluno)
 				echo '
 					<div class="one-member">
-						<div class="img-and-link-border">
-							<div class="img-and-link">
+						<div class="outside-img-border">
+							<div class="outside-img">
 								<img class="img-membro" src="imgs/membros/'. $nome . '.jpg" />
 								<div class="membro-description">
 									<p id="dept-desription">Dept. Electrónica</p>
-									<a href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank"></a>
 									<p id="funtion-description">Coordenador</p>
+									<a class="link" href="https://web.tecnico.ulisboa.pt/' . $ID_aluno . '" target="_blank">Website</a>
 								</div>
 							</div>
 						</div>

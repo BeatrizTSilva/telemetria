@@ -4,7 +4,96 @@
  * Description: graphs that show the data from the sensors
  *
  *****************************************************************************/
-/* FROM HIGHCHARTS - FOR TEST */
+
+ var ajax = new XMLHttpRequest();
+ ajax.open("GET", "ajax.php", true);
+ ajax.send();
+
+ ajax.onreadystatechange = function() {
+       if (this.readyState == 4 && this.status == 200) {
+     console.log("we are readystatechnage");
+           var data = JSON.parse(this.responseText);
+           console.log(data);
+
+     var html = "";
+     for(var a = 0; a < data.length; a++) {
+       var time = data[a].time;
+       var voltage = data[a].voltage;
+       var current = data[a].current;
+       var speed = data[a].speed;
+       var temperature = data[a].temperature;
+       var coordinates1 = data[a].coordinates1;
+       var coordinates2 = data[a].coordinates2;
+
+       html += "<tr>";
+         html += "<td>" + time + "</td>";
+         html += "<td>" + voltage + "</td>";
+         html += "<td>" + current + "</td>";
+         html += "<td>" + speed + "</td>";
+         html += "<td>" + temperature + "</td>";
+         html += "<td>" + coordinates1 + "</td>";
+         html += "<td>" + coordinates2 + "</td>";
+       html += "</tr>";
+     }
+     document.getElementById("data").innerHTML += html;
+     }
+   };
+/* --------------------------- TRYING TO PUT DATA FROM DATABASE ----------------------- */
+Highcharts.chart('container', {
+  chart: {
+      type: 'spline',
+      animation: Highcharts.svg, // don't animate in old IE
+      marginRight: 10,
+      events: {
+          load: function () {
+              // set up the updating of the chart each second
+              var series = this.series[0];
+              setInterval(function () {
+                  // current time - will create the actual update of time
+                  var x = (new Date()).getTime(),
+                      y = 6; // value for y from database (was "y = Math.random();")
+                  series.addPoint([x, y], true, true);
+              }, 1000);
+          }
+      }
+  },
+  time: { useUTC: false },
+  title: { text: 'From database' },
+  accessibility: {
+      announceNewData: { enabled: true, minAnnounceInterval: 15000,
+          announcementFormatter: function (allSeries, newSeries, newPoint) {
+              if (newPoint) { return 'New point added. Value: ' + newPoint.y; }
+              return false;
+          }
+      }
+  },
+  xAxis: { type: 'datetime', tickPixelInterval: 150 },
+  yAxis: {
+    title: { text: 'Value' },
+    plotLines: [{ value: 0, width: 1, color: '#808080'}]
+  },
+  tooltip: {
+      headerFormat: '<b>{series.name}</b><br/>',
+      pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
+  },
+  legend: { enabled: false }, exporting: { enabled: false },
+  series: [{
+      name: 'Database',
+      data: (function () { var data = [], time = (new Date()).getTime(), i;
+          for (i = -30; i <= 0; i += 1) {
+              data.push({
+                  x: time + i * 1000, // shows time in a comprehensible way
+                  y:0 // initial value (was "y: Math.random()")
+              });
+          }
+          return data;
+      }())
+  }]
+});
+
+
+
+/* ---------------------- FROM HIGHCHARTS - FOR TEST --------------------- */
 Highcharts.chart('container', {
   chart: {
       type: 'spline',

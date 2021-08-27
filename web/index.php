@@ -127,9 +127,11 @@
     			}
   			};
 
+		</script>
 
 
 
+		<!--script>
 			/* ---------- JSON.parse ----------- */
 			/*var response = '{"result":true,"count":1}';
 			const parsed_var = JSON.parse(response);
@@ -140,9 +142,8 @@
 			console.log("Stringed variable is: " + stringed_var);
 			var data = JSON.parse(new_var);
 			console.log(new_var);
-			console.log("Result is: " + new_var.result);*/
-
-		</script>
+			console.log("Result is: " + new_var.result);
+		</script-->
 
 
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->

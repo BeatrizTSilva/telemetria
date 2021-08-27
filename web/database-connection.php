@@ -1,6 +1,6 @@
 <?php
 /* ---------------------------------------------------------------------------
- * File: database_connection.php
+ * File: database-connection.php
  *
  * Description: All functions related to the database - connection,
  *	retrieving values, deleting rows, etc

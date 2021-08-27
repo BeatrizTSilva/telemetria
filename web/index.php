@@ -25,7 +25,7 @@
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
 	<!----------------------------- includes ----------------------------------->
 	<?php
-	require("database_connection.php");
+	require("database-connection.php");
 	require("functions.php");
 	//require("ajax.php");
 	?>

@@ -79,7 +79,7 @@
 		?-->
 
 		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
-		<!--table>
+		<table>
 			<tr>
 			<th>Time</th>
 			<th>Voltage</th>
@@ -90,7 +90,7 @@
 			<th>Coordinates2</th>
 			</tr>
 			<tbody id="data"></tbody>
-		</table-->
+		</table>
 
 		<script>
 			var ajax = new XMLHttpRequest();
@@ -108,7 +108,7 @@
 				}
 			}
 
-			/*ajax.onreadystatechange = function() {
+			ajax.onreadystatechange = function() {
         		if (this.readyState == 4 && this.status == 200) {
 					console.log("we are readystatechnage");
             		var data = JSON.parse(this.responseText);
@@ -136,7 +136,7 @@
 					}
 					document.getElementById("data").innerHTML += html;
     			}
-  			};*/
+  			};
 
 
 

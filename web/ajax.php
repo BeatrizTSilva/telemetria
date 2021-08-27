@@ -30,8 +30,5 @@ while ($row = pg_fetch_assoc($result))
 }
 
 echo json_encode($data);
-//exit();
-
-//echo "Hello";
-
+exit();
 ?>

@@ -159,9 +159,7 @@
 		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
 		<div class="highcharts-figure">
 			<div id="container"></div>
-			<p class="highcharts-description">
-				Chart showing data updating every second, with old data being removed.
-			</p>
+			<p class="highcharts-description">Chart</p>
 		</div>
 
 		<script src="graphs.js"></script>

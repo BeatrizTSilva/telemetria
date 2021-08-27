@@ -27,7 +27,7 @@
 	<?php
 	require("database_connection.php");
 	require("functions.php");
-	require("ajax.php");
+	//require("ajax.php");
 	?>
 	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -79,7 +79,7 @@
 		?-->
 
 		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
-		<table>
+		<!--table>
 			<tr>
 			<th>Time</th>
 			<th>Voltage</th>
@@ -90,7 +90,7 @@
 			<th>Coordinates2</th>
 			</tr>
 			<tbody id="data"></tbody>
-		</table>
+		</table-->
 
 		<script>
 			var ajax = new XMLHttpRequest();
@@ -103,7 +103,7 @@
 			ajax.send();
 
 			ajax.onreadystatechange = function () {
-				if(this.readyState == 4 && this.status ==200) {
+				if(this.readyState == 4 && this.status == 200) {
 					alert(this.responseText);
 				}
 			}

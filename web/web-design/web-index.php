@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="This Website is mearly a test to understand the basic structure of the php file">
+		<meta name="description" content="This Website is merely a test to understand the basic structure of the php file">
 		<link rel="stylesheet" type="text/css" href="web-styles.css">
 		<!-- for icon -->
 		<link rel="icon" href="imgs/33.png">
@@ -17,6 +17,22 @@
 		<!-- main -->
 		<main>
 
+		<?php
+			$membro2 = array(
+				array('Miguel D_Ajuda',   'ist425444/', 'Dept. Electrónica',       'Coordenador'),
+				array('Alexandre Freira', 'ist190209/', 'Dept. Electrónica',       'Web Design'),
+				array('Beatriz Silva',    'ist186954/', 'Dept. Electrónica',       'Web Design'),
+				array('Daniel Vareta',    'ist190234/', 'Dept. Electrónica',       'Web Design'),
+				array('João Coelho',      'ist196252/', 'Dept. Electrónica',       'Web Design'),
+				array('Paulo Silva',      'ist193672/', 'Dept. Comm e Marketing',  'Web Design'),
+				array('Eduarda David',    'ist196788/', 'Dept. Comm e Marketing',  'Web Design'),
+				array('Lourenço Vieira',  'ist190307/', 'Dept. Electrónica',       'Web Design'),
+				array('Francisco Pedro',  'ist196791/', 'Dept. Comm e Marketing',  'Web Design'),
+			);
+			echo $membros2[0][0];
+		?>
+
+
 		<div class="membros-container">
 		<div class="membros-container-2">
 			<h1 id="dep-title">Departamento de Web Design</h1>
@@ -25,11 +41,11 @@
 			<div class="one-member" id="one-member-miguel">
 				<div class="outside-img-border">
 					<div class="outside-img">
-						<img class="img-membro" src="imgs/membros/Miguel D_Ajuda.jpg" />
+						<img class="img-membro" src="imgs/membros/<?php echo $membro2[0][0] ?>.jpg" />
 						<div class="membro-description">
-							<p id="dept-desription">uigfrbfeoipçbfri</p>
-							<p id="function-description">Coordenador</p>
-							<div class="link-div"><a class="link" href="https://web.tecnico.ulisboa.pt/ist425444" target="_blank">Website</a></div>
+							<p id="dept-desription">Dept. Electrónica</p>
+							<p id="function-description"> <?php echo $membro2[0][3] ?> </p>
+							<div class="link-div"><a class="link" href="https://web.tecnico.ulisboa.pt/<?php echo $membro2[0][1] ?>" target="_blank">Website</a></div>
 						</div>
 					</div>
 				</div>
@@ -37,30 +53,9 @@
 			</div>
 			<br>
 			<h2 class="coordenador-membros-title" id="membros-title">Membros</h2>
-			<div class="membros-div">
+			<div class="membros-div">'
 				<?php
-				$membro2 = array(
-					array('Alexandre Freira', 'ist190209/', 'Dept. Electrónica',       'Web Design'),
-					array('Beatriz Silva',    'ist186954/', 'Dept. Electrónica',       'Web Design'),
-					array('Daniel Vareta',    'ist190234/', 'Dept. Electrónica',       'Web Design'),
-					array('João Coelho',      'ist196252/', 'Dept. Electrónica',       'Web Design'),
-					array('Paulo Silva',      'ist193672/', 'Dept. Comm e Marketing',  'Web Design'),
-					array('Eduarda David',    'ist196788/', 'Dept. Comm e Marketing',  'Web Design'),
-					array('Lourenço Vieira',  'ist190307/', 'Dept. Electrónica',       'Web Design'),
-					array('Francisco Pedro',  'ist196791/', 'Dept. Comm e Marketing',  'Web Design'),
-				);
-				$membro = array(
-				'Alexandre Freira' 	=> 'ist190209/',
-				'Beatriz Silva' 	=> 'ist186954/',
-				'Daniel Vareta' 	=> 'ist190234/',
-				'João Coelho' 		=> 'ist196252/',
-				'Paulo Silva' 		=> 'ist193672/',
-				'Eduarda David' 	=> 'ist196788/',
-				'Lourenço Vieira' 	=> 'ist190307/',
-				'Francisco Pedro'	=> 'ist196791/'
-				);
-
-				for ($row = 0; $row < count($membro2); $row++) {
+				for ($row = 1; $row < count($membro2); $row++) {
 					echo '
 						<div class="one-member">
 							<div class="outside-img-border">

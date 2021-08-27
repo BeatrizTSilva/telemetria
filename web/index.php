@@ -94,19 +94,8 @@
 
 		<script>
 			var ajax = new XMLHttpRequest();
-			var method = "GET";
-			var url = "ajax.php";
-			var asynchronous = true;
-
-			ajax.open(method, url, asynchronous);
-			//ajax.open("GET", "ajax.php", true);
+			ajax.open("GET", "ajax.php", true);
 			ajax.send();
-
-			ajax.onreadystatechange = function () {
-				if(this.readyState == 4 && this.status == 200) {
-					alert(this.responseText);
-				}
-			}
 
 			ajax.onreadystatechange = function() {
         		if (this.readyState == 4 && this.status == 200) {

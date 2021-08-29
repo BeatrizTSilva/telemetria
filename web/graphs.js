@@ -5,7 +5,8 @@
  *
  *****************************************************************************/
 
-var ajax = new XMLHttpRequest();
+/* -------------------------------- AJAX ORIGINAL -----------------------*/
+/*var ajax = new XMLHttpRequest();
 ajax.open("GET", "ajax.php", true);
 ajax.send();
 
@@ -15,9 +16,11 @@ ajax.onreadystatechange = function() {
     var data = JSON.parse(this.responseText);
     console.log(data);
   }
-};
-/* --------------------------- TRYING TO PUT DATA FROM DATABASE ----------------------- */
-Highcharts.chart('container', {
+};*/
+
+
+/* -------------------------------- NEW HIGHCHARTS -------------------------------- */
+/*Highcharts.chart('container', {
   chart: {
       type: 'spline',
       animation: Highcharts.svg, // don't animate in old IE
@@ -67,12 +70,12 @@ Highcharts.chart('container', {
           return data;
       }())
   }]
-});
+});*/
 
 /* ------------------------------------ Older graphs ---------------------------------- */
 /* ------------------------------------ Graph 1 --------------------------------------- */
 var chartT = new Highcharts.Chart({
-  chart:{renderTo : 'temperature_graph'},
+  chart:{renderTo : 'test-chart'},
   title: {text:'Temperature'},
   series: [{
     showInLegend: true,
@@ -100,7 +103,12 @@ setInterval(function () {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var x = (new Date()).getTime();
-      var y = 1;
+      //var y = 1;
+
+      var data = JSON.parse(this.responseText);
+      console.log(data[0]);
+      y = data[0];
+
 
       /*function iterationFunction(){
         for (i = 1; ;i++){
@@ -122,7 +130,7 @@ setInterval(function () {
     }
   };
   //xhttp.open("GET", "ajax.php");
-  xhttp.open("GET", "database_connection.php", true);
+  xhttp.open("GET", "ajax.php", true);
   xhttp.send();
 }, 3000);
 

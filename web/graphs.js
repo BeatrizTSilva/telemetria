@@ -5,17 +5,17 @@
  *
  *****************************************************************************/
 
-// var ajax = new XMLHttpRequest();
-// ajax.open("GET", "ajax.php", true);
-// ajax.send();
+var ajax = new XMLHttpRequest();
+ajax.open("GET", "ajax.php", true);
+ajax.send();
 
-// ajax.onreadystatechange = function() {
-//   if (this.readyState == 4 && this.status == 200) {
-//     console.log("we are readystatechnage");
-//     var data = JSON.parse(this.responseText);
-//     console.log(data);
-//   }
-// };
+ajax.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log("we are readystatechnage");
+    var data = JSON.parse(this.responseText);
+    console.log(data);
+  }
+};
 /* --------------------------- TRYING TO PUT DATA FROM DATABASE ----------------------- */
 Highcharts.chart('container', {
   chart: {

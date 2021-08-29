@@ -92,7 +92,7 @@
 			<tbody id="data"></tbody>
 		</table>
 
-		<script>
+		<!--script>
 			var ajax = new XMLHttpRequest();
 			ajax.open("GET", "ajax.php", true);
 			ajax.send();
@@ -101,6 +101,7 @@
         		if (this.readyState == 4 && this.status == 200) {
             		var data = JSON.parse(this.responseText);
             		//console.log(data);
+					// alert(this.responseText);
 
 					var html = "";
 					for(var a = 0; a < data.length; a++) {
@@ -126,7 +127,7 @@
     			}
   			};
 
-		</script>
+		</script-->
 
 
 

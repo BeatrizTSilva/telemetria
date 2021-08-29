@@ -20,15 +20,20 @@ $database = pg_connect('host='.$hostname.' port='.$port.' dbname='.$database_nam
     echo "Connection failed <br>";
 }*/
 /* ----------------------------------- 6th AJAX test --------------------------------- */
-//$database = connectDB();
-$result = pg_query($database,"SELECT * FROM telemetria ORDER BY t");
+/*$result = pg_query($database,"SELECT * FROM telemetria ORDER BY t");
 
 $data = array();
 while ($row = pg_fetch_assoc($result))
 {
     array_push($data, $row);
-}
+}*/
+
+$result = pg_query($database, "SELECT voltage FROM telemetria WHERE t=1");
+$data = array();
+$row = pg_fetch_assoc($result);
+array_push($data, $row);
 
 echo json_encode($data);
+
 exit();
 ?>

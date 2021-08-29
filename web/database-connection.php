@@ -72,7 +72,7 @@ function getOneValue ($database, $variable, $time){
 	$string = "SELECT " .$variable. " FROM telemetria WHERE t=".$time;
 	$result = pg_query($database, "SELECT " .$variable. " FROM telemetria WHERE t=".$time) or die("ERROR: Cannot execute query " .$string." in getOneValue <br>");
 	$row = pg_fetch_assoc($result) or die("ERROR: Could not fetch result for ".$variable." at t= ".$time." in getOneValue <br>");
-	echo "Result for ".$variable." at time ".$time." is " .$row[$variable] . "<br>";
+	echo "Result for ".$variable." at time ".$time." is " .$row[$variable]. "<br>";
 	return $row[$variable];
 }
 

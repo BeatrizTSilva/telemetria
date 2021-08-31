@@ -106,7 +106,7 @@ setInterval(function () {
       //var y = 1;
 
       var data = JSON.parse(this.responseText);
-      console.log(data[0]);
+      console.log(data.voltage);
       y = data[0];
 
 
@@ -117,10 +117,7 @@ setInterval(function () {
 
       }
       setInterval(IterationFunction, 3000);*/
-
-
-      //var y = JSON.parse(this.responseText);
-      console.log(y);
+      console.log("This is y: "+y);
 
       if (chartT.series[0].data.length > 10) {
         chartT.series[0].addPoint([x, y], true, true, true);

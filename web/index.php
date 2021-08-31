@@ -40,7 +40,7 @@
 			<script src="clock.js"></script>
 		</div>
 		<p id="github-code">
-        	Code <a href="https://github.com/colher-de-pau/site" target="_blank" rel="noopenernoreferrer">here</a>
+        	Code <a href="https://github.com/BeatrizTSilva/telemetria" target="_blank" rel="noopenernoreferrer">here</a>
       	</p>
 	</div>
 

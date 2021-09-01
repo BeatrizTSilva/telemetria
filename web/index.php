@@ -101,7 +101,7 @@
         		if (this.readyState == 4 && this.status == 200) {
             		var data = JSON.parse(this.responseText);
             		//console.log(data);
-					// alert(this.responseText);
+					//alert(this.responseText);
 
 					var html = "";
 					for(var a = 0; a < data.length; a++) {
@@ -164,12 +164,7 @@
 
 		<div id="test-chart"></div>
 		<div id="temperature_graph" id="one-graph"></div>
-
 		<script src="graphs.js"></script>
-
-		<div id="test-chart"></div>
-		<div id="temperature_graph" id="one-graph"></div>
-		<!--script src="graphs.js"></script-->
 
 		<!--?php closeConnection($database); ?-->
 

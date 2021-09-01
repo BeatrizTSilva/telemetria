@@ -28,10 +28,14 @@ while ($row = pg_fetch_assoc($result))
     array_push($data, $row);
 }*/
 
-$result = pg_query($database, "SELECT voltage FROM telemetria WHERE t=1");
+//$result = pg_query($database, "SELECT * FROM telemetria WHERE t=1");
+$result = pg_query($database, "SELECT * FROM telemetria ORDER BY t");
 $data = array();
-$row = pg_fetch_assoc($result);
-array_push($data, $row);
+
+while ($row = pg_fetch_assoc($result))
+{
+    array_push($data, $row);
+}
 
 echo json_encode($data);
 

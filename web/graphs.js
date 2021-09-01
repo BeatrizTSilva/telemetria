@@ -99,15 +99,21 @@ var chartT = new Highcharts.Chart({
 });
 
 setInterval(function () {
-  var xhttp = new XMLHttpRequest();
+  let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      var x = (new Date()).getTime();
-      //var y = 1;
-
+      let x = (new Date()).getTime();
+      let y;
       var data = JSON.parse(this.responseText);
-      console.log(data.voltage);
-      y = data[0];
+
+      console.log("this.Response " + this.responseText);
+      console.log(data);
+      //y = data[0];
+
+      y = data[0].voltage;
+      z = data[1].current;
+      console.log("This is y: " + y);
+      console.log("This is z: " + z);
 
 
       /*function iterationFunction(){
@@ -117,7 +123,7 @@ setInterval(function () {
 
       }
       setInterval(IterationFunction, 3000);*/
-      console.log("This is y: "+y);
+
 
       if (chartT.series[0].data.length > 10) {
         chartT.series[0].addPoint([x, y], true, true, true);
@@ -126,7 +132,6 @@ setInterval(function () {
       }
     }
   };
-  //xhttp.open("GET", "ajax.php");
   xhttp.open("GET", "ajax.php", true);
   xhttp.send();
 }, 3000);

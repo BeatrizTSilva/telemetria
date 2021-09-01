@@ -157,10 +157,10 @@
 		</div-->
 
 		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
-		<!--div class="highcharts-figure">
+		<div class="highcharts-figure">
 			<div id="container"></div>
 			<p class="highcharts-description">Chart</p>
-		</div-->
+		</div>
 
 		<div id="test-chart"></div>
 		<div id="temperature_graph" id="one-graph"></div>

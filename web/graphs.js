@@ -20,7 +20,7 @@ ajax.onreadystatechange = function() {
 
 
 /* -------------------------------- NEW HIGHCHARTS -------------------------------- */
-/*Highcharts.chart('container', {
+Highcharts.chart('container', {
   chart: {
       type: 'spline',
       animation: Highcharts.svg, // don't animate in old IE
@@ -30,10 +30,33 @@ ajax.onreadystatechange = function() {
               // set up the updating of the chart each second
               var series = this.series[0];
               setInterval(function () {
-                  // current time - will create the actual update of time
+                  /* // current time - will create the actual update of time
                   var x = (new Date()).getTime(),
-                      y = 6; // value for y from database (was "y = Math.random();")
-                  series.addPoint([x, y], true, true);
+                      y = 6; // value for y from database (was "y = Math.random();")*/
+
+                      let xhttp = new XMLHttpRequest();
+                      xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                          let x = (new Date()).getTime();
+                          let y; /* y axis */
+                          let y_string; /* aux variable */
+                          let data = JSON.parse(this.responseText); /* everything that comes from the database (in ajax.php) */
+
+                          console.log("this.Response " + this.responseText);
+                          console.log(data);
+
+                          y_string = data[0].voltage; /* data[0].voltage will return a string */
+                          y = parseFloat(y_string); /* make the string a float */
+                          z = data[1].current;
+                          console.log("This is y: " + y);
+
+                          console.log("This is z: " + z);
+
+                          series.addPoint([x, y], true, true);
+                        }
+                      };
+                  xhttp.open("GET", "ajax.php", true);
+                  xhttp.send();
               }, 1000);
           }
       }
@@ -70,7 +93,7 @@ ajax.onreadystatechange = function() {
           return data;
       }())
   }]
-});*/
+});
 
 /* ------------------------------------ Older graphs ---------------------------------- */
 /* ------------------------------------ Graph 1 --------------------------------------- */
@@ -102,30 +125,25 @@ setInterval(function () {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      let x = (new Date()).getTime();
+      let x = (new Date()).getTime(); /* x axis */
       let y; /* y axis */
       let y_string; /* aux variable */
-      let data = JSON.parse(this.responseText);
+      let data = JSON.parse(this.responseText); /* everything that comes from the database (in ajax.php) */
 
       console.log("this.Response " + this.responseText);
       console.log(data);
-      //y = data[0];
 
       y_string = data[0].voltage; /* data[0].voltage will return a string */
       y = parseFloat(y_string); /* make the string a float */
       z = data[1].current;
       console.log("This is y: " + y);
-
       console.log("This is z: " + z);
-
 
       /*function iterationFunction(){
         for (i = 1; ;i++){
           getOneValue($database, "temperature", i);
         }
-
-      }
-      setInterval(IterationFunction, 3000);*/
+      }*/
 
 
       if (chartT.series[0].data.length > 10) {

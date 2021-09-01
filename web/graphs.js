@@ -103,16 +103,19 @@ setInterval(function () {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       let x = (new Date()).getTime();
-      let y;
-      var data = JSON.parse(this.responseText);
+      let y; /* y axis */
+      let y_string; /* aux variable */
+      let data = JSON.parse(this.responseText);
 
       console.log("this.Response " + this.responseText);
       console.log(data);
       //y = data[0];
 
-      y = data[0].voltage;
+      y_string = data[0].voltage; /* data[0].voltage will return a string */
+      y = parseFloat(y_string); /* make the string a float */
       z = data[1].current;
       console.log("This is y: " + y);
+
       console.log("This is z: " + z);
 
 

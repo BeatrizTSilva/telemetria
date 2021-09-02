@@ -146,22 +146,33 @@
 		</script-->
 
 
-		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
-		<div id="temperature_graph" class="graph"></div-->
-		<div id="voltage_graph" class="graph"></div>
-		<div id="speed_graph" class="graph"></div>
-		<div id="graph_voltmeter" class="graph"></div>
-		<!--script src="graphs.js"></script-->
-
 		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
 		<div class="highcharts-figure">
 			<div id="container"></div>
 			<p class="highcharts-description">Chart</p>
 		</div>
 
-		<!--div id="temperature_graph" class="one-graph"></div>
-		<div id="speed_graph" class="one-graph"></div-->
+		<div id="test-chart" class="one-graph"></div>
+		<div id="speed_graph" class="one-graph"></div>
+
+
+
+		<figure class="highcharts-figure">
+			<div id="container-speed" class="chart-container"></div>
+			<div id="container-rpm" class="chart-container"></div>
+			<p class="highcharts-description">
+				Chart demonstrating solid gauges with dynamic data. Two separate charts
+				are used, and each is updated dynamically every few seconds. Solid
+				gauges are popular charts for dashboards, as they visualize a number
+				in a range at a glance. As demonstrated by these charts, the color of
+				the gauge can change depending on the value of the data shown.
+			</p>
+		</figure>
+
+
 		<script src="graphs.js"></script>
+
+
 
 
 		<!--?php closeConnection($database); ?-->

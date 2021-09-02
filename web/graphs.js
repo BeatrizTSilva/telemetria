@@ -19,6 +19,7 @@ ajax.onreadystatechange = function() {
 };*/
 
 
+let counter = 0;
 /* -------------------------------- NEW HIGHCHARTS -------------------------------- */
 Highcharts.chart('container', {
   chart: {
@@ -26,41 +27,39 @@ Highcharts.chart('container', {
       animation: Highcharts.svg, // don't animate in old IE
       marginRight: 10,
       events: {
-          load: function () {
-              // set up the updating of the chart each second
-              var series = this.series[0];
-              setInterval(function () {
-                  /* // current time - will create the actual update of time
-                  var x = (new Date()).getTime(),
-                      y = 6; // value for y from database (was "y = Math.random();")*/
+        load: function () {
+          // set up the updating of the chart each second
+          var series = this.series[0];
+          setInterval(function () {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                let x = (new Date()).getTime();
+                let y; /* y axis */
+                let y_string; /* aux variable */
+                let data = JSON.parse(this.responseText); /* everything that comes from the database (in ajax.php) */
 
-                      let xhttp = new XMLHttpRequest();
-                      xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                          let x = (new Date()).getTime();
-                          let y; /* y axis */
-                          let y_string; /* aux variable */
-                          let data = JSON.parse(this.responseText); /* everything that comes from the database (in ajax.php) */
+                console.log("this.Response " + this.responseText);
+                console.log(data);
 
-                          console.log("this.Response " + this.responseText);
-                          console.log(data);
+                y_string = data[counter].voltage; /* data[0].voltage will return a string */
+                y = parseFloat(y_string); /* make the string a float */
+                z = data[1].current;
+                console.log("This is y: " + y);
 
-                          y_string = data[0].voltage; /* data[0].voltage will return a string */
-                          y = parseFloat(y_string); /* make the string a float */
-                          z = data[1].current;
-                          console.log("This is y: " + y);
+                console.log("This is z: " + z);
 
-                          console.log("This is z: " + z);
+                series.addPoint([x, y], true, true); /* updates the graph */
 
-                          series.addPoint([x, y], true, true);
-                        }
-                      };
-                  xhttp.open("GET", "ajax.php", true);
-                  xhttp.send();
-              }, 1000);
-          }
+                counter++;
+              }
+            };
+            xhttp.open("GET", "ajax.php", true);
+            xhttp.send();
+          }, 1000);
+        }
       }
-  },
+    },
   time: { useUTC: false },
   title: { text: 'From database' },
   accessibility: {
@@ -73,7 +72,7 @@ Highcharts.chart('container', {
   },
   xAxis: { type: 'datetime', tickPixelInterval: 150 },
   yAxis: {
-    title: { text: 'Value' },
+    title: { text: 'Voltage [V]' },
     plotLines: [{ value: 0, width: 1, color: '#808080'}]
   },
   tooltip: {
@@ -99,7 +98,7 @@ Highcharts.chart('container', {
 /* ------------------------------------ Graph 1 --------------------------------------- */
 var chartT = new Highcharts.Chart({
   chart:{renderTo : 'test-chart'},
-  title: {text:'Temperature'},
+  title: {text:'Current'},
   series: [{
     showInLegend: true,
     name: "Temp",
@@ -116,15 +115,17 @@ var chartT = new Highcharts.Chart({
     dateTimeLabelFormats: {second:'%H:%M:%S'}
   },
   yAxis: {
-    title: {text:'Temperature [ºC]'}
+    title: {text:'Current [A]'}
   },
   credits: {enabled: false}
 });
 
+let counter2 = 0;
 setInterval(function () {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
+
       let x = (new Date()).getTime(); /* x axis */
       let y; /* y axis */
       let y_string; /* aux variable */
@@ -133,7 +134,7 @@ setInterval(function () {
       console.log("this.Response " + this.responseText);
       console.log(data);
 
-      y_string = data[0].voltage; /* data[0].voltage will return a string */
+      y_string = data[counter2].current; /* data[i].voltage will return a string */
       y = parseFloat(y_string); /* make the string a float */
       z = data[1].current;
       console.log("This is y: " + y);
@@ -141,147 +142,22 @@ setInterval(function () {
 
       /*function iterationFunction(){
         for (i = 1; ;i++){
-          getOneValue($database, "temperature", i);
+
         }
       }*/
 
-
+      /* updating the graph */
       if (chartT.series[0].data.length > 10) {
         chartT.series[0].addPoint([x, y], true, true, true);
       } else {
         chartT.series[0].addPoint([x, y], true, false, true);
       }
+      counter2++;
     }
   };
   xhttp.open("GET", "ajax.php", true);
   xhttp.send();
 }, 3000);
-
-
-/*setInterval(function () {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      var x = (new Date()).getTime();
-      console.log(this.responseText);
-      var y = 1;
-
-      if (chartT.series[0].data.length > 10) {
-        chartT.series[0].addPoint([x, y], true, true, true);
-      } else {
-        chartT.series[0].addPoint([x, y], true, false, true);
-      }
-    }
-  };
-  //xhttp.open("GET", "index.php", false); // for synch
-  xhttp.open("GET", "database_connection.php?q", true); // for async -> will not wait for server
-  xhttp.send();
-}, 3000);*/
-
-
-/*
-setInterval(function ( ) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var x = (new Date()).getTime(),
-          y = parseFloat(this.responseText);
-      //console.log(this.responseText);
-      if(chartT.series[0].data.length > 40) {
-        chartT.series[0].addPoint([x, y], true, true, true);
-      } else {
-        chartT.series[0].addPoint([x, y], true, false, true);
-      }
-    }
-  };
-  xhttp.open("GET", "/temperature", true);
-  xhttp.send();
-}, 30000 ); */
-
-
-/* -------------------------------------------- Graph 2 ------------------------------------------- */
-var chartH = new Highcharts.Chart({
-  chart:{renderTo:'voltage_graph'},
-  title: {text: 'Voltage'},
-  series: [{
-    showInLegend: true,
-    name: "V",
-    data: []
-  }],
-  plotOptions: {
-    line: {animation: false,
-      dataLabels: {enabled: true}
-    }
-  },
-  xAxis: {
-    type: 'datetime',
-    dateTimeLabelFormats: {second: '%H:%M:%S'}
-  },
-  yAxis: {
-    title: {text: 'Voltage [V]'}
-  },
-  credits: {enabled: false}
-});
-setInterval(function ( ) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var x = (new Date()).getTime(),
-          y = parseFloat(this.responseText);
-      //console.log(this.responseText);
-      if(chartH.series[0].data.length > 40) {
-        chartH.series[0].addPoint([x, y], true, true, true);
-      } else {
-        chartH.series[0].addPoint([x, y], true, false, true);
-      }
-    }
-  };
-  xhttp.open("GET", "/humidity", true);
-  xhttp.send();
-}, 30000 ) ;
-
-
-/* ------------------------------------------ Graph 3 ---------------------------------------------- */
-var chartP = new Highcharts.Chart({
-  chart:{renderTo:'current_graph'},
-  title: {text: 'Current'},
-  series: [{
-    showInLegend: true,
-    name: "I",
-    data: []
-  }],
-  plotOptions: {
-    line: {animation: false,
-      dataLabels: {enabled: true}
-    },
-    series: {color: '#18009c'}
-  },
-  xAxis: {
-    type: 'datetime',
-    dateTimeLabelFormats: {second: '%H:%M:%S'}
-  },
-  yAxis: {
-    title: {text: 'Current [I]'}
-  },
-  credits: {enabled: false}
-});
-setInterval(function ( ) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      var x = (new Date()).getTime(),
-          y = parseFloat(this.responseText);
-      //console.log(this.responseText);
-      if(chartP.series[0].data.length > 40) {
-        chartP.series[0].addPoint([x, y], true, true, true);
-      } else {
-        chartP.series[0].addPoint([x, y], true, false, true);
-      }
-    }
-  };
-  xhttp.open("GET", "/pressure", true);
-  xhttp.send();
-}, 30000 ) ;
 
 
 /* --------------------------------------------------- Speed graph ------------------------------------------------------- */

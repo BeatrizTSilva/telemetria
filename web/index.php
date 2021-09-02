@@ -147,14 +147,11 @@
 
 
 		<!-- ----------------------------------------- graphs for voltage, speed, etc -> in graphs.js ---------------------------------------------------- -->
-		<!--div id="graph-container">
-			<div id="temperature_graph" class="graph"></div-->
-			<!--div id="voltage_graph" class="graph"></div>
-			<div id="current_graph" class="graph"></div>
-			<div id="speed_graph" class="graph"></div>
-			<div id="graph_voltmeter" class="graph"></div-->
-			<!--script src="graphs.js"></script>
-		</div-->
+		<div id="temperature_graph" class="graph"></div-->
+		<div id="voltage_graph" class="graph"></div>
+		<div id="speed_graph" class="graph"></div>
+		<div id="graph_voltmeter" class="graph"></div>
+		<!--script src="graphs.js"></script-->
 
 		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
 		<div class="highcharts-figure">
@@ -162,9 +159,10 @@
 			<p class="highcharts-description">Chart</p>
 		</div>
 
-		<div id="test-chart"></div>
-		<div id="temperature_graph" id="one-graph"></div>
+		<!--div id="temperature_graph" class="one-graph"></div>
+		<div id="speed_graph" class="one-graph"></div-->
 		<script src="graphs.js"></script>
+
 
 		<!--?php closeConnection($database); ?-->
 

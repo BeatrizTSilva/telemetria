@@ -45,124 +45,111 @@
       	</p>
 	</div>
 
-	<div id="main-container">
+
 	<!--a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a-->
 
-		<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
-		<?php
-		/* connection to the database -> in database_connection.php */
-		$database = connectDB();
+	<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
+	<?php
+	/* connection to the database -> in database_connection.php */
+	$database = connectDB();
 
-		/* values that can be inserted into the database */
-		$values1 = array('time' => '6', 'volt' => '52.1', 'ampere' => '0.95', 'vel' => '8.52',
-			'temp' => '26.2', 'coord1' => '9.85465', 'coord2' => '11.35698'
-		);
-		$values2 = array('time' => '5', 'volt' => '20.99', 'ampere' => '5.84', 'vel' => '19',
-			'temp' => '25.1', 'coord1' => '9.23585', 'coord2' => '11.23589'
-		);
+	/* values that can be inserted into the database */
+	$values1 = array('time' => '6', 'volt' => '52.1', 'ampere' => '0.95', 'vel' => '8.52',
+	'temp' => '26.2', 'coord1' => '9.85465', 'coord2' => '11.35698'
+	);
+	$values2 = array('time' => '5', 'volt' => '20.99', 'ampere' => '5.84', 'vel' => '19',
+	'temp' => '25.1', 'coord1' => '9.23585', 'coord2' => '11.23589'
+	);
 
-		/* inserts a row -> in database_connection.php */
-		//insertRow($database, $values1);
-		/* in functions.php */
-		//writeMessage();
-		/* shows the whole database -> in database_connection.php */
-		showTable($database);
-		/* write SQL for parameter $variable and time $time */
-		$something = getOneValue($database, "current", 2);
-		echo "The value from getOneValue is " .$something. "<br>";
-		/* choose variable to print */
-		//getColumn($database, "voltage");
-		/* get one value at a time for all t's*/
-		//getSequenceOfValues($database, "current");
-		/* delete row at time t */
-		//deleteRow($database, 6);
-		//showTable($database);
-		?>
+	/* inserts a row -> in database_connection.php */
+	//insertRow($database, $values1);
+	/* in functions.php */
+	//writeMessage();
+	/* shows the whole database -> in database_connection.php */
+	showTable($database);
+	/* write SQL for parameter $variable and time $time */
+	$something = getOneValue($database, "current", 2);
+	echo "The value from getOneValue is " .$something. "<br>";
+	/* choose variable to print */
+	//getColumn($database, "voltage");
+	/* get one value at a time for all t's*/
+	//getSequenceOfValues($database, "current");
+	/* delete row at time t */
+	//deleteRow($database, 6);
+	//showTable($database);
+	?>
 
-		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
-		<!--table>
-			<tr>
-			<th>Time</th>
-			<th>Voltage</th>
-			<th>Current</th>
-			<th>Speed</th>
-			<th>Temperature</th>
-			<th>Coordinates1</th>
-			<th>Coordinates2</th>
-			</tr>
-			<tbody id="data"></tbody>
-		</table-->
+	<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
+	<!--table>
+		<tr>
+		<th>Time</th>
+		<th>Voltage</th>
+		<th>Current</th>
+		<th>Speed</th>
+		<th>Temperature</th>
+		<th>Coordinates1</th>
+		<th>Coordinates2</th>
+		</tr>
+	<tbody id="data"></tbody>
+	</table-->
 
-		<!--script>
-			var ajax = new XMLHttpRequest();
-			ajax.open("GET", "ajax.php", true);
-			ajax.send();
+	<!--script>
+	var ajax = new XMLHttpRequest();
+	ajax.open("GET", "ajax.php", true);
+	ajax.send();
 
-			ajax.onreadystatechange = function() {
-        		if (this.readyState == 4 && this.status == 200) {
-            		var data = JSON.parse(this.responseText);
-            		//console.log(data);
-					//alert(this.responseText);
+	ajax.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var data = JSON.parse(this.responseText);
+			//console.log(data);
+			//alert(this.responseText);
 
-					var html = "";
-					for(var a = 0; a < data.length; a++) {
-						var time = data[a].time;
-						var voltage = data[a].voltage;
-						var current = data[a].current;
-						var speed = data[a].speed;
-						var temperature = data[a].temperature;
-						var coordinates1 = data[a].coordinates1;
-						var coordinates2 = data[a].coordinates2;
+			var html = "";
+			for(var a = 0; a < data.length; a++) {
+				var time = data[a].time;
+				var voltage = data[a].voltage;
+				var current = data[a].current;
+				var speed = data[a].speed;
+				var temperature = data[a].temperature;
+				var coordinates1 = data[a].coordinates1;
+				var coordinates2 = data[a].coordinates2;
 
-						html += "<tr>";
-							html += "<td>" + time + "</td>";
-							html += "<td>" + voltage + "</td>";
-							html += "<td>" + current + "</td>";
-							html += "<td>" + speed + "</td>";
-							html += "<td>" + temperature + "</td>";
-							html += "<td>" + coordinates1 + "</td>";
-							html += "<td>" + coordinates2 + "</td>";
-						html += "</tr>";
-					}
-					document.getElementById("data").innerHTML += html;
-    			}
-  			};
+				html += "<tr>";
+				html += "<td>" + time + "</td>";
+				html += "<td>" + voltage + "</td>";
+				html += "<td>" + current + "</td>";
+				html += "<td>" + speed + "</td>";
+				html += "<td>" + temperature + "</td>";
+				html += "<td>" + coordinates1 + "</td>";
+				html += "<td>" + coordinates2 + "</td>";
+				html += "</tr>";
+			}
+			document.getElementById("data").innerHTML += html;
+		}
+	};
 
-		</script-->
-
-
-		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
-		<div class="graphs">
-			<div class="highcharts-figure">
-				<div id="voltage-graph"></div>
-				<div id="speed-graph"></div>
-				<div id="container-speed" class="chart-container"></div>
-				<div id="container-rpm" class="chart-container"></div>
-			</div>
-		</div>
-
-		<!--div class="highcharts-figure"></div>
-			<div id="speed-graph"></div>
-		</div>
+	</script-->
 
 
-		<figure class="highcharts-figure">
-			<div id="container-speed" class="chart-container"></div>
+	<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
+	<div class="graphs-container">
+		<!--div class="highcharts-figure"-->
 
-		</figure>
-
-		<figure class="highcharts-figure">
-			<div id="container-rpm" class="chart-container"></div>
-		</figure-->
-
-		<script src="graphs.js"></script>
-
-
-
-
-		<!--?php closeConnection($database); ?-->
-		<script scr="dark-mode.js"></script>
-
+			<div id="voltage-graph" class="one-graph"></div>
+			<div id="speed-graph" class="one-graph"></div>
+			<div id="container-speed" class="gauge one-graph"></div>
+			<div id="container-rpm" class="gauge one-graph"></div>
+		<!--/div-->
 	</div>
+
+	<script src="graphs.js"></script>
+
+
+
+
+	<!--?php closeConnection($database); ?-->
+	<script scr="dark-mode.js"></script>
+
+
 </body>
 </html>

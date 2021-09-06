@@ -14,15 +14,17 @@
 	<title>TTTTTT</title>
 	<link rel="icon" href="imgs/rover.ico"> <!-- icon for the browser tab -->
 	<link rel="stylesheet" type="text/css" href="styles.css"> <!--css file-->
-	<!--meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"-->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0">
+
 	<!---------------------------- for graphs --------------------------------->
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/highcharts-more.js"></script>
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+
 	<!----------------------------- includes ----------------------------------->
 	<?php
 	require("database-connection.php");
@@ -149,24 +151,15 @@
 		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
 		<div class="highcharts-figure">
 			<div id="container"></div>
-			<p class="highcharts-description">Chart</p>
 		</div>
 
 		<div id="test-chart" class="one-graph"></div>
 		<div id="speed_graph" class="one-graph"></div>
 
 
-
 		<figure class="highcharts-figure">
 			<div id="container-speed" class="chart-container"></div>
 			<div id="container-rpm" class="chart-container"></div>
-			<p class="highcharts-description">
-				Chart demonstrating solid gauges with dynamic data. Two separate charts
-				are used, and each is updated dynamically every few seconds. Solid
-				gauges are popular charts for dashboards, as they visualize a number
-				in a range at a glance. As demonstrated by these charts, the color of
-				the gauge can change depending on the value of the data shown.
-			</p>
 		</figure>
 
 

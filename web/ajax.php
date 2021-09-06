@@ -1,8 +1,8 @@
 <?php
-/*-----------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
  * File: ajax.js
  *
- * Description: tests with ajax and real time updates
+ * Description: retrieving data from the database for real time updates
  *
 -------------------------------------------------------------------------------- */
 include ("file.php");

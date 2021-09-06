@@ -27,7 +27,6 @@ var saved_month, saved_day, saved_year, saved_hour, saved_min, saved_sec;
   //document.getElementById('clockbox').innerHTML=" "+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";
   document.getElementById('clockbox').innerHTML=" "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+"";
 
-
   saved_day = ndate;
   saved_month = tmonth[nmonth];
   saved_year = nyear;
@@ -40,7 +39,7 @@ window.onload=function(){
   GetClock();
   setInterval(GetClock,1000);
 
-  /* to get individual values - not relevant as of yet */
+  /* to get individual values - not relevant right now */
   //document.getElementById("day").innerHTML=saved_day;
   //document.getElementById("month").innerHTML=saved_month;
   //document.getElementById("year").innerHTML=saved_year;

@@ -4,40 +4,34 @@
 	margin: 0px;
 }
 body{ /* for everything */
-	margin: 0px;
-	/* background-color: #080a09;  */
-	color: #46555f;
+	margin: 0px; color: #46555f;
+	background-color: #080a09;
 }
 /* -------------------------------------------- HEADER ---------------------------------------------- */
 #header{ /* header (rgb(84, 219, 57); #89c45f;) */
-	background:#89c45f; /* box-shadow: 0px 5px 5px #D3D3D3;  */
-	display: flex; position: sticky; align-items: center; justify-content: center;
-	left: 0; top: 0; width: 100%; z-index: 999; /* high z index so other content scrolls underneath */
-
+	background:#89c45f; /* box-shadow: 0px 5px 5px #D3D3D3;  */ display: flex; position: sticky; align-items: center;
+	justify-content: center; left: 0; top: 0; width: 100%; z-index: 999;
 }
 #clockbox{ /* clock div */
-	display: flex; height: auto; width: auto; margin: auto; color: white; font-size: 1.6rem;
+	display: flex; height: auto; width: auto; margin: auto; color: white; font-size: 1.4rem;
 }
 .github-button { /* github button */
-	display: flex; align-items: center; justify-content: center; margin-right: 0.7rem; float: right;
-	color: white; text-decoration: none; font-size: 2.2rem; background-color: inherit; border-radius: 10px; width: 100%;
-	border: solid 1px white;
-
+	display: flex; align-items: center; justify-content: center; margin-right: 0.7rem; float: right; color: #89c45f;
+	text-decoration: none; font-size: 2.2rem; background-color: white; width: 100%;
+	border-radius: 10px; border: solid 1.5px white;
 }
 .github-button p { /* words */
 	font-size: 1.2rem; margin-right: 0.5rem;
 }
-
 #psem-logo { /* logo */
-	display: block; width: 6rem; height: 2.3rem; float: left; margin-left:0.5rem; margin-top:0.5rem;
+	display: block; width: 5.8rem; height: 2.5rem; float: left; margin-left:0.5rem; margin-top:0.5rem;
 	margin-bottom: 0.4rem; margin-right: 0.3rem; background-color: inherit;
 }
 
 /* ------------------------------------------- MIDDLE ------------------------------------------------- */
 .button-web-design { /* button for redirecting to the web design page (not in use anymore)*/
-	font: bold; text-decoration: none; background-color: #89c45f; padding: 17px 10px 17px 10px; float: right;
-	box-shadow: 0px 2px 2px #D3D3D3; color: white; margin-right: 1rem; margin-top: 1rem;
-	border-radius: 8px; font-size: 1.7rem;
+	font: bold; text-decoration: none; background-color: #89c45f; padding: 17px 10px 17px 10px; float: right; color: white;
+	box-shadow: 0px 2px 2px #D3D3D3; margin-right: 1rem; margin-top: 1rem; border-radius: 8px; font-size: 1.7rem;
 }
 
 /* ---------------------------------------------- GRAPHS ------------------------------------------------ */
@@ -51,17 +45,16 @@ body{ /* for everything */
 	display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
 }
 .one-graph { /* each individual graph */
-	position: relative; margin: 1.2rem 1.2rem 1.2rem 1.2rem;
-}
-
-#voltage-graph {
-	height: 400px;
+	position: relative; margin: 1rem 0.2rem 1rem 0.2rem;
 }
 #speed-graph { /* speed "clock" */
-	width: 40rem; height: 20rem;
+	width: 25rem; height: 28rem;
+}
+.spline {
+	width: 45rem; height: 20rem;
 }
 .gauge { /* both gauges */
-	width: 20rem; height: 10rem;
+	width: 25rem; height: 12rem;
 }
 /* ------------------- PREVIOUS HIGHCHARTS PARAMETERS -------------------------- */
 /* .highcharts-figure, .highcharts-data-table table {
@@ -95,19 +88,13 @@ body{ /* for everything */
 	}
 } */
 
-
-
-
-
-
-
 /* -------------------------- NOT IN USE AT THE MOMENT ------------------------ */
 #table{ /* dummy table */
-	margin-left:5px; margin-top:7px; text-align:left; float:right; padding-left:3px; padding-right:3px; position:relative;
+	margin-left: 5px; margin-top: 7px; text-align: left; float: right; padding-left: 3px; padding-right: 3px; position: relative;
 }
 #month, #day, #year, #hour, #minute, #second, p{ /* display of the date in the body */
-	margin-left:0.1rem; float:left;
+	margin-left: 0.1rem; float: left;
 }
 #table th, #table td{ /* elements for the table */
-	padding:3px; border:1px solid #ddd;
+	padding: 3px; border: 1px solid #ddd;
 }

@@ -5,7 +5,7 @@
  * Description: All functions related to the database - connection,
  *	retrieving values, deleting rows, etc
  *
- * Comment: delete "echos" in the end
+ * Comment: delete "echos"
  *
  --------------------------------------------------------------------------- */
 include ("file.php"); // for hostaname, username, etc

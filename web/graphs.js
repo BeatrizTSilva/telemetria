@@ -41,7 +41,7 @@ Highcharts.chart('voltage-graph', {
                 let y_string; // aux variable
                 let data = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-                console.log("this.Response " + this.responseText);
+                console.log("this.Response in voltage is " + this.responseText);
                 console.log(data);
 
                 y_string = data[counter].voltage; // data[0].voltage will return a string
@@ -118,7 +118,7 @@ Highcharts.chart('current-graph', {
                 let y_string; // aux variable
                 let data = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-                console.log("this.Response " + this.responseText);
+                console.log("this.Response in current is " + this.responseText);
                 console.log(data);
 
                 y_string = data[counter].current; // data[0].voltage will return a string

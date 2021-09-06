@@ -1,10 +1,9 @@
 <!-----------------------------------------------------------------------------
  * File: index.php
  *
- * Description: html file, basically
+ * Description: HTML File
  *
- * Comments: CLOSE CONNECTION TO DATABASE SOONER (CURRENTLY AT THE
- * 			END OF THE FILE)
+ * Comments: CLOSE CONNECTION TO DATABASE
  *
 ------------------------------------------------------------------------------>
 <!DOCTYPE HTML>
@@ -48,7 +47,7 @@
         	Code <a href="https://github.com/BeatrizTSilva/telemetria" target="_blank" rel="noopenernoreferrer">here</a>
       	</p-->
 		<a href="https://github.com/BeatrizTSilva/telemetria" target="_blank">
-        	<div class="github-button"> <p>Code</p> <i class="fa fa-github"></i> </div>
+        	<div class="github-button"> <!--p>Code</p--> <i class="fa fa-github"></i> </div>
         </a>
 	</div>
 
@@ -57,7 +56,7 @@
 	<!--a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a-->
 
 	<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
-	<?php
+	<!--?php
 	/* connection to the database -> in database_connection.php */
 	$database = connectDB();
 
@@ -85,7 +84,7 @@
 	/* delete row at time t */
 	//deleteRow($database, 6);
 	//showTable($database);
-	?>
+	?-->
 
 	<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
 	<!--table>
@@ -142,19 +141,15 @@
 	<!--------------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
 	<div class="splines-container">
-		<!--div class="highcharts-figure"-->
-			<div id="voltage-graph" class="highcharts-figure one-graph"></div>
-			<div id="current-graph" class="highcharts-figure one-graph"></div>
-			<div id="temperature-graph" class="highcharts-figure one-graph"></div>
-		<!--/div-->
+		<div id="voltage-graph" class="spline one-graph"></div>
+		<div id="current-graph" class="spline one-graph"></div>
+		<div id="temperature-graph" class="spline one-graph"></div>
 	</div>
 
 	<div class="gauges-container">
-		<!--div class="highcharts-figure"-->
-		<div id="speed-graph" class="highcharts-figure one-graph"></div>
-		<div id="container-speed" class="highcharts-figure gauge one-graph"></div>
-		<div id="container-rpm" class="highcharts-figure gauge one-graph"></div>
-		<!--/div-->
+		<div id="speed-graph" class="one-graph"></div>
+		<div id="container-speed" class="gauge one-graph"></div>
+		<div id="container-rpm" class="gauge one-graph"></div>
 	</div>
 
 	<script src="graphs.js"></script>

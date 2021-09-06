@@ -10,23 +10,27 @@ body{ /* for everything */
 }
 /* -------------------------------------------- HEADER ---------------------------------------------- */
 #header{ /* header (rgb(84, 219, 57); #89c45f;) */
-	background:#89c45f;
-	/* box-shadow: 0px 5px 5px #D3D3D3;  */
-	display: flex; position: sticky;
+	background:#89c45f; /* box-shadow: 0px 5px 5px #D3D3D3;  */
+	display: flex; position: sticky; align-items: center; justify-content: center;
 	left: 0; top: 0; width: 100%; z-index: 999; /* high z index so other content scrolls underneath */
+
 }
 #clockbox{ /* clock div */
-	display: flex; height: auto; width: auto; margin: auto; color: white; font-size: 1.1rem;
+	display: flex; height: auto; width: auto; margin: auto; color: white; font-size: 1.6rem;
 }
-#github-code { /* github link */
-	font-size: 0.9rem; margin-right: 0.45rem; margin-bottom: 0.1rem; margin-top: 0.7rem; float: right; color: white;
+.github-button { /* github button */
+	display: flex; align-items: center; justify-content: center; margin-right: 0.7rem; float: right;
+	color: white; text-decoration: none; font-size: 2.2rem; background-color: inherit; border-radius: 10px; width: 100%;
+	border: solid 1px white;
+
 }
-#github-code a { /* color of the link */
-	color: white;
+.github-button p { /* words */
+	font-size: 1.2rem; margin-right: 0.5rem;
 }
+
 #psem-logo { /* logo */
-	display: block; width: 5rem; height: 2.1rem; float: left; margin-left:0.4rem; margin-top:0.4rem;
-	margin-bottom: 0.3rem; margin-right: 0.3rem;
+	display: block; width: 6rem; height: 2.3rem; float: left; margin-left:0.5rem; margin-top:0.5rem;
+	margin-bottom: 0.4rem; margin-right: 0.3rem; background-color: inherit;
 }
 
 /* ------------------------------------------- MIDDLE ------------------------------------------------- */
@@ -41,30 +45,31 @@ body{ /* for everything */
 	display: flex; flex-direction: column;
 }
 .splines-container { /* container for the splines */
-	display: flex; flex-direction: row;
-	flex-wrap: wrap; justify-content: center;
-	/* justify-content: center; align-items: center;
-	align-content: center; */
-	/* background-color: #080a09; */
-	/* text-align: center; */
-	/* margin: 0rem 7rem 0rem 7rem; */
+	display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
 }
 .gauges-container { /* container for the gauges */
-	display: flex; flex-direction: row;
-	flex-wrap: wrap; justify-content: center;
+	display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
 }
 .one-graph { /* each individual graph */
-	position: relative;
+	position: relative; margin: 1.2rem 1.2rem 1.2rem 1.2rem;
 }
-.highcharts-figure, .highcharts-data-table table {
-	min-width: 320px; max-width: 800px; width: 600px; margin: 0;
-}
+
 #voltage-graph {
 	height: 400px;
 }
+#speed-graph { /* speed "clock" */
+	width: 40rem; height: 20rem;
+}
+.gauge { /* both gauges */
+	width: 20rem; height: 10rem;
+}
+/* ------------------- PREVIOUS HIGHCHARTS PARAMETERS -------------------------- */
+/* .highcharts-figure, .highcharts-data-table table {
+	min-width: 320px; max-width: 800px; width: 600px; margin: 0;
+}
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif; border-collapse: collapse; border: 1px solid #EBEBEB; margin: 10px auto;
-	text-align: center; width: 100%; max-width: 500px;
+	text-align: center; width: 100%;
 }
 .highcharts-data-table caption {
 	padding: 1em 0; font-size: 1.2em; color: #555;
@@ -81,7 +86,6 @@ body{ /* for everything */
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
 }
-
 @media (max-width: 600px) {
 	.highcharts-figure, .highcharts-data-table table {
 		width: 100%;
@@ -89,12 +93,10 @@ body{ /* for everything */
 	.highcharts-figure .gauge {
 		width: 300px; float: none; margin: 0 auto;
 	}
-}
+} */
 
-/* ------------------- GAUGE -------------------------- */
-.gauge {
-	width: 300px; height: 200px; float: left;
-}
+
+
 
 
 

@@ -2,6 +2,7 @@
  * File: graphs.js
  *
  * Description: graphs that show the data from the sensors
+ *          the data is retrieved in ajax.php from the database
  *
  *****************************************************************************/
 
@@ -19,8 +20,8 @@ ajax.onreadystatechange = function() {
 };*/
 
 
-/* -------------------------------- CUURENT HIGHCHARTS BLUE -------------------------------- */
-Highcharts.chart('container', {
+/* ---------------------------------------- VOLTAGE ------------------------------------- */
+Highcharts.chart('voltage-graph', {
   chart: {
       type: 'spline',
       animation: Highcharts.svg, // don't animate in old IE
@@ -34,33 +35,33 @@ Highcharts.chart('container', {
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
               if (this.readyState == 4 && this.status == 200) {
-                let x = (new Date()).getTime();
-                let y; /* y axis */
-                let y_string; /* aux variable */
-                let data = JSON.parse(this.responseText); /* everything that comes from the database (in ajax.php) */
+                let x = (new Date()).getTime(); // x axis
+                let y; // y axis
+                let y_string; // aux variable
+                let data = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
                 console.log("this.Response " + this.responseText);
                 console.log(data);
 
-                y_string = data[counter].voltage; /* data[0].voltage will return a string */
-                y = parseFloat(y_string); /* make the string a float */
+                y_string = data[counter].voltage; // data[0].voltage will return a string
+                y = parseFloat(y_string); // make the string a float
                 z = data[1].current;
                 console.log("This is y: " + y);
                 console.log("This is z: " + z);
 
-                series.addPoint([x, y], true, true); /* updates the graph */
+                series.addPoint([x, y], true, true); // updates the graph
 
-                counter++;
+                counter++; // increase counter to go to nextvalue in time
               }
             };
-            xhttp.open("GET", "ajax.php", true);
+            xhttp.open("GET", "ajax.php", true); //go get stuff from ajax.php
             xhttp.send();
           }, 1000);
         }
       }
     },
   time: { useUTC: false },
-  title: { text: 'From database' },
+  title: { text: 'Voltage' },
   accessibility: {
       announceNewData: { enabled: true, minAnnounceInterval: 15000,
           announcementFormatter: function (allSeries, newSeries, newPoint) {
@@ -93,14 +94,12 @@ Highcharts.chart('container', {
   }]
 });
 
-/* ---------------------------------------- GAUGE ------------------------------------------- */
+/* ------------------------------------------- GAUGE ------------------------------------------- */
 var gaugeOptions = {
   chart: {
       type: 'solidgauge'
   },
-
   title: null,
-
   pane: {
       center: ['50%', '85%'],
       size: '140%',
@@ -114,15 +113,12 @@ var gaugeOptions = {
           shape: 'arc'
       }
   },
-
   exporting: {
       enabled: false
   },
-
   tooltip: {
       enabled: false
   },
-
   // the value axis
   yAxis: {
       stops: [
@@ -248,7 +244,7 @@ setInterval(function () {
 
 
 /* ------------------------------------ CURRENT --------------------------------------- */
-var chartT = new Highcharts.Chart({
+/*var chartT = new Highcharts.Chart({
   chart:{renderTo : 'test-chart'},
   title: {text:'Current'},
   series: [{
@@ -277,21 +273,20 @@ setInterval(function () {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      let x = (new Date()).getTime(); /* x axis */
-      let y; /* y axis */
-      let y_string; /* aux variable */
-      let data = JSON.parse(this.responseText); /* everything that comes from the database (in ajax.php) */
-
+      let x = (new Date()).getTime(); // x axis
+      let y; // y axis
+      let y_string; // aux variable
+      let data = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
       console.log("this.Response " + this.responseText);
       console.log(data);
 
-      y_string = data[counter2].current; /* data[i].voltage will return a string */
-      y = parseFloat(y_string); /* make the string a float */
+      y_string = data[counter2].current; // data[i].voltage will return a string
+      y = parseFloat(y_string); // make the string a float
       z = data[1].current;
       console.log("This is y: " + y);
       console.log("This is z: " + z);
 
-      /* updating the graph */
+      // updating the graph
       if (chartT.series[0].data.length > 10) {
         chartT.series[0].addPoint([x, y], true, true, true);
       } else {
@@ -304,9 +299,10 @@ setInterval(function () {
   xhttp.send();
 }, 3000);
 
+*/
 
 /* --------------------------------------------------- Speed graph ------------------------------------------------------- */
-Highcharts.chart('speed_graph', {
+Highcharts.chart('speed-graph', {
   chart:{
     type: 'gauge',
     plotBackgroundColor: null,

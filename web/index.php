@@ -29,7 +29,6 @@
 	<?php
 	require("database-connection.php");
 	require("functions.php");
-	//require("ajax.php");
 	?>
 	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -150,18 +149,25 @@
 
 		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
 		<div class="highcharts-figure">
-			<div id="container"></div>
+			<div id="voltage-graph"></div>
+			<div id="speed-graph"></div>
+			<div id="container-speed" class="chart-container"></div>
+			<div id="container-rpm" class="chart-container"></div>
 		</div>
 
-		<div id="test-chart" class="one-graph"></div>
-		<div id="speed_graph" class="one-graph"></div>
+		<div class="highcharts-figure"></div>
+			<div id="speed-graph"></div>
+		</div>
 
 
 		<figure class="highcharts-figure">
 			<div id="container-speed" class="chart-container"></div>
-			<div id="container-rpm" class="chart-container"></div>
+
 		</figure>
 
+		<figure class="highcharts-figure">
+			<div id="container-rpm" class="chart-container"></div>
+		</figure>
 
 		<script src="graphs.js"></script>
 
@@ -169,7 +175,7 @@
 
 
 		<!--?php closeConnection($database); ?-->
-
+		<script scr="dark-mode.js"></script>
 
 	</div>
 </body>

@@ -1,15 +1,19 @@
 * {
 	box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	margin: 0px; background-color: #080a09;
+	margin: 0px;
 }
 body{ /* for everything */
-	 margin: 0px; background-color: white; color: #46555f;
+	margin: 0px;
+	/* background-color: #080a09;  */
+	color: #46555f;
 }
-#header{ /* header (background-color: #94c43c;) */
-	background:#89c45f; box-shadow: 0px 5px 5px #D3D3D3; display: flex;
-	position: sticky; left: 0; top: 0; width: 100%;
-	z-index: 999; /* high z index so other content scrolls underneath */
+/* ------------------------------------- HEADER --------------------------------------- */
+#header{ /* header (rgb(84, 219, 57); #89c45f;) */
+	background:#89c45f;
+	/* box-shadow: 0px 5px 5px #D3D3D3;  */
+	display: flex; position: sticky;
+	left: 0; top: 0; width: 100%; z-index: 999; /* high z index so other content scrolls underneath */
 }
 #clockbox{ /* clock div */
 	display: flex; height: auto; width: auto; margin: auto; color: white; font-size: 1.1rem;
@@ -20,25 +24,34 @@ body{ /* for everything */
 #github-code a { /* color of the link */
 	color: white;
 }
-.button-web-design { /* button for redirecting to the web desing page */
+#psem-logo { /* logo */
+	display: block; width: 5rem; height: 2.1rem; float: left; margin-left:0.4rem; margin-top:0.4rem;
+	margin-bottom: 0.3rem; margin-right: 0.3rem;
+}
+
+/* ----------------------------------- MIDDLE --------------------------------------- */
+.button-web-design { /* button for redirecting to the web design page (not in use anymore)*/
 	font: bold; text-decoration: none; background-color: #89c45f; padding: 17px 10px 17px 10px; float: right;
 	box-shadow: 0px 2px 2px #D3D3D3; color: white; margin-right: 1rem; margin-top: 1rem;
 	border-radius: 8px; font-size: 1.7rem;
 }
-#psem-logo { /* logo */
-	display: block; width: 5rem; height: 2.1rem; float: left; margin-left:0.4rem; margin-top:0.4rem;
-	margin-bottom: 0.3rem; margin-right: 0.3rem;
-  }
 #main-container { /* big container for all things in the body */
-	margin-top: 0.6rem; margin-left: 1rem; margin-bottom: 0.8rem; margin-right: 0.8rem;
+	/* margin-top: 0.6rem; margin-left: 1rem; margin-bottom: 0.8rem; margin-right: 0.8rem; */
 }
 #database{ /* div for database (not necessary) */
 	margin-left: 0.2rem; float: left; position: relative;
 }
 
-/* -------------------- Highcharts ------------------ */
+/* ---------------------------- Highcharts --------------------------- */
+.graphs {
+	display: flex; position: relative; justify-content: center; flex-wrap: wrap; align-items: center;
+	align-content: center;
+	background-color: #080a09; text-align: center;
+}
 .highcharts-figure, .highcharts-data-table table {
 	min-width: 320px; max-width: 800px; width: 600px; margin: 1em auto;
+	background-color: red;
+
 }
 #voltage-graph {
 	height: 400px;
@@ -46,6 +59,7 @@ body{ /* for everything */
 .highcharts-data-table table {
 	font-family: Verdana, sans-serif; border-collapse: collapse; border: 1px solid #EBEBEB; margin: 10px auto;
 	text-align: center; width: 100%; max-width: 500px;
+	background-color: blue;
 }
 .highcharts-data-table caption {
 	padding: 1em 0; font-size: 1.2em; color: #555;
@@ -55,9 +69,12 @@ body{ /* for everything */
 }
 .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
 	padding: 0.5em;
+	background-color: blue;
 }
 .highcharts-data-table thead tr, .highcharts-data-table tr:nth-child(even) {
-    background: #f8f8f8;
+    /* background: #f8f8f8; */
+	background: #080a09;
+	background-color: blue;
 }
 .highcharts-data-table tr:hover {
     background: #f1f7ff;
@@ -69,18 +86,20 @@ body{ /* for everything */
 	}
 	.highcharts-figure .chart-container {
 		width: 300px; float: none; margin: 0 auto;
+		background-color: blue;
 	}
 }
 
 /* ------------------- GAUGE -------------------------- */
 .chart-container {
 	width: 300px; height: 200px; float: left;
+	background-color: blue;
 }
 
 
 
 
-/* - - - - - - NOT IN USE AT THE MOMENT - - - - - - */
+/* -------------------------- NOT IN USE AT THE MOMENT ------------------------ */
 #table{ /* dummy table */
 	margin-left:5px; margin-top:7px; text-align:left; float:right; padding-left:3px; padding-right:3px; position:relative;
 }

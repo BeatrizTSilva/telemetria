@@ -46,10 +46,10 @@
 	</div>
 
 	<div id="main-container">
-	<a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a>
+	<!--a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a-->
 
 		<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
-		<!--?php
+		<?php
 		/* connection to the database -> in database_connection.php */
 		$database = connectDB();
 
@@ -77,10 +77,10 @@
 		/* delete row at time t */
 		//deleteRow($database, 6);
 		//showTable($database);
-		?-->
+		?>
 
 		<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
-		<table>
+		<!--table>
 			<tr>
 			<th>Time</th>
 			<th>Voltage</th>
@@ -91,7 +91,7 @@
 			<th>Coordinates2</th>
 			</tr>
 			<tbody id="data"></tbody>
-		</table>
+		</table-->
 
 		<!--script>
 			var ajax = new XMLHttpRequest();
@@ -131,31 +131,17 @@
 		</script-->
 
 
-
-		<!--script>
-			/* ---------- JSON.parse ----------- */
-			/*var response = '{"result":true,"count":1}';
-			const parsed_var = JSON.parse(response);
-			const stringed_var = JSON.stringify(response);
-			console.log(response);
-			console.log("Parsed variable is: " + parsed_var);
-			console.log("Result (from parsed variable) is: " + parsed_var.result);
-			console.log("Stringed variable is: " + stringed_var);
-			var data = JSON.parse(new_var);
-			console.log(new_var);
-			console.log("Result is: " + new_var.result);
-		</script-->
-
-
 		<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
-		<div class="highcharts-figure">
-			<div id="voltage-graph"></div>
-			<div id="speed-graph"></div>
-			<div id="container-speed" class="chart-container"></div>
-			<div id="container-rpm" class="chart-container"></div>
+		<div class="graphs">
+			<div class="highcharts-figure">
+				<div id="voltage-graph"></div>
+				<div id="speed-graph"></div>
+				<div id="container-speed" class="chart-container"></div>
+				<div id="container-rpm" class="chart-container"></div>
+			</div>
 		</div>
 
-		<div class="highcharts-figure"></div>
+		<!--div class="highcharts-figure"></div>
 			<div id="speed-graph"></div>
 		</div>
 
@@ -167,7 +153,7 @@
 
 		<figure class="highcharts-figure">
 			<div id="container-rpm" class="chart-container"></div>
-		</figure>
+		</figure-->
 
 		<script src="graphs.js"></script>
 

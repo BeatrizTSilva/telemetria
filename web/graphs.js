@@ -24,6 +24,7 @@ ajax.onreadystatechange = function() {
 Highcharts.chart('voltage-graph', {
   chart: {
       type: 'spline',
+      // backgroundColor: '#808080',
       animation: Highcharts.svg, // don't animate in old IE
       marginRight: 10,
       events: {
@@ -73,7 +74,8 @@ Highcharts.chart('voltage-graph', {
   xAxis: { type: 'datetime', tickPixelInterval: 150 },
   yAxis: {
     title: { text: 'Voltage [V]' },
-    plotLines: [{ value: 0, width: 1, color: '#808080'}]
+    // plotLines: [{ value: 0, width: 1, color: '#808080'}]
+    plotLines: [{ value: 0, width: 1, color: '#89c45f'}]
   },
   tooltip: {
       headerFormat: '<b>{series.name}</b><br/>',
@@ -81,7 +83,7 @@ Highcharts.chart('voltage-graph', {
   },
   legend: { enabled: false }, exporting: { enabled: false },
   series: [{
-      name: 'Database',
+      name: 'Voltage',
       data: (function () { var data = [], time = (new Date()).getTime(), i;
           for (i = -30; i <= 0; i += 1) {
               data.push({

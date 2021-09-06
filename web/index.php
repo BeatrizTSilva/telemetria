@@ -131,18 +131,26 @@
 	</script-->
 
 
-	<!--------------------------------------------------- graph from highcharts (updated) --------------------------------------------->
+	<!--------------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
+	<div class="splines-container">
 		<!--div class="highcharts-figure"-->
-
 			<div id="voltage-graph" class="one-graph"></div>
-			<div id="speed-graph" class="one-graph"></div>
-			<div id="container-speed" class="gauge one-graph"></div>
-			<div id="container-rpm" class="gauge one-graph"></div>
+			<div id="current-graph" class="one-graph"></div>
+			<div id="temperature-graph" class="one-graph"></div>
+		<!--/div-->
+	</div>
+
+	<div class="gauges-container">
+		<!--div class="highcharts-figure"-->
+		<div id="speed-graph" class="one-graph"></div>
+		<div id="container-speed" class="gauge one-graph"></div>
+		<div id="container-rpm" class="gauge one-graph"></div>
 		<!--/div-->
 	</div>
 
 	<script src="graphs.js"></script>
+	</div>
 
 
 

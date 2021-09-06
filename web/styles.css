@@ -37,7 +37,10 @@ body{ /* for everything */
 }
 
 /* ---------------------------------------------- GRAPHS ------------------------------------------------ */
-.graphs-container { /* conatiner for all the graphs */
+.graphs-container {
+	display: flex; flex-direction: column;
+}
+.splines-container { /* container for the splines */
 	display: flex; flex-direction: row;
 	flex-wrap: wrap; justify-content: center;
 	/* justify-content: center; align-items: center;
@@ -45,6 +48,10 @@ body{ /* for everything */
 	/* background-color: #080a09; */
 	/* text-align: center; */
 	/* margin: 0rem 7rem 0rem 7rem; */
+}
+.gauges-container { /* container for the gauges */
+	display: flex; flex-direction: row;
+	flex-wrap: wrap; justify-content: center;
 }
 .one-graph { /* each individual graph */
 	position: relative;

@@ -1,6 +1,6 @@
 /******************************************************************************
  * File: dark-mode.js
  *
- * Description: to transform everything into dark mode
+ * Description: turn into dark mode
  *
  *****************************************************************************/

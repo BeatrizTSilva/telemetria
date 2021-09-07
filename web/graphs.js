@@ -19,36 +19,48 @@ ajax.onreadystatechange = function() {
   }
 };*/
 
-var value_from_database;
+/* ---------------------------- AJAX FUNCTION ---------------------------------*/
+
 var counter = 0;
-var x;
 var y;
 
-setInterval(function () {
+function call_ajax (parameter) {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      x = (new Date()).getTime(); // x axis
       let y_string; // aux variable
-      value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
+      let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
       console.log("this.Response in voltage is " + this.responseText);
       console.log(value_from_database);
 
-      y_string = value_from_database[counter].voltage; // data[0].voltage will return a string
-      y = parseFloat(y_string); // make the string a float
-      z = value_from_database[1].current;
-      console.log("This is y: " + y);
-      console.log("This is z: " + z);
+      // y_string = value_from_database[counter].voltage; // data[0].voltage will return a string
+      // y = parseFloat(y_string); // make the string a float
 
-      series.addPoint([x, y], true, true); // updates the graph
 
-      counter++; // increase counter to go to nextvalue in time
+      switch(parameter) {
+        case "temperature":
+          y_string = value_from_database[counter].temperature;
+          y = parseFloat(y_string); // y_string will return a string so we need to convert it
+          console.log("This is y in temp: " + y);
+          break;
+        case "voltage":
+          y_string = value_from_database[counter].voltage;
+          y = parseFloat(y_string); // y_string will return a string so we need to convert it
+          console.log("This is y in voltage: " + y);
+          break;
+        // default:
+        //   // code block
+      }
+      counter++; // increase counter to go to nextvalue in the database
+      console.log("Counter = " +counter);
+      return y; // send y back to the graph that called it
     }
   };
   xhttp.open("GET", "ajax.php", true); //go get stuff from ajax.php
   xhttp.send();
-}, 1000);
+
+}
 
 /* ----------------------------- TEST WITH TEMPERATURE GRAPH ------------------------------- */
 Highcharts.chart('temperature-graph', {
@@ -61,21 +73,12 @@ Highcharts.chart('temperature-graph', {
         load: function () {
           // set up the updating of the chart each second
           let series = this.series[0];
-          setInterval(function () {
-                //let x = (new Date()).getTime(); // x axis
-                //let y; // y axis
-                //let y_string; // aux variable
-                //let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
-
-                //console.log("this.Response " + this.responseText);
-                //console.log(value_from_database);
-
-                //y_string = value_from_database[counter].temperature; // data[0].voltage will return a string
-                //y = parseFloat(y_string); // make the string a float
-
-                series.addPoint([x, y], true, true); // updates the graph
-
-                //counter++; // increase counter to go to nextvalue in time
+          let sensor = "temperature";
+          setInterval(function () { // function that updates each 1000ms
+            let x = (new Date()).getTime(); // x axis
+            y = call_ajax(sensor); // will return the value of y from the corresponding sensor we want
+            console.log("INSIDE THE GRAPH Y = " +y);
+            series.addPoint([x, y], true, true); // updates the graph
           }, 1000);
         }
       }

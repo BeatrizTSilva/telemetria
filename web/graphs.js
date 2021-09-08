@@ -1,10 +1,10 @@
 /******************************************************************************
- * File: graphs.js
- *
- * Description: graphs that show the data from the sensors
- *          the data is retrieved in ajax.php from the database
- *
- *****************************************************************************/
+* File: graphs.js
+*
+* Description: graphs that show the data from the sensors
+*          the data is retrieved in ajax.php from the database
+*
+*****************************************************************************/
 
 /* -------------------------------- AJAX ORIGINAL -----------------------*/
 /*let ajax = new XMLHttpRequest();
@@ -36,20 +36,20 @@ function call_ajax (parameter) {
       console.log("INSIDE call_ajax parameter = " + parameter);
 
       y = 40;
-      // switch(parameter) { // switch to return the right value to the right graph
-      //   case 'temperature':
-      //     y_string = value_from_database[counter].temperature; // value_from_database[counter].parameter will return a string
-      //     y = parseFloat(y_string); // make the string a float
-      //     console.log("This is y in temp: " + y);
-      //     break;
-      //   case 'voltage':
-      //     y_string = value_from_database[counter].voltage;
-      //     y = parseFloat(y_string);
-      //     console.log("This is y in voltage: " + y);
-      //     break;
-      //   // default:
-      //   //   // code block
-      // }
+      switch(parameter) { // switch to return the right value to the right graph
+        case 'temperature':
+        y_string = value_from_database[counter].temperature; // value_from_database[counter].parameter will return a string
+        y = parseFloat(y_string); // make the string a float
+        console.log("This is y in temp: " + y);
+        break;
+        case 'voltage':
+        y_string = value_from_database[counter].voltage;
+        y = parseFloat(y_string);
+        console.log("This is y in voltage: " + y);
+        break;
+        // default:
+        //   // code block
+      }
 
       counter++; // increase counter to go to nextvalue in the database
       console.log("INSIDE call_ajax counter = " + counter);
@@ -61,6 +61,7 @@ function call_ajax (parameter) {
   xhttp.send();
 }
 
+/* function to test variables inside and outside functions */
 /*function change_y (expression) {
   y = 100;
   console.log("y inside the function is " +y);
@@ -77,34 +78,34 @@ console.log("EARLY OUTSIDE call_ajax y = " + y);
 /* ----------------------------- TEST WITH TEMPERATURE GRAPH ------------------------------- */
 Highcharts.chart('temperature-graph', {
   chart: {
-      type: 'spline',
-      // backgroundColor: '#808080',
-      animation: Highcharts.svg, // don't animate in old IE
-      marginRight: 10,
-      events: {
-        load: function () {
-          // set up the updating of the chart each second
-          let series = this.series[0];
-          let sensor = 'temperature';
-          let y_axis;
-          setInterval(function () { // function that updates each 1000ms
-            let x = (new Date()).getTime(); // x axis
-            y_axis = call_ajax(sensor); // will return the value of y from the corresponding sensor we want
-            series.addPoint([x, y_axis], true, true); // updates the graph
-            console.log("INSIDE THE GRAPH Y = " + y_axis);
-          }, 1000);
-        }
+    type: 'spline',
+    // backgroundColor: '#808080',
+    animation: Highcharts.svg, // don't animate in old IE
+    marginRight: 10,
+    events: {
+      load: function () {
+        // set up the updating of the chart each second
+        let series = this.series[0];
+        let sensor = 'temperature';
+        let y_axis;
+        setInterval(function () { // function that updates each 1000ms
+          let x = (new Date()).getTime(); // x axis
+          y_axis = call_ajax(sensor); // will return the value of y from the corresponding sensor we want
+          series.addPoint([x, y_axis], true, true); // updates the graph
+          console.log("INSIDE THE GRAPH Y = " + y_axis);
+        }, 1000);
       }
-    },
+    }
+  },
   time: { useUTC: false },
   title: { text: 'Temperature' },
   accessibility: {
-      announceNewData: { enabled: true, minAnnounceInterval: 15000,
-          announcementFormatter: function (allSeries, newSeries, newPoint) {
-              if (newPoint) { return 'New point added. Value: ' + newPoint.y; }
-              return false;
-          }
+    announceNewData: { enabled: true, minAnnounceInterval: 15000,
+      announcementFormatter: function (allSeries, newSeries, newPoint) {
+        if (newPoint) { return 'New point added. Value: ' + newPoint.y; }
+        return false;
       }
+    }
   },
   xAxis: { type: 'datetime', tickPixelInterval: 150 },
   yAxis: {
@@ -113,21 +114,21 @@ Highcharts.chart('temperature-graph', {
     plotLines: [{ value: 0, width: 1, color: '#89c45f'}]
   },
   tooltip: {
-      headerFormat: '<b>{series.name}</b><br/>',
-      pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
+    headerFormat: '<b>{series.name}</b><br/>',
+    pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y:.2f}'
   },
   legend: { enabled: false }, exporting: { enabled: false },
   series: [{
-      name: 'Voltage',
-      data: (function () { let data = [], time = (new Date()).getTime(), i;
-          for (i = -30; i <= 0; i += 1) {
-              data.push({
-                  x: time + i * 1000, // shows time in a comprehensible way
-                  y:0 // initial value (was "y: Math.random()")
-              });
-          }
-          return data;
-      }())
+    name: 'Voltage',
+    data: (function () { let data = [], time = (new Date()).getTime(), i;
+      for (i = -30; i <= 0; i += 1) {
+        data.push({
+          x: time + i * 1000, // shows time in a comprehensible way
+          y:0 // initial value (was "y: Math.random()")
+        });
+      }
+      return data;
+    }())
   }]
 });
 
@@ -356,114 +357,74 @@ Highcharts.chart('temperature-graph', {
 /* ------------------------------------------- GAUGE ------------------------------------------- */
 let gaugeOptions = {
   chart: {
-      type: 'solidgauge'
+    type: 'solidgauge'
   },
   title: null,
   pane: {
-      center: ['50%', '85%'],
-      size: '140%',
-      startAngle: -90,
-      endAngle: 90,
-      background: {
-          backgroundColor:
-              Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
-          innerRadius: '60%',
-          outerRadius: '100%',
-          shape: 'arc'
-      }
+    center: ['50%', '85%'], size: '140%', startAngle: -90, endAngle: 90,
+    background: {
+      backgroundColor:
+      Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
+      innerRadius: '60%', outerRadius: '100%', shape: 'arc'
+    }
   },
-  exporting: {
-      enabled: false
-  },
-  tooltip: {
-      enabled: false
-  },
+  exporting: { enabled: false },
+  tooltip: { enabled: false },
   // the value axis
   yAxis: {
-      stops: [
-          [0.1, '#55BF3B'], // green
-          [0.5, '#DDDF0D'], // yellow
-          [0.9, '#DF5353'] // red
-      ],
-      lineWidth: 0,
-      tickWidth: 0,
-      minorTickInterval: null,
-      tickAmount: 2,
-      title: {
-          y: -70
-      },
-      labels: {
-          y: 16
-      }
+    stops: [
+      [0.1, '#55BF3B'], // green
+      [0.5, '#DDDF0D'], // yellow
+      [0.9, '#DF5353'] // red
+    ],
+    lineWidth: 0, tickWidth: 0, minorTickInterval: null, tickAmount: 2,
+    title: { y: -70 },
+    labels: { y: 16 }
   },
-
   plotOptions: {
-      solidgauge: {
-          dataLabels: {
-              y: 5,
-              borderWidth: 0,
-              useHTML: true
-          }
-      }
+    solidgauge: {
+      dataLabels: { y: 5, borderWidth: 0, useHTML: true }
+    }
   }
 };
 
 // The speed gauge
 let chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptions, {
-  yAxis: {
-      min: 0,
-      max: 200,
-      title: {
-          text: 'Speed'
-      }
+  yAxis: { min: 0, max: 200,
+    title: { text: 'Speed' }
   },
-
-  credits: {
-      enabled: false
-  },
-
+  credits: { enabled: false },
   series: [{
-      name: 'Speed',
-      data: [80],
-      dataLabels: {
-          format:
-              '<div style="text-align:center">' +
-              '<span style="font-size:25px">{y}</span><br/>' +
-              '<span style="font-size:12px;opacity:0.4">km/h</span>' +
-              '</div>'
-      },
-      tooltip: {
-          valueSuffix: ' km/h'
-      }
+    name: 'Speed',
+    data: [80],
+    dataLabels: {
+      format:
+      '<div style="text-align:center">' +
+      '<span style="font-size:25px">{y}</span><br/>' +
+      '<span style="font-size:12px;opacity:0.4">km/h</span>' +
+      '</div>'
+    },
+    tooltip: { valueSuffix: ' km/h' }
   }]
-
 }));
 
 // The RPM gauge
 let chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, {
-  yAxis: {
-      min: 0,
-      max: 5,
-      title: {
-          text: 'RPM'
-      }
+  yAxis: { min: 0, max: 5,
+    title: { text: 'RPM' }
   },
-
   series: [{
-      name: 'RPM',
-      data: [1],
-      dataLabels: {
-          format:
-              '<div style="text-align:center">' +
-              '<span style="font-size:25px">{y:.1f}</span><br/>' +
-              '<span style="font-size:12px;opacity:0.4">' +
-              '* 1000 / min' +
-              '</span>' +
-              '</div>'
-      },
-      tooltip: {
-          valueSuffix: ' revolutions/min'
-      }
+    name: 'RPM', data: [1],
+    dataLabels: {
+      format:
+      '<div style="text-align:center">' +
+      '<span style="font-size:25px">{y:.1f}</span><br/>' +
+      '<span style="font-size:12px;opacity:0.4">' +
+      '* 1000 / min' +
+      '</span>' +
+      '</div>'
+    },
+    tooltip: { valueSuffix: ' revolutions/min' }
   }]
 
 }));
@@ -472,37 +433,31 @@ let chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, 
 setInterval(function () {
   // Speed
   let point,
-      newVal,
-      inc;
-
+  newVal,
+  inc;
   if (chartSpeed) {
-      point = chartSpeed.series[0].points[0];
-      inc = Math.round((Math.random() - 0.5) * 100);
-      newVal = point.y + inc;
-
-      if (newVal < 0 || newVal > 200) {
-          newVal = point.y - inc;
-      }
-
-      point.update(newVal);
+    point = chartSpeed.series[0].points[0];
+    inc = Math.round((Math.random() - 0.5) * 100);
+    newVal = point.y + inc;
+    if (newVal < 0 || newVal > 200) {
+      newVal = point.y - inc;
+    }
+    point.update(newVal);
   }
-
   // RPM
   if (chartRpm) {
-      point = chartRpm.series[0].points[0];
-      inc = Math.random() - 0.5;
-      newVal = point.y + inc;
-
-      if (newVal < 0 || newVal > 5) {
-          newVal = point.y - inc;
-      }
-
-      point.update(newVal);
+    point = chartRpm.series[0].points[0];
+    inc = Math.random() - 0.5;
+    newVal = point.y + inc;
+    if (newVal < 0 || newVal > 5) {
+      newVal = point.y - inc;
+    }
+    point.update(newVal);
   }
 }, 2000);
 
 
-/* ------------------------------------ CURRENT --------------------------------------- */
+/* ------------------------------------ CURRENT (keeping for maybe future reference) --------------------------------------- */
 /*let chartT = new Highcharts.Chart({
   chart:{renderTo : 'test-chart'},
   title: {text:'Current'},
@@ -563,25 +518,15 @@ setInterval(function () {
 /* --------------------------------------------------- Speed graph ------------------------------------------------------- */
 Highcharts.chart('speed-graph', {
   chart:{
-    type: 'gauge',
-    plotBackgroundColor: null,
-    plotBackgroundImage: null,
-    plotBorderWidth: 0,
-    plotShadow: false
+    type: 'gauge', plotBackgroundColor: null, plotBackgroundImage: null, plotBorderWidth: 0, plotShadow: false
   },
-  title: {
-    text: 'Speed'
-  },
+  title: { text: 'Speed' },
   pane: {
-    startAngle: -150,
-    endAngle: 150,
+    startAngle: -150, endAngle: 150,
     background: [{
       backgroundColor: {
         linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
-        stops: [
-        [0, '#FFF'],
-        [1, '#333']
-        ]
+        stops: [ [0, '#FFF'], [1, '#333'] ]
       },
       borderWidth: 0,
       outerRadius: '109%'
@@ -589,78 +534,63 @@ Highcharts.chart('speed-graph', {
       backgroundColor: {
         linearGradient: { x1: 0, y1: 0, x2: 0, y2: 1 },
         stops: [
-        [0, '#333'],
-        [1, '#FFF']
+          [0, '#333'],
+          [1, '#FFF']
         ]
       },
       borderWidth: 1,
       outerRadius: '107%'
     }, {
-            // default background
-          }, {
-            backgroundColor: '#DDD',
-            borderWidth: 0,
-            outerRadius: '105%',
-            innerRadius: '103%'
-          }]
-        },
-    // the value axis
-    yAxis: {
-      min: 0,
-      max: 100,
-      minorTickInterval: 'auto', /* interval between values displayed on the gauge */
-      minorTickWidth: 1,
-      minorTickLength: 10,
-      minorTickPosition: 'inside',
-      minorTickColor: '#666',
-      tickPixelInterval: 30, /* intervals between values */
-      tickWidth: 2,
-      tickPosition: 'inside',
-      tickLength: 10,
-      tickColor: '#666',
-      labels: {
-        step: 2,
-        rotation: 'auto'
-      },
-      title: {
-        text: 'km/h'
-      },
-      plotBands: [{
-        from: 0, /* first band goes from speed 0 to 30 */
-        to: 30,
-            color: '#55BF3B' // green
-          }, {
-            from: 30, /* first band goes from speed 30 to 70 */
-            to: 70,
-            color: '#DDDF0D' // yellow
-          }, {
-            from: 70, /* first band goes from speed 70 to 100 */
-            to: 100,
-            color: '#DF5353' // red
-          }]
-        },
+      // default background
+    }, {
+      backgroundColor: '#DDD', borderWidth: 0, outerRadius: '105%', innerRadius: '103%'
+    }]
+  },
+  // the value axis
+  yAxis: {
+    min: 0, max: 100,
+    minorTickInterval: 'auto', /* interval between values displayed on the gauge */
+    minorTickWidth: 1, minorTickLength: 10,
+    minorTickPosition: 'inside', minorTickColor: '#666',
+    tickPixelInterval: 30, /* intervals between values */
+    tickWidth: 2, tickPosition: 'inside', tickLength: 10, tickColor: '#666',
+    labels: {
+      step: 2,
+      rotation: 'auto'
+    },
+    title: { text: 'km/h' },
+    plotBands: [{
+      from: 0, /* first band goes from speed 0 to 30 */
+      to: 30,
+      color: '#55BF3B' // green
+    }, {
+      from: 30, /* first band goes from speed 30 to 70 */
+      to: 70,
+      color: '#DDDF0D' // yellow
+    }, {
+      from: 70, /* first band goes from speed 70 to 100 */
+      to: 100,
+      color: '#DF5353' // red
+    }]
+  },
 
-        series: [{
-          name: 'Speed',
-          data: [0], /* initial value */
-          tooltip: {
-            valueSuffix: ' km/h'
-          }
-        }]
+  series: [{
+    name: 'Speed',
+    data: [0], /* initial value */
+    tooltip: {
+      valueSuffix: ' km/h'
+    }
+  }]
 
-      },
+},
 // Add some life
 
 function (chart) {
   if (!chart.renderer.forExport) {
     setInterval(function () {
-      //let point = chart.series[0].points[0];
       let point = chart.series[0].points[0];
       let newVal; /* new value that comes from the database */
       let inc;
-      /*
-      inc = -(newVal - database_speed); // for when we have the database values here
-      */
       inc = 1; /* increment */
       newVal = point.y + inc;
       while (newVal < 0 || newVal > 63) {
@@ -672,6 +602,8 @@ function (chart) {
 }
 );
 
+
+/* function for console logging values */
 setInterval(function () { // function that updates each 1000ms
   console.log("LATE OUTSIDE call_ajax counter = " + counter);
   console.log("LATE OUTSIDE call_ajax y = " + y);

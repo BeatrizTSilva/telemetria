@@ -34,6 +34,7 @@
 	<?php
 	require("database-connection.php");
 	require("functions.php");
+	//require("test-ajax.php");
 	?>
 </head>
 

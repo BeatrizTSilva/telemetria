@@ -234,7 +234,7 @@ Highcharts.chart('current-graph', {
                 series.addPoint([x, y], true, true); // updates the graph
 
                 counter++; // increase counter to go to nextvalue in time
-              }
+              }/* novo comentario*/
             };
             xhttp.open("GET", "ajax.php", true); //go get stuff from ajax.php
             xhttp.send();

@@ -17,7 +17,7 @@ $port = 5432;
 // connect to the database
 $database = pg_connect('host='.$hostname.' port='.$port.' dbname='.$database_name.' user='.$username.' password='.$password);
 
-$result = pg_query($database, "SELECT * FROM telemetria ORDER BY t"); // do the query (we want all the parameters)
+$result = pg_query($database, "SELECT * FROM telemetria WHERE t=1"); // do the query (we want all the parameters)
 $value_from_database = array(); // create an array
 
 while ($row = pg_fetch_assoc($result)) {

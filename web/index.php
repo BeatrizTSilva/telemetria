@@ -142,10 +142,11 @@
 	<!--------------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
 	<div class="splines-container">
+		<div id="new-test-graph" class="spline one-graph"></div>
+		<div id="new-new-test-graph" class="spline one-graph"></div>
 		<div id="voltage-graph" class="spline one-graph"></div>
 		<div id="current-graph" class="spline one-graph"></div>
 		<div id="temperature-graph" class="spline one-graph"></div>
-		<div id="speed-graph" class="spline one-graph"></div>
 	</div>
 
 	<div class="gauges-container">

@@ -29,7 +29,7 @@ body{ /* for everything */
 }
 .button-web-design { /* button for redirecting to the web design page (not in use anymore)*/
 	font: bold; text-decoration: none; background-color: white /*#89c45f*/; margin: 5px 1.8rem 5px 5px; float: right; color: #89c45f/*white*/;
-	/* box-shadow: 2px 2px 2px #D3D3D3;  */ padding: 1px 1px 1px 1px;
+	/* box-shadow: 2px 2px 2px #D3D3D3;  */ padding: 2px 2.5px 2px 2.5px;
 	border-radius: 8px; font-size: 1.7rem;
 	/* border: solid 1.5px white; */
 }

@@ -45,7 +45,7 @@
 			<script src="clock.js"></script>
 		</div>
 		<!-- button to go to web design page -->
-		<a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a>
+		<a class="button-web-design" href="psem-website/index.html" target="_blank">Website</a>
 
 		<a href="https://github.com/BeatrizTSilva/telemetria" target="_blank">
         	<div class="github-button"> <!--p>Code</p--> <i class="fa fa-github"></i> </div>

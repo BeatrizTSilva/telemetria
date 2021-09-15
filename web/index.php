@@ -44,17 +44,15 @@
 		<div id="clockbox">
 			<script src="clock.js"></script>
 		</div>
-		<!--p id="github-code">
-        	Code <a href="https://github.com/BeatrizTSilva/telemetria" target="_blank" rel="noopenernoreferrer">here</a>
-      	</p-->
+		<!-- button to go to web design page -->
+		<a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a>
+
 		<a href="https://github.com/BeatrizTSilva/telemetria" target="_blank">
         	<div class="github-button"> <!--p>Code</p--> <i class="fa fa-github"></i> </div>
         </a>
 	</div>
 
 
-	<!-- button to go to web design page -->
-	<!--a class="button-web-design" href="web-design/web-index.php" target="_blank">Go to Web Design</a-->
 
 	<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
 	<!--?php

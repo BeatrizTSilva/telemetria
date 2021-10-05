@@ -1,5 +1,6 @@
 <?php
 /* ---------------------------------------------------------------------------
+ *     NOT A NEEDED FILE (ONLY FOR REFERENCE)
  * File: database-connection.php
  *
  * Description: All functions related to the database - connection,

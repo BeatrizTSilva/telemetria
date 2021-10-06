@@ -5,7 +5,7 @@
  *
  * Comments:
  *
------------------------------------------------------------------------------->
+------------------------------------------------------------------------------->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -38,6 +38,7 @@
 		<div id="clockbox">
 			<script src="clock.js"></script>
 		</div>
+
 		<!-- button to go to web design page -->
 		<a class="button-web-design" href="psem-website/index.html" target="_blank">Site PSEM</a>
 
@@ -58,8 +59,7 @@
 		</div>
 
 		<div class="gauges-container">
-			<div id="speed-gauge-test" class="one-graph"></div>
-			<div id="speed-graph" class="one-graph"></div>
+			<div id="speed-gauge" class="one-graph"></div>
 			<div id="container-speed" class="gauge one-graph"></div>
 			<div id="container-rpm" class="gauge one-graph"></div>
 		</div>
@@ -68,7 +68,7 @@
 		<script src="graphs-test.js"></script>
 	</div>
 
-	<script scr="dark-mode.js"></script>
+	<script src="dark-mode.js"></script>
 
 
 </body>

@@ -96,7 +96,7 @@ body{ /* for everything */
 	position: relative;
 	margin: 0.2rem 0.2rem 0.2rem 0.2rem;
 }
-#speed-graph { /* speed "clock" */
+#speed-gauge { /* speed "clock" */
 	width: 25rem;
 	height: 28rem;
 }

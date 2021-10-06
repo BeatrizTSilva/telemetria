@@ -1,74 +1,136 @@
 * {
-	box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	margin: 0px;
 }
 body{ /* for everything */
-	margin: 0px; color: #46555f;
+	margin: 0px;
+	color: #46555f;
 	background-color: #080a09;
 }
 /* -------------------------------------------- HEADER ---------------------------------------------- */
 #header{ /* header (rgb(84, 219, 57); #89c45f;) */
-	background:#89c45f; /* box-shadow: 0px 5px 5px #D3D3D3;  */ display: flex; position: sticky; align-items: center;
-	justify-content: center; left: 0; top: 0; width: 100%; z-index: 999;
+	background:#89c45f;
+	/* box-shadow: 0px 5px 5px #D3D3D3; */
+	display: flex;
+	position: sticky;
+	align-items: center;
+	justify-content: center;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
 }
 #clockbox{ /* clock div */
-	display: flex; height: auto; width: auto; margin: auto; color: white; font-size: 1.4rem;
+	display: flex;
+	height: auto;
+	width: auto;
+	margin: auto;
+	color: white;
+	font-size: 1.4rem;
 }
 .github-button { /* github button */
-	display: flex; align-items: center; justify-content: center; margin-right: 0.7rem; float: right; color: #89c45f;
-	text-decoration: none; font-size: 2.2rem; background-color: white; width: 100%;
-	border-radius: 10px; border: solid 1.5px white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 0.7rem;
+	float: right;
+	color: #89c45f;
+	text-decoration: none;
+	font-size: 2.2rem;
+	background-color: white;
+	width: 100%;
+	border-radius: 10px;
+	border: solid 1.5px white;
 }
 .github-button p { /* words */
-	font-size: 1.2rem; margin-right: 0.5rem;
+	font-size: 1.2rem;
+	margin-right: 0.5rem;
 }
 #psem-logo { /* logo */
-	display: block; width: 5.8rem; height: 2.5rem; float: left; margin-left:0.5rem; margin-top:0.5rem;
-	margin-bottom: 0.4rem; margin-right: 0.3rem; background-color: inherit;
+	display: block;
+	width: 5.8rem;
+	height: 2.5rem;
+	float: left;
+	margin-left:0.5rem;
+	margin-top:0.5rem;
+	margin-bottom: 0.4rem;
+	margin-right: 0.3rem;
+	background-color: inherit;
 }
 .button-web-design { /* button for redirecting to the web design page (not in use anymore)*/
-	font: bold; text-decoration: none; background-color: white /*#89c45f*/; margin: 5px 1.8rem 5px 5px; float: right; color: #89c45f/*white*/;
-	/* box-shadow: 2px 2px 2px #D3D3D3;  */ padding: 2px 2.5px 2px 2.5px;
-	border-radius: 8px; font-size: 1.7rem;
+	font: bold;
+	text-decoration: none;
+	background-color: white /*#89c45f*/;
+	margin: 5px 1.8rem 5px 5px;
+	float: right;
+	color: #89c45f/*white*/;
+	padding: 2px 2.5px 2px 2.5px;
+	border-radius: 8px;
+	font-size: 1.7rem;
+	/* box-shadow: 2px 2px 2px #D3D3D3; */
 	/* border: solid 1.5px white; */
 }
 
 /* ---------------------------------------------- GRAPHS ------------------------------------------------ */
 .graphs-container {
-	display: flex; flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .splines-container { /* container for the splines */
-	display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; margin: 0.5rem 0 0.5rem 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0.5rem 0 0.5rem 0;
 }
 .gauges-container { /* container for the gauges */
-	display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .one-graph { /* each individual graph */
-	position: relative; margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+	position: relative;
+	margin: 0.2rem 0.2rem 0.2rem 0.2rem;
 }
 #speed-graph { /* speed "clock" */
-	width: 25rem; height: 28rem;
+	width: 25rem;
+	height: 28rem;
 }
 .spline {
-	width: 45rem; height: 20rem;
+	width: 45rem;
+	height: 20rem;
 }
 .gauge { /* both gauges */
-	width: 25rem; height: 12rem;
+	width: 25rem;
+	height: 12rem;
 }
 /* ------------------- PREVIOUS HIGHCHARTS PARAMETERS -------------------------- */
 /* .highcharts-figure, .highcharts-data-table table {
-	min-width: 320px; max-width: 800px; width: 600px; margin: 0;
+	min-width: 320px;
+	max-width: 800px;
+	width: 600px;
+	margin: 0;
 }
 .highcharts-data-table table {
-	font-family: Verdana, sans-serif; border-collapse: collapse; border: 1px solid #EBEBEB; margin: 10px auto;
-	text-align: center; width: 100%;
+	font-family: Verdana, sans-serif;
+	border-collapse: collapse;
+	border: 1px solid #EBEBEB;
+	margin: 10px auto;
+	text-align: center;
+	width: 100%;
 }
 .highcharts-data-table caption {
-	padding: 1em 0; font-size: 1.2em; color: #555;
+	padding: 1em 0;
+	font-size: 1.2em;
+	color: #555;
 }
 .highcharts-data-table th {
-	font-weight: 600; padding: 0.5em;
+	font-weight: 600;
+	padding: 0.5em;
 }
 .highcharts-data-table td, .highcharts-data-table th, .highcharts-data-table caption {
 	padding: 0.5em;
@@ -84,6 +146,8 @@ body{ /* for everything */
 		width: 100%;
 	}
 	.highcharts-figure .gauge {
-		width: 300px; float: none; margin: 0 auto;
+		width: 300px;
+		float: none;
+		margin: 0 auto;
 	}
 } */

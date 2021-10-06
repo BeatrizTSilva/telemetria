@@ -35,8 +35,8 @@ Highcharts.chart('voltage-graph', {
                 let y_string; // aux variable
                 let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-                console.log("this.Response in voltage is " + this.responseText);
-                console.log(value_from_database);
+                // console.log("this.Response in voltage is " + this.responseText);
+                // console.log(value_from_database);
 
                 y_string = value_from_database[counter].voltage; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
@@ -109,8 +109,8 @@ Highcharts.chart('current-graph', {
                 let y_string; // aux variable
                 let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-                console.log("this.Response in current is " + this.responseText);
-                console.log(value_from_database);
+                // console.log("this.Response in current is " + this.responseText);
+                // console.log(value_from_database);
 
                 y_string = value_from_database[counter].current; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
@@ -183,8 +183,8 @@ Highcharts.chart('temperature-graph', {
                 let y_string; // aux variable
                 let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-                console.log("this.Response " + this.responseText);
-                console.log(value_from_database);
+                // console.log("this.Response " + this.responseText);
+                // console.log(value_from_database);
 
                 y_string = value_from_database[counter].temperature; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
@@ -256,8 +256,8 @@ Highcharts.chart('speed-spline-graph', {
                 let y_string; // aux variable
                 let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-                console.log("this.Response " + this.responseText);
-                console.log(value_from_database);
+                // console.log("this.Response " + this.responseText);
+                // console.log(value_from_database);
 
                 y_string = value_from_database[counter].speed; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
@@ -385,8 +385,8 @@ function (chart) {
 					let y_string; // aux variable
 					let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-					console.log("this.Response in voltage is " + this.responseText);
-					console.log(value_from_database);
+					// console.log("this.Response in voltage is " + this.responseText);
+					// console.log(value_from_database);
 
 					y_string = value_from_database[counter].speed; // data[0].voltage will return a string
 					y = parseFloat(y_string); // make the string a float
@@ -403,6 +403,118 @@ function (chart) {
   }
 }
 );
+
+/* --------------------------------------- GAUGES (SPEED AND RPM) ------------------------------------- */
+let gaugeOptions = {
+	chart: {
+		type: 'solidgauge'
+	},
+	title: null,
+	pane: {
+		center: ['50%', '85%'], size: '140%', startAngle: -90, endAngle: 90,
+		background: {
+			backgroundColor:
+			Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
+			innerRadius: '60%', outerRadius: '100%', shape: 'arc'
+		}
+	},
+	exporting: { enabled: false },
+	tooltip: { enabled: false },
+	// the value axis
+	yAxis: {
+		stops: [
+			[0.1, '#55BF3B'], // green
+			[0.5, '#DDDF0D'], // yellow
+			[0.9, '#DF5353'] // red
+		],
+		lineWidth: 0, tickWidth: 0, minorTickInterval: null, tickAmount: 2,
+		title: { y: -70 },
+		labels: { y: 16 }
+	},
+	plotOptions: {
+		solidgauge: {
+			dataLabels: { y: 5, borderWidth: 0, useHTML: true }
+		}
+	}
+};
+
+// The speed gauge
+let chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptions, {
+	yAxis: { min: 0, max: 70,
+		title: { text: 'Speed' }
+	},
+	credits: { enabled: false },
+	series: [{
+		name: 'Speed',
+		data: [80],
+		dataLabels: {
+			format:
+			'<div style="text-align:center">' +
+			'<span style="font-size:25px">{y}</span><br/>' +
+			'<span style="font-size:12px;opacity:0.4">km/h</span>' +
+			'</div>'
+		},
+		tooltip: { valueSuffix: ' km/h' }
+	}]
+}));
+// The RPM gauge
+let chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, {
+	yAxis: { min: 0, max: 5,
+		title: { text: 'RPM' }
+	},
+	series: [{
+		name: 'RPM', data: [1],
+		dataLabels: {
+			format:
+			'<div style="text-align:center">' +
+			'<span style="font-size:25px">{y:.1f}</span><br/>' +
+			'<span style="font-size:12px;opacity:0.4">' +
+			'* 1000 / min' +
+			'</span>' +
+			'</div>'
+		},
+		tooltip: { valueSuffix: ' revolutions/min' }
+	}]
+}));
+
+let counter = 0;
+// Bring life to the dials
+setInterval(function () {
+	// Speed
+	let point;
+	if (chartSpeed) {
+		let xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				point = chartSpeed.series[0].points[0];
+				let y; // y axis
+				let y_string; // aux variable
+				let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
+
+				y_string = value_from_database[counter].speed; // data[0].voltage will return a string
+				y = parseFloat(y_string); // make the string a float
+				point.update(y); // updates gauge
+
+				counter++; // increase counter to go to nextvalue in time
+			}
+		};
+		xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+		xhttp.send();
+	}
+	// RPM
+	if (chartRpm) {
+		point = chartRpm.series[0].points[0];
+		inc = Math.random() - 0.5;
+		newVal = point.y + inc;
+		if (newVal < 0 || newVal > 5) {
+			newVal = point.y - inc;
+		}
+		point.update(newVal);
+	}
+}, 1000);
+
+
+
 
 /******************************************************************************************************
 *
@@ -422,105 +534,6 @@ function (chart) {
 *
 ******************************************************************************************************/
 
-/* --------------------------------------- GAUGES (SPEED AND RPM) ------------------------------------- */
-let gaugeOptions = {
-  chart: {
-    type: 'solidgauge'
-  },
-  title: null,
-  pane: {
-    center: ['50%', '85%'], size: '140%', startAngle: -90, endAngle: 90,
-    background: {
-      backgroundColor:
-      Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
-      innerRadius: '60%', outerRadius: '100%', shape: 'arc'
-    }
-  },
-  exporting: { enabled: false },
-  tooltip: { enabled: false },
-  // the value axis
-  yAxis: {
-    stops: [
-      [0.1, '#55BF3B'], // green
-      [0.5, '#DDDF0D'], // yellow
-      [0.9, '#DF5353'] // red
-    ],
-    lineWidth: 0, tickWidth: 0, minorTickInterval: null, tickAmount: 2,
-    title: { y: -70 },
-    labels: { y: 16 }
-  },
-  plotOptions: {
-    solidgauge: {
-      dataLabels: { y: 5, borderWidth: 0, useHTML: true }
-    }
-  }
-};
-
-// The speed gauge
-let chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptions, {
-  yAxis: { min: 0, max: 200,
-    title: { text: 'Speed' }
-  },
-  credits: { enabled: false },
-  series: [{
-    name: 'Speed',
-    data: [80],
-    dataLabels: {
-      format:
-      '<div style="text-align:center">' +
-      '<span style="font-size:25px">{y}</span><br/>' +
-      '<span style="font-size:12px;opacity:0.4">km/h</span>' +
-      '</div>'
-    },
-    tooltip: { valueSuffix: ' km/h' }
-  }]
-}));
-
-// The RPM gauge
-let chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, {
-  yAxis: { min: 0, max: 5,
-    title: { text: 'RPM' }
-  },
-  series: [{
-    name: 'RPM', data: [1],
-    dataLabels: {
-      format:
-      '<div style="text-align:center">' +
-      '<span style="font-size:25px">{y:.1f}</span><br/>' +
-      '<span style="font-size:12px;opacity:0.4">' +
-      '* 1000 / min' +
-      '</span>' +
-      '</div>'
-    },
-    tooltip: { valueSuffix: ' revolutions/min' }
-  }]
-
-}));
-// Bring life to the dials
-setInterval(function () {
-  // Speed
-  let point, newVal, inc;
-
-  if (chartSpeed) {
-    point = chartSpeed.series[0].points[0];
-    inc = Math.round((Math.random() - 0.5) * 100);
-    newVal = point.y + inc;
-    if (newVal < 0 || newVal > 200) {
-      newVal = point.y - inc;
-    }
-    point.update(newVal); //updates the graph
-  }
-  // RPM
-  if (chartRpm) {
-    point = chartRpm.series[0].points[0];
-    inc = Math.random() - 0.5;
-    newVal = point.y + inc;
-    if (newVal < 0 || newVal > 5) {
-      newVal = point.y - inc;
-    }
-    point.update(newVal);
-  }
-}, 1000);
 
 /******************************************************************************************************
 *

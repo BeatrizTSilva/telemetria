@@ -87,14 +87,3 @@ body{ /* for everything */
 		width: 300px; float: none; margin: 0 auto;
 	}
 } */
-
-/* -------------------------- NOT IN USE AT THE MOMENT ------------------------ */
-#table{ /* dummy table */
-	margin-left: 5px; margin-top: 7px; text-align: left; float: right; padding-left: 3px; padding-right: 3px; position: relative;
-}
-#month, #day, #year, #hour, #minute, #second, p{ /* display of the date in the body */
-	margin-left: 0.1rem; float: left;
-}
-#table th, #table td{ /* elements for the table */
-	padding: 3px; border: 1px solid #ddd;
-}

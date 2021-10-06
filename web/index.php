@@ -31,13 +31,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<!----------------------------- includes ----------------------------------->
-	<?php
-	require("database-connection.php");
-	//require("test-ajax.php");
-	?>
+
 </head>
 
 <body>
+	<!--------------------------------------------- HEADER ----------------------------------------------------->
 	<div id="header">
 		<img id="psem-logo" src="imgs/psem-car-white.png" />
 		<div id="clockbox">
@@ -51,79 +49,25 @@
         </a>
 	</div>
 
-	<!-- ---------------------------------- 6th AJAX test ---------------------------------------------->
-	<!--table>
-		<tr>
-		<th>Time</th>
-		<th>Voltage</th>
-		<th>Current</th>
-		<th>Speed</th>
-		<th>Temperature</th>
-		<th>Coordinates1</th>
-		<th>Coordinates2</th>
-		</tr>
-	<tbody id="data"></tbody>
-	</table-->
-
-	<!--script>
-	var ajax = new XMLHttpRequest();
-	ajax.open("GET", "ajax.php", true);
-	ajax.send();
-
-	ajax.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			var data = JSON.parse(this.responseText);
-			//console.log(data);
-			//alert(this.responseText);
-
-			var html = "";
-			for(var a = 0; a < data.length; a++) {
-				var time = data[a].time;
-				var voltage = data[a].voltage;
-				var current = data[a].current;
-				var speed = data[a].speed;
-				var temperature = data[a].temperature;
-				var coordinates1 = data[a].coordinates1;
-				var coordinates2 = data[a].coordinates2;
-
-				html += "<tr>";
-				html += "<td>" + time + "</td>";
-				html += "<td>" + voltage + "</td>";
-				html += "<td>" + current + "</td>";
-				html += "<td>" + speed + "</td>";
-				html += "<td>" + temperature + "</td>";
-				html += "<td>" + coordinates1 + "</td>";
-				html += "<td>" + coordinates2 + "</td>";
-				html += "</tr>";
-			}
-			document.getElementById("data").innerHTML += html;
-		}
-	};
-
-	</script-->
-
-
-	<!--------------------------------------------------- Graphs ------------------------------------------------->
+	<!-------------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
-	<div class="splines-container">
-		<div id="new-test-graph" class="spline one-graph"></div>
-		<div id="new-new-test-graph" class="spline one-graph"></div>
-		<div id="voltage-graph" class="spline one-graph"></div>
-		<div id="current-graph" class="spline one-graph"></div>
-		<div id="temperature-graph" class="spline one-graph"></div>
+		<div class="splines-container">
+			<div id="new-test-graph" class="spline one-graph"></div>
+			<div id="new-new-test-graph" class="spline one-graph"></div>
+			<div id="voltage-graph" class="spline one-graph"></div>
+			<div id="current-graph" class="spline one-graph"></div>
+			<div id="temperature-graph" class="spline one-graph"></div>
+		</div>
+
+		<div class="gauges-container">
+			<div id="speed-graph" class="one-graph"></div>
+			<div id="container-speed" class="gauge one-graph"></div>
+			<div id="container-rpm" class="gauge one-graph"></div>
+		</div>
+
+		<script src="graphs.js"></script>
 	</div>
 
-	<div class="gauges-container">
-		<div id="speed-graph" class="one-graph"></div>
-		<div id="container-speed" class="gauge one-graph"></div>
-		<div id="container-rpm" class="gauge one-graph"></div>
-	</div>
-
-	<script src="graphs.js"></script>
-	</div>
-
-
-	<!--?php closeConnection($database); ?-->
 	<script scr="dark-mode.js"></script>
 
 

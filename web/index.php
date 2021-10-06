@@ -63,7 +63,7 @@
 		</div>
 
 		<script src="graphs.js"></script>
-		<script src="test-graphs.js"></script>
+		<script src="graphs-test.js"></script>
 	</div>
 
 	<script scr="dark-mode.js"></script>

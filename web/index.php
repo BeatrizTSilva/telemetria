@@ -54,9 +54,11 @@
 			<div id="voltage-graph" class="spline one-graph"></div>
 			<div id="current-graph" class="spline one-graph"></div>
 			<div id="temperature-graph" class="spline one-graph"></div>
+			<div id="speed-spline-graph" class="spline one-graph"></div>
 		</div>
 
 		<div class="gauges-container">
+			<div id="speed-gauge-test" class="one-graph"></div>
 			<div id="speed-graph" class="one-graph"></div>
 			<div id="container-speed" class="gauge one-graph"></div>
 			<div id="container-rpm" class="gauge one-graph"></div>

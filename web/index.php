@@ -61,7 +61,9 @@
 		<div class="gauges-container">
 			<div id="speed-gauge" class="one-graph"></div>
 			<div id="container-speed" class="gauge one-graph"></div>
+			<div id="container-speed2" class="gauge one-graph"></div>
 			<div id="container-rpm" class="gauge one-graph"></div>
+			<div id="container-rpm2" class="gauge one-graph"></div>
 		</div>
 
 		<script src="graphs.js"></script>

@@ -353,10 +353,10 @@ Highcharts.chart('speed-gauge', {
     title: { text: 'km/h' },
     plotBands: [{
       from: 0, /* first band goes from speed x to y */
-      to: 25,
+      to: 20,
       color: '#55BF3B' // green
     }, {
-      from: 25, /* second band goes from speed x to y */
+      from: 20, /* second band goes from speed x to y */
       to: 50,
       color: '#DDDF0D' // yellow
     }, {
@@ -496,8 +496,6 @@ let chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, 
   }]
 
 }));
-
-let counter2 = 0;
 // Bring life to the dials
 setInterval(function () {
   // Speed

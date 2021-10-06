@@ -3,7 +3,7 @@
  *
  * Description: HTML File
  *
- * Comments: CLOSE CONNECTION TO DATABASE
+ * Comments:
  *
 ------------------------------------------------------------------------------>
 <!DOCTYPE HTML>
@@ -29,13 +29,10 @@
 
 	<!-------------------------- jquery (for ajax) ------------------------------>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-	<!----------------------------- includes ----------------------------------->
-
 </head>
 
 <body>
-	<!--------------------------------------------- HEADER ----------------------------------------------------->
+	<!--------------------------------------------- HEADER --------------------------------------------------->
 	<div id="header">
 		<img id="psem-logo" src="imgs/psem-car-white.png" />
 		<div id="clockbox">
@@ -49,7 +46,7 @@
         </a>
 	</div>
 
-	<!-------------------------------------------------- Graphs ------------------------------------------------->
+	<!---------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
 		<div class="splines-container">
 			<div id="new-test-graph" class="spline one-graph"></div>
@@ -66,6 +63,7 @@
 		</div>
 
 		<script src="graphs.js"></script>
+		<script src="test-graphs.js"></script>
 	</div>
 
 	<script scr="dark-mode.js"></script>

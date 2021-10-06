@@ -118,3 +118,34 @@ function showTable($database){
 	echo "</table>";
 }
 ?>
+
+<!-- ----------------------------------------------- DATABASE ---------------------------------------------------------- -->
+<!--?php
+/* connection to the database -> in database_connection.php */
+$database = connectDB();
+
+/* values that can be inserted into the database */
+$values1 = array('time' => '6', 'volt' => '52.1', 'ampere' => '0.95', 'vel' => '8.52',
+'temp' => '26.2', 'coord1' => '9.85465', 'coord2' => '11.35698'
+);
+$values2 = array('time' => '5', 'volt' => '20.99', 'ampere' => '5.84', 'vel' => '19',
+'temp' => '25.1', 'coord1' => '9.23585', 'coord2' => '11.23589'
+);
+
+/* inserts a row -> in database_connection.php */
+//insertRow($database, $values1);
+/* in functions.php */
+//writeMessage();
+/* shows the whole database -> in database_connection.php */
+showTable($database);
+/* write SQL for parameter $variable and time $time */
+$something = getOneValue($database, "current", 2);
+echo "The value from getOneValue is " .$something. "<br>";
+/* choose variable to print */
+//getColumn($database, "voltage");
+/* get one value at a time for all t's*/
+//getSequenceOfValues($database, "current");
+/* delete row at time t */
+//deleteRow($database, 6);
+//showTable($database);
+?-->

@@ -12,10 +12,10 @@
 include ("file.php"); // for hostaname, username, etc
 /* ------------------------------------------ connects to the database and returns the connection ---------------------------------------------------- */
 function connectDB(){
-	$hostname = host();
-	$username = username();
-	$password = database_password();
-	$database_name = database_name();
+	$hostname = host(); /* the same for everyone */
+	$username = username1();
+	$password = database_password1();
+	$database_name = database_name1();
 	$port = 5432;
 
 	$connection = pg_connect('host='.$hostname.' port='.$port.' dbname='.$database_name.' user='.$username.' password='.$password);

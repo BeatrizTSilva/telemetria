@@ -446,7 +446,7 @@ let chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptio
 	credits: { enabled: false },
 	series: [{
 		name: 'Speed',
-		data: [80],
+		data: [0], // initial value probably
 		dataLabels: {
 			format:
 			'<div style="text-align:center">' +
@@ -459,18 +459,24 @@ let chartSpeed = Highcharts.chart('container-speed', Highcharts.merge(gaugeOptio
 }));
 // The RPM gauge
 let chartRpm = Highcharts.chart('container-rpm', Highcharts.merge(gaugeOptions, {
-	yAxis: { min: 0, max: 5,
+	yAxis: { min: 0, max: 70,
 		title: { text: 'RPM' }
 	},
+  credits: { enabled: false },
 	series: [{
-		name: 'RPM', data: [1],
+		name: 'RPM',
+    data: [0], // initial value probably
 		dataLabels: {
 			format:
-			'<div style="text-align:center">' +
-			'<span style="font-size:25px">{y:.1f}</span><br/>' +
-			'<span style="font-size:12px;opacity:0.4">' +
-			'* 1000 / min' +
-			'</span>' +
+			// '<div style="text-align:center">' +
+			// '<span style="font-size:25px">{y:.1f}</span><br/>' +
+			// '<span style="font-size:12px;opacity:0.4">' +
+			// '* 1000 / min' +
+			// '</span>' +
+			// '</div>'
+      '<div style="text-align:center">' +
+			'<span style="font-size:25px">{y}</span><br/>' +
+			'<span style="font-size:12px;opacity:0.4">km/h</span>' +
 			'</div>'
 		},
 		tooltip: { valueSuffix: ' revolutions/min' }
@@ -481,19 +487,20 @@ let counter = 0;
 // Bring life to the dials
 setInterval(function () {
 	// Speed
-	let point;
+	let point_speed;
+  let point_RPM;
 	if (chartSpeed) {
 		let xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
-				point = chartSpeed.series[0].points[0];
+				point_speed = chartSpeed.series[0].points[0];
 				let y; // y axis
 				let y_string; // aux variable
 				let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
 				y_string = value_from_database[counter].speed; // data[0].voltage will return a string
 				y = parseFloat(y_string); // make the string a float
-				point.update(y); // updates gauge
+				point_speed.update(y); // updates gauge
 
 				counter++; // increase counter to go to nextvalue in time
 			}
@@ -501,15 +508,28 @@ setInterval(function () {
 		xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
 		xhttp.send();
 	}
+}, 1000);
+
+setInterval(function () {
 	// RPM
 	if (chartRpm) {
-		point = chartRpm.series[0].points[0];
-		inc = Math.random() - 0.5;
-		newVal = point.y + inc;
-		if (newVal < 0 || newVal > 5) {
-			newVal = point.y - inc;
-		}
-		point.update(newVal);
+		let xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				point_RPM = chartRPM.series[0].points[0];
+				let y; // y axis
+				let y_string; // aux variable
+				let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
+
+				y_string = value_from_database[counter2].speed; // data[0].voltage will return a string
+				y = parseFloat(y_string); // make the string a float
+				point_RPM.update(y); // updates gauge
+
+				counter2++; // increase counter to go to nextvalue in time
+			}
+		};
+		xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+		xhttp.send();
 	}
 }, 1000);
 

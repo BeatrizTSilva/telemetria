@@ -5,13 +5,13 @@
  * Description: retrieving data from the database for real time updates
  *
 -------------------------------------------------------------------------------- */
-include ("file.php"); // file created to hold the database conenction parameters
+include ("file.php"); // file created to return the database conenction parameters
 
-// database conenction parameters
+// database conenction parameters -- change for different database
 $hostname = host();
-$username = username();
-$password = database_password();
-$database_name = database_name();
+$username = username2();
+$password = database_password2();
+$database_name = database_name2();
 $port = 5432;
 
 // connect to the database

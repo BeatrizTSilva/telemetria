@@ -38,7 +38,7 @@ Highcharts.chart('voltage-graph', {
                 // console.log("this.Response in voltage is " + this.responseText);
                 // console.log(value_from_database);
 
-                y_string = value_from_database[counter].voltage; // data[0].voltage will return a string
+                y_string = value_from_database[counter].tensao; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
 
                 series.addPoint([x, y], true, true); // updates the graph
@@ -112,7 +112,7 @@ Highcharts.chart('current-graph', {
                 // console.log("this.Response in current is " + this.responseText);
                 // console.log(value_from_database);
 
-                y_string = value_from_database[counter].current; // data[0].voltage will return a string
+                y_string = value_from_database[counter].corrente; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
 
                 series.addPoint([x, y], true, true); // updates the graph
@@ -186,7 +186,7 @@ Highcharts.chart('temperature-graph', {
                 // console.log("this.Response " + this.responseText);
                 // console.log(value_from_database);
 
-                y_string = value_from_database[counter].temperature; // data[0].voltage will return a string
+                y_string = value_from_database[counter].temperatura; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
 
                 series.addPoint([x, y], true, true); // updates the graph
@@ -259,7 +259,7 @@ Highcharts.chart('speed-spline-graph', {
                 // console.log("this.Response " + this.responseText);
                 // console.log(value_from_database);
 
-                y_string = value_from_database[counter].speed; // data[0].voltage will return a string
+                y_string = value_from_database[counter].velocidade; // data[0].voltage will return a string
                 y = parseFloat(y_string); // make the string a float
 
                 series.addPoint([x, y], true, true); // updates the graph
@@ -388,7 +388,7 @@ function (chart) {
 					// console.log("this.Response in voltage is " + this.responseText);
 					// console.log(value_from_database);
 
-					y_string = value_from_database[counter].speed; // data[0].voltage will return a string
+					y_string = value_from_database[counter].velocidade; // data[0].voltage will return a string
 					y = parseFloat(y_string); // make the string a float
 
 					point.update(y); // updates
@@ -498,7 +498,7 @@ setInterval(function () {
 				let y_string; // aux variable
 				let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-				y_string = value_from_database[counter].speed; // data[0].voltage will return a string
+				y_string = value_from_database[counter].velocidade; // data[0].voltage will return a string
 				y = parseFloat(y_string); // make the string a float
 				point_speed.update(y); // updates gauge
 
@@ -521,7 +521,7 @@ setInterval(function () {
 				let y_string; // aux variable
 				let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
-				y_string = value_from_database[counter2].speed; // data[0].voltage will return a string
+				y_string = value_from_database[counter2].velocidade; // data[0].voltage will return a string
 				y = parseFloat(y_string); // make the string a float
 				point_RPM.update(y); // updates gauge
 

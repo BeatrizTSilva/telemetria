@@ -12,11 +12,11 @@ include ("file.php"); // file created to return the database conenction paramete
 
 // database conenction parameters -- change for different databases
 $hostname = host();
-$username = username2();
-$password = database_password2();
-$database_name = database_name2();
+$username = username1();
+$password = database_password1();
+$database_name = database_name1();
 $port = 5432;
-$table_name = table_name2();
+$table_name = table_name1();
 
 // connect to the database
 $database = pg_connect('host='.$hostname.' port='.$port.' dbname='.$database_name.' user='.$username.' password='.$password);

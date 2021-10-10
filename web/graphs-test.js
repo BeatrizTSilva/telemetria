@@ -58,12 +58,12 @@ Highcharts.chart('new-test-graph', {
 							let x = (new Date()).getTime(); // x axis
 							let y; // y axis
 							let y_string; // aux variable
-							let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
+							let value_from_database2 = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
 							// console.log("this.Response " + this.responseText);
-							// console.log(value_from_database);
+							// console.log(value_from_database2);
 
-							y_string = value_from_database[counter].speed; // data[0].voltage will return a string
+							y_string = value_from_database2[counter].speed; // data[0].voltage will return a string
 							y = parseFloat(y_string); // make the string a float
 
 							series.addPoint([x, y], true, true); // updates the graph
@@ -133,12 +133,12 @@ Highcharts.chart('new-new-test-graph', {
 							let x = (new Date()).getTime(); // x axis
 							let y; // y axis
 							let y_string; // aux variable
-							let value_from_database = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
+							let value_from_database2 = JSON.parse(this.responseText); // everything that comes from the database (in ajax.php)
 
 							// console.log("this.Response " + this.responseText);
-							// console.log(value_from_database);
+							// console.log(value_from_database2);
 
-							y_string = value_from_database[counter].speed; // data[0].voltage will return a string
+							y_string = value_from_database2[counter].speed; // data[0].voltage will return a string
 							y = parseFloat(y_string); // make the string a float
 
 							series.addPoint([x, y], true, true); // updates the graph
@@ -197,21 +197,21 @@ Highcharts.chart('new-new-test-graph', {
 //   xhttp.onreadystatechange = function () {
 //     if (this.readyState == 4 && this.status == 200) {
 //       let y_string; // aux variable for y axis
-//       let value_from_database = JSON.parse(this.responseText); // convert everything that comes from the database (in ajax.php)
+//       let value_from_database2 = JSON.parse(this.responseText); // convert everything that comes from the database (in ajax.php)
 
 //       console.log("this.Response is " + this.responseText);
-//       console.log(value_from_database);
+//       console.log(value_from_database2);
 //       console.log("INSIDE call_ajax parameter = " + parameter);
 
 //       //y = 40;
 //       switch(parameter) { // switch to return the right value to the right graph
 //         case 'temperature':
-//         y_string = value_from_database[counter].temperature; // value_from_database[counter].parameter will return a string
+//         y_string = value_from_database2[counter].temperature; // value_from_database2[counter].parameter will return a string
 //         y = parseFloat(y_string); // make the string a float
 //         console.log("This is y in temp: " + y);
 //         break;
 //         case 'voltage':
-//         y_string = value_from_database[counter].voltage;
+//         y_string = value_from_database2[counter].voltage;
 //         y = parseFloat(y_string);
 //         console.log("This is y in voltage: " + y);
 //         break;

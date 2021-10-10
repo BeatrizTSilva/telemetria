@@ -4,9 +4,6 @@
  *
  * Description: retrieving data from the database for real time updates
  *
- * aquisicao (horas, sd, tempo, tensao, corrente, velocidade, temperatura, ns,
- *      latitude, longitude, ang_x, ang_y, ang_z, acel_x, acel_y, acel_z, validity)
- *
 -------------------------------------------------------------------------------- */
 include ("file.php"); // file created to return the database conenction parameters
 

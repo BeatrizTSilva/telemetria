@@ -21,7 +21,7 @@ $table_name = table_name2();
 // connect to the database
 $database = pg_connect('host='.$hostname.' port='.$port.' dbname='.$database_name.' user='.$username.' password='.$password);
 
-$result = pg_query($database, "SELECT * FROM " .$table_name /*" ORDER BY tempo"*/); // do the query (we want all the parameters)
+$result = pg_query($database, "SELECT * FROM " .$table_name); // do the query (we want all the parameters)
 //$result = pg_query($database, "SELECT * FROM telemetria ORDER BY t WHERE t > T_curr");
 $value_from_database = array(); // create an array
 

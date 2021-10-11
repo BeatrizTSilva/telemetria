@@ -4,6 +4,8 @@
 * Description: graphs that show the data from the sensors
 *          the data is retrieved in ajax.php from the database
 *
+* T_current -> current time to keep track which values are graphed already
+*
 *****************************************************************************/
 
 

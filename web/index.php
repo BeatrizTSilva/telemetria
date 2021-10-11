@@ -52,20 +52,22 @@
 		<div class="splines-container">
 			<div id="new-test-graph" class="spline one-graph"></div>
 			<div id="new-new-test-graph" class="spline one-graph"></div>
-			<div id="voltage-graph" class="spline one-graph"></div>
+			<div id="testing-ajax-call" class="spline one-graph"></div>
+			<!--div id="voltage-graph" class="spline one-graph"></div>
 			<div id="current-graph" class="spline one-graph"></div>
 			<div id="temperature-graph" class="spline one-graph"></div>
-			<div id="speed-spline-graph" class="spline one-graph"></div>
+			<div id="speed-spline-graph" class="spline one-graph"></div-->
 		</div>
 
-		<div class="gauges-container">
+		<!--div class="gauges-container">
 			<div id="speed-gauge" class="one-graph"></div>
 			<div id="container-speed" class="gauge one-graph"></div>
 			<div id="container-rpm" class="gauge one-graph"></div>
-		</div>
+		</div-->
 
-		<script src="graphs.js"></script>
+		<!--script src="graphs.js"></script-->
 		<script src="graphs-test.js"></script>
+		<script src="ajax-js.js"></script>
 	</div>
 
 	<script src="dark-mode.js"></script>

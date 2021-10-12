@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<title>Telemetria</title>
+	<link rel="stylesheet" type="text/css" href="../styles.css"> <!--css file-->
+	<link rel="icon" href="../imgs/rover.ico"> <!-- icon for the browser tab -->
 	<!---------------------------- for the graphs --------------------------------->
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/highcharts-more.js"></script>
@@ -14,7 +17,6 @@
 </head>
 
 <body>
-	<p style="color:blue;">I am blue</p>
 	<!---------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
 		<div class="splines-container">

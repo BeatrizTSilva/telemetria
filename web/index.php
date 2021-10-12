@@ -40,8 +40,8 @@
 		</div>
 
 		<!-- button to go to web design page -->
-		<a class="button-web-design" href="psem-website/index.html" target="_blank">Site PSEM</a>
-		<a class="button-web-design" href="safekeeping/index.html" target="_blank">Telemetria</a>
+		<a class="button-header" href="psem-website/index.html" target="_blank">Site PSEM</a>
+		<a class="button-header" href="safekeeping/index.php" target="_blank">Telemetria</a>
 
 		<a href="https://github.com/BeatrizTSilva/telemetria" target="_blank">
         	<div class="github-button"> <!--p>Code</p--> <i class="fa fa-github"></i> </div>
@@ -51,22 +51,22 @@
 	<!---------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
 		<div class="splines-container">
-			<!--div id="new-test-graph" class="spline one-graph"></div>
-			<div id="new-new-test-graph" class="spline one-graph"></div-->
-			<!--div id="testing-ajax-call" class="spline one-graph"></div-->
-			<div id="voltage-graph" class="spline one-graph"></div>
+			<div id="new-test-graph" class="spline one-graph"></div>
+			<div id="new-new-test-graph" class="spline one-graph"></div>
+			<div id="testing-ajax-call" class="spline one-graph"></div>
+			<!--div id="voltage-graph" class="spline one-graph"></div>
 			<div id="current-graph" class="spline one-graph"></div>
 			<div id="temperature-graph" class="spline one-graph"></div>
-			<div id="speed-spline-graph" class="spline one-graph"></div>
+			<div id="speed-spline-graph" class="spline one-graph"></div-->
 		</div>
 
-		<div class="gauges-container">
+		<!--div class="gauges-container">
 			<div id="speed-gauge" class="one-graph"></div>
 			<div id="container-speed" class="gauge one-graph"></div>
 			<div id="container-rpm" class="gauge one-graph"></div>
-		</div>
+		</div-->
 
-		<script src="graphs.js"></script>
+		<!--script src="graphs.js"></script-->
 		<script src="graphs-test.js"></script>
 		<script src="ajax-js.js"></script>
 	</div>

@@ -8,7 +8,8 @@
 body{ /* for everything */
 	margin: 0px;
 	color: #46555f;
-	background-color: #080a09;
+	/* background-color: #080a09; */
+	background-color: white;
 }
 /* -------------------------------------------- HEADER ---------------------------------------------- */
 #header{ /* header (rgb(84, 219, 57); #89c45f;) */
@@ -60,7 +61,7 @@ body{ /* for everything */
 	margin-right: 0.3rem;
 	background-color: inherit;
 }
-.button-web-design { /* button for redirecting to the web design page (not in use anymore)*/
+.button-header { /* button for redirecting to another page */
 	font: bold;
 	text-decoration: none;
 	background-color: white /*#89c45f*/;

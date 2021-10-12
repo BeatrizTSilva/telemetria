@@ -71,7 +71,7 @@ Highcharts.chart('new-test-graph', {
 							counter++; // increase counter to go to nextvalue in time
 						}
 					};
-					xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
+					xhttp.open("POST", "ajax1.php", true); //go get stuff from ajax.php
 					xhttp.send();
 				}, 1000);
 			}
@@ -146,7 +146,7 @@ Highcharts.chart('new-new-test-graph', {
 							counter++; // increase counter to go to nextvalue in time
 						}
 					};
-					xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
+					xhttp.open("POST", "ajax1.php", true); //go get stuff from ajax.php
 					xhttp.send();
 				}, 1000);
 			}
@@ -225,7 +225,7 @@ Highcharts.chart('new-new-test-graph', {
 //       return y; // send y back to the graph that called it
 //     }
 //   };
-//   xhttp.open("GET", "ajax2.php", true); //go get stuff from ajax.php
+//   xhttp.open("GET", "ajax1.php", true); //go get stuff from ajax.php
 //   xhttp.send();
 // }
 

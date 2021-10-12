@@ -4,6 +4,7 @@
  * TESTS WITH AJAX.SEND()
  *
 -------------------------------------------------------------------------------- */
+t_current = -1;
 Highcharts.chart('testing-ajax-call', {
     chart: {
         type: 'spline',
@@ -33,11 +34,17 @@ Highcharts.chart('testing-ajax-call', {
                   series.addPoint([x, y], true, true); // updates the graph
 
                   counter++; // increase counter to go to nextvalue in time
-                  let message = 13;
+
+                  t_current = 3;
                 }
               };
-              xhttp.open("POST", "ajax-call.php", true); //go get stuff from ajax.php
-              xhttp.send(message);
+              xhttp.open("POST", "send()-test.php", true); //go get stuff from ajax.php
+              xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+              xhttp.setRequestHeader("Content-length", t_current.length);
+              xhttp.setRequestHeader("Connection", "close");
+              console.log("t_current = " + t_current + " before sending");
+              // req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+              xhttp.send(t_current);
             }, 1000);
           }
         }

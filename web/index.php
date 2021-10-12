@@ -51,8 +51,8 @@
 	<!---------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
 		<div class="splines-container">
-			<div id="new-test-graph" class="spline one-graph"></div>
-			<div id="new-new-test-graph" class="spline one-graph"></div>
+			<!--div id="new-test-graph" class="spline one-graph"></div>
+			<div id="new-new-test-graph" class="spline one-graph"></div-->
 			<div id="testing-ajax-call" class="spline one-graph"></div>
 			<!--div id="voltage-graph" class="spline one-graph"></div>
 			<div id="current-graph" class="spline one-graph"></div>
@@ -67,8 +67,8 @@
 		</div-->
 
 		<!--script src="graphs.js"></script-->
-		<script src="graphs-test.js"></script>
-		<script src="ajax-js.js"></script>
+		<!--script src="graphs-test.js"></script-->
+		<script src="send()-test.js"></script>
 	</div>
 
 	<script src="dark-mode.js"></script>

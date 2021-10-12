@@ -48,7 +48,7 @@ Highcharts.chart('voltage-graph', {
                 counter++; // increase counter to go to nextvalue in time
               }
             };
-            xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+            xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
             xhttp.send();
           }, 1000);
         }
@@ -122,7 +122,7 @@ Highcharts.chart('current-graph', {
                 counter++; // increase counter to go to nextvalue in time
               }/* novo comentario*/
             };
-            xhttp.open("GET", "ajax.php", true); //go get stuff from ajax.php
+            xhttp.open("GET", "ajax2.php", true); //go get stuff from ajax.php
             xhttp.send();
           }, 1000);
         }
@@ -196,7 +196,7 @@ Highcharts.chart('temperature-graph', {
                 counter++; // increase counter to go to nextvalue in time
               }
             };
-            xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+            xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
             xhttp.send();
           }, 1000);
         }
@@ -269,7 +269,7 @@ Highcharts.chart('speed-spline-graph', {
                 counter++; // increase counter to go to nextvalue in time
               }
             };
-            xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+            xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
             xhttp.send();
           }, 1000);
         }
@@ -398,7 +398,7 @@ function (chart) {
 					counter++; // increase counter to go to nextvalue in time
 				}
 			};
-			xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+			xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
 			xhttp.send();
 
     }, 1000); /* time interval for updates */
@@ -507,7 +507,7 @@ setInterval(function () {
 				counter++; // increase counter to go to nextvalue in time
 			}
 		};
-		xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+		xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
 		xhttp.send();
 	}
 }, 1000);
@@ -530,7 +530,7 @@ setInterval(function () {
 				counter2++; // increase counter to go to nextvalue in time
 			}
 		};
-		xhttp.open("POST", "ajax.php", true); //go get stuff from ajax.php
+		xhttp.open("POST", "ajax2.php", true); //go get stuff from ajax.php
 		xhttp.send();
 	}
 }, 1000);
@@ -618,7 +618,7 @@ setInterval(function () {
       counter2++;
     }
   };
-  xhttp.open("GET", "ajax.php", true);
+  xhttp.open("GET", "ajax2.php", true);
   xhttp.send();
 }, 3000);
 

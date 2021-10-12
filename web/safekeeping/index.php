@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<!---------------------------------------- SAFEKEEPING ------------------------------------>
 <html>
 <head>
 	<title>Telemetria</title>

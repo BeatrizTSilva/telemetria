@@ -1,4 +1,10 @@
 <?php
+/*------------------------------------------------------------------------------
+ * File: ajax-call.php
+ *
+ * TESTS WITH AJAX.SEND()
+ *
+-------------------------------------------------------------------------------- */
 include ("file.php"); // file created to return the database conenction parameters
 
 // database conenction parameters -- change for different databases

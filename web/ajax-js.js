@@ -1,3 +1,9 @@
+/*------------------------------------------------------------------------------
+ * File: ajax-js.js
+ *
+ * TESTS WITH AJAX.SEND()
+ *
+-------------------------------------------------------------------------------- */
 Highcharts.chart('testing-ajax-call', {
     chart: {
         type: 'spline',
@@ -27,10 +33,11 @@ Highcharts.chart('testing-ajax-call', {
                   series.addPoint([x, y], true, true); // updates the graph
 
                   counter++; // increase counter to go to nextvalue in time
+                  let message = 13;
                 }
               };
               xhttp.open("POST", "ajax-call.php", true); //go get stuff from ajax.php
-              xhttp.send();
+              xhttp.send(message);
             }, 1000);
           }
         }

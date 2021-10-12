@@ -8,7 +8,7 @@
  *      latitude, longitude, ang_x, ang_y, ang_z, acel_x, acel_y, acel_z, validity)
  *
 -------------------------------------------------------------------------------- */
-include ("file.php"); // file created to return the database conenction parameters
+include ("../file.php"); // file created to return the database conenction parameters
 
 // database conenction parameters -- change for different databases
 $hostname = host();
@@ -21,7 +21,8 @@ $table_name = table_name2();
 // connect to the database
 $database = pg_connect('host='.$hostname.' port='.$port.' dbname='.$database_name.' user='.$username.' password='.$password);
 
-$result = pg_query($database, "SELECT * FROM " .$table_name); // do the query (we want all the parameters)
+$result = pg_query($database, "SELECT * FROM " .$table_name. " ORDER BY sd ASC, tempo ASC"); // do the query (we want all the parameters)
+/* ORDER BY sd ASC, tempo ASC */
 //$result = pg_query($database, "SELECT * FROM telemetria ORDER BY t WHERE t > T_curr");
 $value_from_database = array(); // create an array
 

@@ -32,6 +32,7 @@
 
 	<?php
 		include("send()-test.php");
+		// include("receive.php");
 	?>
 </head>
 

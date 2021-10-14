@@ -31,5 +31,14 @@ echo json_encode($value_from_database2); // encode the whole arary as a JSON obj
 // exit();
 
 /* receive the value of the current time */
-echo "<br> This is foo: " .$foo;
+
+$requestPayload = file_get_contents("php://input"); // JSON object
+$object = json_decode($requestPayload, true); // convert to a php object
+// var_dump($object);
+
+echo "<br> This is requestPayload:" .$object;
+
+$NUMBER = $object;
+$NUMBER = $NUMBER + 1;
+echo "<br> NUMBER = " .$NUMBER;
 ?>

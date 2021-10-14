@@ -48,13 +48,15 @@ Highcharts.chart('testing-ajax-call', {
               // xhttp.send(t_current);
 
               // console.log("t_current = " + t_current + " before sending");
-              // req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+              // req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
               // xhttp.send(t_current);
-              let foo = 2;
+              let foo = 3;
+              let foo_json = JSON.stringify(parseFloat(foo));
               xhttp.open("POST", "send()-test.php", true);
-              xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+              // xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+              xhttp.setRequestHeader("Content-Type", "application/json");
               // xhttp.send(JSON.stringify(foo));
-              xhttp.send(foo);
+              xhttp.send(foo_json);
             }, 1000);
           }
         }

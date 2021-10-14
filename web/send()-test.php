@@ -31,7 +31,5 @@ echo json_encode($value_from_database2); // encode the whole arary as a JSON obj
 // exit();
 
 /* receive the value of the current time */
-// $t_current = GET['t_current'];
-
-// echo "in php, this is t_current = " .$t_current;
+echo "<br> This is foo: " .$foo;
 ?>

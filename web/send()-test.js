@@ -38,13 +38,23 @@ Highcharts.chart('testing-ajax-call', {
                   t_current = 3;
                 }
               };
-              xhttp.open("POST", "send()-test.php", true); //go get stuff from ajax.php
-              xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-              xhttp.setRequestHeader("Content-length", t_current.length);
-              xhttp.setRequestHeader("Connection", "close");
-              console.log("t_current = " + t_current + " before sending");
+              // xhttp.open("POST", "send()-test.php", true); //go get stuff from ajax.php
+              // xhttp.send(t_current);
+
+              // xhttp.open("POST", "send()-test.php", true); //go get stuff from ajax.php
+              // xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+              // xhttp.setRequestHeader("Content-length", t_current.length);
+              // xhttp.setRequestHeader("Connection", "close");
+              // xhttp.send(t_current);
+
+              // console.log("t_current = " + t_current + " before sending");
               // req.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
-              xhttp.send(t_current);
+              // xhttp.send(t_current);
+              let foo = 2;
+              xhttp.open("POST", "send()-test.php", true);
+              xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+              // xhttp.send(JSON.stringify(foo));
+              xhttp.send(foo);
             }, 1000);
           }
         }

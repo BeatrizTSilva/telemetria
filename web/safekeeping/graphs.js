@@ -342,7 +342,7 @@ Highcharts.chart('speed-gauge', {
   },
   // the value axis
   yAxis: {
-    min: 0, max: 70,
+    min: 0, max: 80,
     minorTickInterval: 'auto', /* interval between values displayed on the gauge */
     minorTickWidth: 1, minorTickLength: 10,
     minorTickPosition: 'inside', minorTickColor: '#666',
@@ -355,15 +355,15 @@ Highcharts.chart('speed-gauge', {
     title: { text: 'km/h' },
     plotBands: [{
       from: 0, /* first band goes from speed x to y */
-      to: 20,
+      to: 30,
       color: '#55BF3B' // green
     }, {
       from: 20, /* second band goes from speed x to y */
-      to: 50,
+      to: 60,
       color: '#DDDF0D' // yellow
     }, {
-      from: 50, /* first band goes from speed x to y */
-      to: 70,
+      from: 60, /* first band goes from speed x to y */
+      to: 80,
       color: '#DF5353' // red
     }]
   },

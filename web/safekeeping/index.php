@@ -18,6 +18,13 @@
 </head>
 
 <body>
+	<!--------------------------------------------- HEADER --------------------------------------------------->
+	<div id="header">
+		<img id="psem-logo" src="../imgs/psem-car-white.png" />
+		<div id="clockbox">
+			<script src="../clock.js"></script>
+		</div>
+	</div>
 	<!---------------------------------------------- Graphs ------------------------------------------------->
 	<div class="graphs-container">
 		<div class="splines-container">
